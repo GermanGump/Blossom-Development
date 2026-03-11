@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
+		6C44D6FC0BFE4D0932020D53 /* BlossomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A16D311E9E96EDCCE313F /* BlossomTheme.swift */; };
+		771E30086BE612562D01269D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */; };
+		8A201F350CFAFDBAEBF5DFCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A0DA3F6F3A877423872E /* ContentView.swift */; };
+		A1F14A95FF6DAE8A51EDDE61 /* ComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */; };
+		B96E0E6F774CB89D0145D3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF207F658E44D9FBB0772C8 /* Foundation.framework */; };
+		C9A9C81E3DE742B608162789 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B8200FCCAB049F5D29CE2 /* TabItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C47A0DA3F6F3A877423872E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
+		503A16D311E9E96EDCCE313F /* BlossomTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomTheme.swift; path = Core/Theme/BlossomTheme.swift; sourceTree = "<group>"; };
+		51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		604B8200FCCAB049F5D29CE2 /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = Features/TabBar/TabItem.swift; sourceTree = "<group>"; };
+		6CF207F658E44D9FBB0772C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomHubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomHubsApp.swift; path = App/BlossomHubsApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD362C552350CE9B479A124C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96E0E6F774CB89D0145D3D3 /* Foundation.framework in Frameworks */,
+				A1F14A95FF6DAE8A51EDDE61 /* ComponentsKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB1DA739D79ABE2523EC1CF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6CF207F658E44D9FBB0772C8 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1D78AF911C3FE2A5668F5C95 = {
+			isa = PBXGroup;
+			children = (
+				8960ABC2420B5484FA9ABAB7 /* Products */,
+				3486DF1173C3C89C315D34BE /* Frameworks */,
+				AE82D6BB8D2213CB019FA9F9 /* BlossomHubs */,
+			);
+			sourceTree = "<group>";
+		};
+		3486DF1173C3C89C315D34BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB1DA739D79ABE2523EC1CF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		466679C585890817677A6412 /* Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets.xcassets;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		499282665E1E922E516EEC5F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7CF4CA274AD21B69FB999960 /* TabBar */,
+			);
+			name = Features;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6C8D1AB44CE169AC0628EE57 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				503A16D311E9E96EDCCE313F /* BlossomTheme.swift */,
+			);
+			name = Theme;
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		7CF4CA274AD21B69FB999960 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				604B8200FCCAB049F5D29CE2 /* TabItem.swift */,
+			);
+			name = TabBar;
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8960ABC2420B5484FA9ABAB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ED69A54995A0AB0A2CE0885 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */,
+				3C47A0DA3F6F3A877423872E /* ContentView.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		AE82D6BB8D2213CB019FA9F9 /* BlossomHubs */ = {
+			isa = PBXGroup;
+			children = (
+				8ED69A54995A0AB0A2CE0885 /* App */,
+				499282665E1E922E516EEC5F /* Features */,
+				D9D52CF63E41499F808ADAAE /* Core */,
+				466679C585890817677A6412 /* Assets.xcassets */,
+				51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */,
+				D91C95A2DBA97700EAA0354E /* Info.plist */,
+			);
+			name = BlossomHubs;
+			path = BlossomHubs;
+			sourceTree = "<group>";
+		};
+		D9D52CF63E41499F808ADAAE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6C8D1AB44CE169AC0628EE57 /* Theme */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		361EE7C76A75F12EC1477D3A /* BlossomHubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1A813E0B5195115CC5AD298 /* Build configuration list for PBXNativeTarget "BlossomHubs" */;
+			buildPhases = (
+				96F9F85DE9D0E3760161C41C /* Sources */,
+				CD362C552350CE9B479A124C /* Frameworks */,
+				58B78024CD72E8C23A666C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlossomHubs;
+			packageProductDependencies = (
+				16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */,
+			);
+			productName = BlossomHubs;
+			productReference = 763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBB72BB3916A6F201525BB91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 22EA2EE7CB6F33FA49B78187 /* Build configuration list for PBXProject "BlossomHubs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D78AF911C3FE2A5668F5C95;
+			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				E90ED9A069755CF5D0B647A9 /* XCRemoteSwiftPackageReference "ComponentsKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8960ABC2420B5484FA9ABAB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				361EE7C76A75F12EC1477D3A /* BlossomHubs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58B78024CD72E8C23A666C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E30086BE612562D01269D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F9F85DE9D0E3760161C41C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */,
+				8A201F350CFAFDBAEBF5DFCA /* ContentView.swift in Sources */,
+				C9A9C81E3DE742B608162789 /* TabItem.swift in Sources */,
+				6C44D6FC0BFE4D0932020D53 /* BlossomTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		039C80D610D70E8FC3ACBC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		26B93A037BB3656ACBCF90D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = BlossomHubs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blossom.hubs-prototype";
+				PRODUCT_NAME = BlossomHubs;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_LANGUAGE_VERSION = 6;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BAF32AACFA0177FDE65E4E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = BlossomHubs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blossom.hubs-prototype";
+				PRODUCT_NAME = BlossomHubs;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_LANGUAGE_VERSION = 6;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		352404DA2AB453A4FAA06384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22EA2EE7CB6F33FA49B78187 /* Build configuration list for PBXProject "BlossomHubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352404DA2AB453A4FAA06384 /* Debug */,
+				039C80D610D70E8FC3ACBC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1A813E0B5195115CC5AD298 /* Build configuration list for PBXNativeTarget "BlossomHubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B93A037BB3656ACBCF90D0 /* Release */,
+				2BAF32AACFA0177FDE65E4E6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E90ED9A069755CF5D0B647A9 /* XCRemoteSwiftPackageReference "ComponentsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/componentskit/ComponentsKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E90ED9A069755CF5D0B647A9 /* XCRemoteSwiftPackageReference "ComponentsKit" */;
+			productName = ComponentsKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DBB72BB3916A6F201525BB91 /* Project object */;
+}
