@@ -119,56 +119,56 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase ? | Pending |
-| FOUND-02 | Phase ? | Pending |
-| FOUND-03 | Phase ? | Pending |
-| FOUND-04 | Phase ? | Pending |
-| FOUND-05 | Phase ? | Pending |
-| FOUND-06 | Phase ? | Pending |
-| FOUND-07 | Phase ? | Pending |
-| FOUND-08 | Phase ? | Pending |
-| FOUND-09 | Phase ? | Pending |
-| FOUND-10 | Phase ? | Pending |
-| FOUND-11 | Phase ? | Pending |
-| DISC-01 | Phase ? | Pending |
-| DISC-02 | Phase ? | Pending |
-| DISC-03 | Phase ? | Pending |
-| DISC-04 | Phase ? | Pending |
-| SUBS-01 | Phase ? | Pending |
-| SUBS-02 | Phase ? | Pending |
-| SUBS-03 | Phase ? | Pending |
-| SUBS-04 | Phase ? | Pending |
-| SUBS-05 | Phase ? | Pending |
-| SUBS-06 | Phase ? | Pending |
-| SUBS-07 | Phase ? | Pending |
-| SUBS-08 | Phase ? | Pending |
-| HUB-01 | Phase ? | Pending |
-| HUB-02 | Phase ? | Pending |
-| HUB-03 | Phase ? | Pending |
-| HUB-04 | Phase ? | Pending |
-| HUB-05 | Phase ? | Pending |
-| HUB-06 | Phase ? | Pending |
-| HUB-07 | Phase ? | Pending |
-| HUB-08 | Phase ? | Pending |
-| ENGR-01 | Phase ? | Pending |
-| ENGR-02 | Phase ? | Pending |
-| ENGR-03 | Phase ? | Pending |
-| ENGR-04 | Phase ? | Pending |
-| ENGR-05 | Phase ? | Pending |
-| ENGR-06 | Phase ? | Pending |
-| CRTR-01 | Phase ? | Pending |
-| CRTR-02 | Phase ? | Pending |
-| CRTR-03 | Phase ? | Pending |
-| CRTR-04 | Phase ? | Pending |
-| CRTR-05 | Phase ? | Pending |
-| CRTR-06 | Phase ? | Pending |
-| CRTR-07 | Phase ? | Pending |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 2 | Pending |
+| FOUND-05 | Phase 2 | Pending |
+| FOUND-06 | Phase 2 | Pending |
+| FOUND-07 | Phase 1 | Pending |
+| FOUND-08 | Phase 1 | Pending |
+| FOUND-09 | Phase 2 | Pending |
+| FOUND-10 | Phase 2 | Pending |
+| FOUND-11 | Phase 2 | Pending |
+| DISC-01 | Phase 3 | Pending |
+| DISC-02 | Phase 3 | Pending |
+| DISC-03 | Phase 3 | Pending |
+| DISC-04 | Phase 3 | Pending |
+| SUBS-01 | Phase 3 | Pending |
+| SUBS-02 | Phase 3 | Pending |
+| SUBS-03 | Phase 3 | Pending |
+| SUBS-04 | Phase 4 | Pending |
+| SUBS-05 | Phase 4 | Pending |
+| SUBS-06 | Phase 4 | Pending |
+| SUBS-07 | Phase 4 | Pending |
+| SUBS-08 | Phase 4 | Pending |
+| HUB-01 | Phase 5 | Pending |
+| HUB-02 | Phase 5 | Pending |
+| HUB-03 | Phase 6 | Pending |
+| HUB-04 | Phase 6 | Pending |
+| HUB-05 | Phase 6 | Pending |
+| HUB-06 | Phase 6 | Pending |
+| HUB-07 | Phase 6 | Pending |
+| HUB-08 | Phase 5 | Pending |
+| ENGR-01 | Phase 7 | Pending |
+| ENGR-02 | Phase 7 | Pending |
+| ENGR-03 | Phase 7 | Pending |
+| ENGR-04 | Phase 7 | Pending |
+| ENGR-05 | Phase 7 | Pending |
+| ENGR-06 | Phase 7 | Pending |
+| CRTR-01 | Phase 8 | Pending |
+| CRTR-02 | Phase 8 | Pending |
+| CRTR-03 | Phase 8 | Pending |
+| CRTR-04 | Phase 8 | Pending |
+| CRTR-05 | Phase 8 | Pending |
+| CRTR-06 | Phase 9 | Pending |
+| CRTR-07 | Phase 8 | Pending |
 
 **Coverage:**
 - v1 requirements: 44 total
-- Mapped to phases: 0
-- Unmapped: 44 ⚠️
+- Mapped to phases: 44
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-10*
-*Last updated: 2026-03-10 after initial definition*
+*Last updated: 2026-03-10 after roadmap creation — all 44 v1 requirements mapped*
