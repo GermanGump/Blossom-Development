@@ -13,12 +13,12 @@ enum AppTab: String, CaseIterable, Identifiable {
 
     var icon: String {
         switch self {
-        case .home:      "house.fill"
+        case .home:      "house"
         case .hubs:      "person.3.fill"
         case .markets:   "globe"
-        case .learn:     "book.fill"
+        case .learn:     "text.book.closed"
         case .portfolio: "arrow.triangle.2.circlepath"
-        case .insights:  "bolt.fill"
+        case .insights:  "bolt"
         }
     }
 }
