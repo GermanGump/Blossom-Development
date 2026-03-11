@@ -10,15 +10,15 @@ struct PlaceholderTabView: View {
                 .font(.system(size: 56, weight: .regular))
                 .foregroundColor(BlossomTheme.teal)
             Text(tab.rawValue)
-                .font(.title.weight(.semibold))
-                .foregroundColor(BlossomTheme.darkNavy)
+                .font(BlossomFont.title)
+                .foregroundColor(BlossomTheme.primaryText)
             Text("Coming soon")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                .font(BlossomFont.subhead)
+                .foregroundColor(BlossomTheme.secondaryText)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(UIColor.systemBackground))
+        .background(BlossomTheme.background)
     }
 }
 

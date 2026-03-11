@@ -16,13 +16,13 @@ struct HubsTopNavBar: View {
             // Center: search bar
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(BlossomTheme.secondaryText)
                 TextField("Search", text: $searchText)
-                    .font(.subheadline)
+                    .font(BlossomFont.subhead)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 10)
-            .background(Color(UIColor.systemGray6))
+            .background(BlossomTheme.cardSurface)
             .cornerRadius(10)
 
             // Right: teal bell with red "9+" badge
@@ -31,7 +31,7 @@ struct HubsTopNavBar: View {
                     .foregroundColor(BlossomTheme.teal)
                     .font(.system(size: 22))
                 Text("9+")
-                    .font(.system(size: 9, weight: .bold))
+                    .font(BlossomFont.caption)
                     .foregroundColor(.white)
                     .padding(.horizontal, 4)
                     .padding(.vertical, 1)

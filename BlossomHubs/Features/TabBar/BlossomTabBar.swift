@@ -35,8 +35,7 @@ struct BlossomTabItem: View {
                 Image(systemName: tab.icon)
                     .font(.system(size: 22, weight: .medium))
                 Text(tab.rawValue)
-                    .font(.caption2)
-                    .fontWeight(.medium)
+                    .font(BlossomFont.caption)
             }
             .foregroundColor(isSelected ? BlossomTheme.tabActive : BlossomTheme.tabInactive)
             .frame(maxWidth: .infinity)
