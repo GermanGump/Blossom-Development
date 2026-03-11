@@ -1,10 +1,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab: AppTab = .hubs
+
     var body: some View {
-        Text("Blossom Hubs")
-            .font(.largeTitle)
-            .fontWeight(.bold)
+        ZStack(alignment: .bottom) {
+            TabView(selection: $selectedTab) {
+                NavigationStack {
+                    PlaceholderTabView(tab: .home)
+                }
+                .tag(AppTab.home)
+                .toolbar(.hidden, for: .tabBar)
+
+                NavigationStack {
+                    HubsView()
+                }
+                .tag(AppTab.hubs)
+                .toolbar(.hidden, for: .tabBar)
+
+                NavigationStack {
+                    PlaceholderTabView(tab: .markets)
+                }
+                .tag(AppTab.markets)
+                .toolbar(.hidden, for: .tabBar)
+
+                NavigationStack {
+                    PlaceholderTabView(tab: .learn)
+                }
+                .tag(AppTab.learn)
+                .toolbar(.hidden, for: .tabBar)
+
+                NavigationStack {
+                    PlaceholderTabView(tab: .portfolio)
+                }
+                .tag(AppTab.portfolio)
+                .toolbar(.hidden, for: .tabBar)
+
+                NavigationStack {
+                    PlaceholderTabView(tab: .insights)
+                }
+                .tag(AppTab.insights)
+                .toolbar(.hidden, for: .tabBar)
+            }
+            .ignoresSafeArea(edges: .bottom)
+
+            BlossomTabBar(selectedTab: $selectedTab)
+        }
     }
 }
 

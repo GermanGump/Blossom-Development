@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166CBDF7F5E6B582F74EB230 /* InsightsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */; };
+		202F9045CCFF0A1AC00F68AC /* HubsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */; };
+		2767FAD6994EAA8A9CC62362 /* LearnNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BED777A2B6E1402277AE6A /* LearnNavigation.swift */; };
+		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
 		6C44D6FC0BFE4D0932020D53 /* BlossomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A16D311E9E96EDCCE313F /* BlossomTheme.swift */; };
 		771E30086BE612562D01269D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */; };
+		891D3652AD087DEF57310006 /* MarketsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */; };
 		8A201F350CFAFDBAEBF5DFCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A0DA3F6F3A877423872E /* ContentView.swift */; };
+		9D252AC79C26D8D1A1B4F899 /* HubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3D46D21C47ACC5C42714C /* HubsView.swift */; };
 		A1F14A95FF6DAE8A51EDDE61 /* ComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */; };
 		B96E0E6F774CB89D0145D3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF207F658E44D9FBB0772C8 /* Foundation.framework */; };
+		C8A9B06F3D538B9E0BF33102 /* PlaceholderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */; };
 		C9A9C81E3DE742B608162789 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B8200FCCAB049F5D29CE2 /* TabItem.swift */; };
+		D2D9D037D7F2E41C0A0C1A6B /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */; };
+		D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */; };
+		F40D87608C86380C32936957 /* PortfolioNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */; };
+		FF7B80191D4F65B697C2C7DF /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PortfolioNavigation.swift; path = Features/Portfolio/PortfolioNavigation.swift; sourceTree = "<group>"; };
+		1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarketsNavigation.swift; path = Features/Markets/MarketsNavigation.swift; sourceTree = "<group>"; };
+		1AB3D46D21C47ACC5C42714C /* HubsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsView.swift; path = Features/Hubs/HubsView.swift; sourceTree = "<group>"; };
 		3C47A0DA3F6F3A877423872E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
+		42BED777A2B6E1402277AE6A /* LearnNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LearnNavigation.swift; path = Features/Learn/LearnNavigation.swift; sourceTree = "<group>"; };
+		4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomTabBar.swift; path = Features/TabBar/BlossomTabBar.swift; sourceTree = "<group>"; };
 		503A16D311E9E96EDCCE313F /* BlossomTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomTheme.swift; path = Core/Theme/BlossomTheme.swift; sourceTree = "<group>"; };
 		51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AvatarView.swift; path = Core/Components/AvatarView.swift; sourceTree = "<group>"; };
 		604B8200FCCAB049F5D29CE2 /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = Features/TabBar/TabItem.swift; sourceTree = "<group>"; };
 		6CF207F658E44D9FBB0772C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomHubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsNavigation.swift; path = Features/Hubs/HubsNavigation.swift; sourceTree = "<group>"; };
+		778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsTopNavBar.swift; path = Features/Hubs/HubsTopNavBar.swift; sourceTree = "<group>"; };
+		8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsightsNavigation.swift; path = Features/Insights/InsightsNavigation.swift; sourceTree = "<group>"; };
+		A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeNavigation.swift; path = Features/Home/HomeNavigation.swift; sourceTree = "<group>"; };
 		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaceholderTabView.swift; path = Core/Components/PlaceholderTabView.swift; sourceTree = "<group>"; };
 		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomHubsApp.swift; path = App/BlossomHubsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA1A1DE9AA1BAEDD191A34E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */,
+				5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */,
+			);
+			name = Components;
+			path = Components;
+			sourceTree = "<group>";
+		};
 		1CB1DA739D79ABE2523EC1CF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,13 +105,37 @@
 			path = Assets.xcassets;
 			sourceTree = "<group>";
 		};
+		4744BCAE0E60151BE5BB7F8C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */,
+			);
+			name = Home;
+			path = Home;
+			sourceTree = "<group>";
+		};
 		499282665E1E922E516EEC5F /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				7CF4CA274AD21B69FB999960 /* TabBar */,
+				B6CE60839D72478ECDCEFABA /* Hubs */,
+				4744BCAE0E60151BE5BB7F8C /* Home */,
+				D8449C39B12EE307CAC5529D /* Markets */,
+				49F50035C1EB991AF4791192 /* Learn */,
+				B055A2F2B27B3F6AD39260AE /* Portfolio */,
+				979E5CAF5ECB5B945E42FE46 /* Insights */,
 			);
 			name = Features;
 			path = Features;
+			sourceTree = "<group>";
+		};
+		49F50035C1EB991AF4791192 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				42BED777A2B6E1402277AE6A /* LearnNavigation.swift */,
+			);
+			name = Learn;
+			path = Learn;
 			sourceTree = "<group>";
 		};
 		6C8D1AB44CE169AC0628EE57 /* Theme */ = {
@@ -95,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				604B8200FCCAB049F5D29CE2 /* TabItem.swift */,
+				4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */,
 			);
 			name = TabBar;
 			path = TabBar;
@@ -118,6 +175,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		979E5CAF5ECB5B945E42FE46 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */,
+			);
+			name = Insights;
+			path = Insights;
+			sourceTree = "<group>";
+		};
 		AE82D6BB8D2213CB019FA9F9 /* BlossomHubs */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +198,40 @@
 			path = BlossomHubs;
 			sourceTree = "<group>";
 		};
+		B055A2F2B27B3F6AD39260AE /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */,
+			);
+			name = Portfolio;
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		B6CE60839D72478ECDCEFABA /* Hubs */ = {
+			isa = PBXGroup;
+			children = (
+				1AB3D46D21C47ACC5C42714C /* HubsView.swift */,
+				76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */,
+				778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */,
+			);
+			name = Hubs;
+			path = Hubs;
+			sourceTree = "<group>";
+		};
+		D8449C39B12EE307CAC5529D /* Markets */ = {
+			isa = PBXGroup;
+			children = (
+				1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */,
+			);
+			name = Markets;
+			path = Markets;
+			sourceTree = "<group>";
+		};
 		D9D52CF63E41499F808ADAAE /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				6C8D1AB44CE169AC0628EE57 /* Theme */,
+				0DA1A1DE9AA1BAEDD191A34E /* Components */,
 			);
 			name = Core;
 			path = Core;
@@ -216,6 +312,17 @@
 				8A201F350CFAFDBAEBF5DFCA /* ContentView.swift in Sources */,
 				C9A9C81E3DE742B608162789 /* TabItem.swift in Sources */,
 				6C44D6FC0BFE4D0932020D53 /* BlossomTheme.swift in Sources */,
+				4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */,
+				C8A9B06F3D538B9E0BF33102 /* PlaceholderTabView.swift in Sources */,
+				9D252AC79C26D8D1A1B4F899 /* HubsView.swift in Sources */,
+				FF7B80191D4F65B697C2C7DF /* HomeNavigation.swift in Sources */,
+				891D3652AD087DEF57310006 /* MarketsNavigation.swift in Sources */,
+				2767FAD6994EAA8A9CC62362 /* LearnNavigation.swift in Sources */,
+				F40D87608C86380C32936957 /* PortfolioNavigation.swift in Sources */,
+				166CBDF7F5E6B582F74EB230 /* InsightsNavigation.swift in Sources */,
+				202F9045CCFF0A1AC00F68AC /* HubsNavigation.swift in Sources */,
+				D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */,
+				D2D9D037D7F2E41C0A0C1A6B /* AvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
