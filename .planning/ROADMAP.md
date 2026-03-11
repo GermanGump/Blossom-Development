@@ -29,11 +29,15 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Depends on**: Nothing (first phase)
 **Requirements**: FOUND-01, FOUND-02, FOUND-03, FOUND-07, FOUND-08
 **Success Criteria** (what must be TRUE):
-  1. App launches in Xcode Simulator and displays a 6-tab bar with tabs labelled Home, Markets, Learn, Portfolio, Insights, Communities
+  1. App launches in Xcode Simulator and displays a 6-tab bar with tabs labelled Home, Hubs, Markets, Learn, Portfolio, Insights
   2. Tapping between tabs does not bleed navigation state — each tab maintains its own independent back-stack
   3. All @Observable view model classes are annotated @MainActor and the project compiles with zero Swift 6 strict concurrency warnings
   4. ComponentsKit resolves as an SPM dependency and the project builds cleanly
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Xcode project scaffold, build settings, ComponentsKit SPM, core types (AppTab enum, BlossomTheme)
+- [ ] 01-02-PLAN.md — Custom scrollable tab bar, per-tab NavigationStack, Hubs top nav bar, placeholder tabs, visual checkpoint
 
 ### Phase 2: Design System and Mock Data
 **Goal**: Every visual building block needed by feature screens exists as a reusable, brand-compliant component — color tokens, typography, card modifiers, shared UI primitives, and a fully seeded mock data layer — so no feature phase introduces inline hex values or raw mock arrays
@@ -136,7 +140,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Scaffold and Swift Architecture | 0/TBD | Not started | - |
+| 1. Project Scaffold and Swift Architecture | 0/2 | Planning complete | - |
 | 2. Design System and Mock Data | 0/TBD | Not started | - |
 | 3. Discovery and Community Preview | 0/TBD | Not started | - |
 | 4. Subscription Flow and Celebration | 0/TBD | Not started | - |
