@@ -66,10 +66,10 @@ Plans:
   3. Tapping a community card navigates to that community's preview page without navigating in any other tab
   4. The community preview page shows the full description, creator bio, and value proposition, with 1-4 tier options listed at their creator-defined names and monthly prices
   5. Tapping a tier expands a tray showing that tier's benefit list, included content types, and monthly cost
-**Plans:** 3 plans
+**Plans:** 1/3 plans complete
 
 Plans:
-- [ ] 03-01-PLAN.md — Splash intro screen, discovery browse with hero card and standard cards, search dropdown, HubsView rewrite
+- [x] 03-01-PLAN.md — Splash intro screen, discovery browse with hero card and standard cards, search dropdown, HubsView rewrite (completed 2026-03-11)
 - [ ] 03-02-PLAN.md — Community preview page with parallax banner, social proof, sticky CTA, tier bottom sheet with accordion expansion
 - [ ] 03-03-PLAN.md — Visual verification checkpoint for complete discovery-to-preview flow
 
@@ -152,7 +152,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 |-------|----------------|--------|-----------|
 | 1. Project Scaffold and Swift Architecture | 2/2 | Complete   | 2026-03-11 |
 | 2. Design System and Mock Data | 3/3 | Complete   | 2026-03-11 |
-| 3. Discovery and Community Preview | 0/3 | In progress | - |
+| 3. Discovery and Community Preview | 1/3 | In progress | - |
 | 4. Subscription Flow and Celebration | 0/TBD | Not started | - |
 | 5. Community Hub and Navigation Structure | 0/TBD | Not started | - |
 | 6. Content Feed and Tier-Gated Access | 0/TBD | Not started | - |

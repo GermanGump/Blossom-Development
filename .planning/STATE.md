@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Phase 2 complete — human verification approved
-last_updated: "2026-03-11T22:51:14.525Z"
-last_activity: 2026-03-11 — Phase 2 fully complete — visual verification approved (Inter font, dark mode, ambassador photos confirmed)
+status: in_progress
+stopped_at: Completed Phase 3 Plan 01 — discovery screen and splash intro
+last_updated: "2026-03-11T23:16:00Z"
+last_activity: 2026-03-11 — Phase 3 Plan 01 complete — splash intro, hero card, discovery cards, search dropdown
 progress:
   total_phases: 9
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
-  percent: 22
+  total_plans: 6
+  completed_plans: 6
+  percent: 24
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 3 — Community Detail Screen (ready to begin)
+**Current focus:** Phase 3 — Discovery and Community Preview (Plan 02 next)
 
 ## Current Position
 
-Phase: 2 of 9 COMPLETE — advancing to Phase 3 (Community Detail Screen)
-Plan: 3 of 3 complete in Phase 2 (all verified)
-Status: Phase 2 complete — ready for Phase 3
-Last activity: 2026-03-11 — Phase 2 fully complete — visual verification approved (Inter font, dark mode, ambassador photos confirmed)
+Phase: 3 of 9 IN PROGRESS — Plan 01 complete, advancing to Plan 02
+Plan: 1 of 3 complete in Phase 3
+Status: Phase 3 Plan 01 complete — ready for Plan 02 (CommunityPreviewView)
+Last activity: 2026-03-11 — Phase 3 Plan 01 complete — splash, hero card, discovery view, stagger-fade, search dropdown
 
-Progress: [██▒░░░░░░░] 22%
+Progress: [███░░░░░░░] 24%
 
 ## Performance Metrics
 
@@ -47,7 +47,7 @@ Progress: [██▒░░░░░░░] 22%
 | Phase 2 | 3 | 32 min | 10.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 5 min (02-03), 15 min (02-02), 12 min (02-01), 3 min (01-01)
+- Last 5 plans: 25 min (03-01), 5 min (02-03), 15 min (02-02), 12 min (02-01), 3 min (01-01)
 - Trend: —
 
 *Updated after each plan completion*
@@ -55,6 +55,7 @@ Progress: [██▒░░░░░░░] 22%
 | Phase 02 P01 | 2 | 2 tasks | 20 files |
 | Phase 02 P02 | 15 | 2 tasks | 13 files |
 | Phase 02 P03 | 5 | 2 tasks | 20 files |
+| Phase 03 P01 | 25 | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,10 @@ Recent decisions affecting current work:
 - [Phase 02-03]: PostType enum (.text, .tradeHighlight, .youtubeLink) gives content feed rendering logic a discriminator for Phase 6
 - [Phase 02-03]: DEBUG assertion placed in .task {} modifier on ContentView (not init()) because @State store isn't accessible from init
 - [Phase 02-03]: CommunityStore uses private extension per ambassador — one extension per ambassador, easy to maintain individually
+- [Phase 03-01]: @AppStorage('hasSeenHubsSplash') lives in HubsView struct body — not in @Observable class — AppStorage properties require SwiftUI lifecycle
+- [Phase 03-01]: HubsDiscoveryViewModel initialized lazily in .onAppear as @State optional — avoids CommunityStore @Environment not yet available at struct init time
+- [Phase 03-01]: PhaseAnimator([false, true]) used for pulsating glow — cleaner than withAnimation repeating, built-in phase coordination
+- [Phase 03-01]: SearchDropdownView takes CommunityStore directly and filters internally — avoids prop-drilling filtered arrays through multiple view layers
 
 ### Pending Todos
 
@@ -91,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T22:00:00Z
-Stopped at: Phase 2 complete — human verification approved
-Resume file: .planning/phases/03-community-detail-screen/ (Phase 3, first plan)
+Last session: 2026-03-11T23:16:00Z
+Stopped at: Completed Phase 3 Plan 01 — discovery screen and splash intro
+Resume file: .planning/phases/03-discovery-and-community-preview/03-02-PLAN.md
