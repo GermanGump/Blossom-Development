@@ -17,9 +17,9 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 - [ ] **FOUND-06**: Light and dark mode support with system preference detection and correct color adaptation
 - [ ] **FOUND-07**: All @Observable classes marked @MainActor for Swift 6.2 strict concurrency compliance
 - [ ] **FOUND-08**: ComponentsKit integrated via SPM as approved third-party dependency
-- [ ] **FOUND-09**: Mock data layer with sample communities, creators, tiers, posts, and forum content
-- [ ] **FOUND-10**: Real ambassador profile photos loaded from asset catalog (BD, Brandon, Max, Nick, Moe, Canadian in a T-shirt)
-- [ ] **FOUND-11**: Blossom logo assets (light mode, dark mode, icon) loaded from asset catalog
+- [x] **FOUND-09**: Mock data layer with sample communities, creators, tiers, posts, and forum content
+- [x] **FOUND-10**: Real ambassador profile photos loaded from asset catalog (BD, Brandon, Max, Nick, Moe, Canadian in a T-shirt)
+- [x] **FOUND-11**: Blossom logo assets (light mode, dark mode, icon) loaded from asset catalog
 
 ### Discovery
 
@@ -127,9 +127,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-06 | Phase 2 | Pending |
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Pending |
-| FOUND-09 | Phase 2 | Pending |
-| FOUND-10 | Phase 2 | Pending |
-| FOUND-11 | Phase 2 | Pending |
+| FOUND-09 | Phase 2 | Complete |
+| FOUND-10 | Phase 2 | Complete |
+| FOUND-11 | Phase 2 | Complete |
 | DISC-01 | Phase 3 | Pending |
 | DISC-02 | Phase 3 | Pending |
 | DISC-03 | Phase 3 | Pending |
