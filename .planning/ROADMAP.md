@@ -36,8 +36,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2/2 plans complete
 
 Plans:
-- [ ] 01-01-PLAN.md — Xcode project scaffold, build settings, ComponentsKit SPM, core types (AppTab enum, BlossomTheme)
-- [ ] 01-02-PLAN.md — Custom scrollable tab bar, per-tab NavigationStack, Hubs top nav bar, placeholder tabs, visual checkpoint
+- [x] 01-01-PLAN.md — Xcode project scaffold, build settings, ComponentsKit SPM, core types (AppTab enum, BlossomTheme)
+- [x] 01-02-PLAN.md — Custom scrollable tab bar, per-tab NavigationStack, Hubs top nav bar, placeholder tabs, visual checkpoint
 
 ### Phase 2: Design System and Mock Data
 **Goal**: Every visual building block needed by feature screens exists as a reusable, brand-compliant component — color tokens, typography, card modifiers, shared UI primitives, and a fully seeded mock data layer — so no feature phase introduces inline hex values or raw mock arrays
@@ -49,7 +49,12 @@ Plans:
   3. The mock data layer provides at least 3 communities with creators, tiers, posts, forum threads, and FAQ entries accessible via CommunityStore — no feature screen imports raw mock arrays directly
   4. All 6 ambassador profile photos (BD, Brandon, Max, Nick, Moe, Canadian in a T-shirt) and all 3 Blossom logo variants load from the asset catalog without placeholder images
   5. Brand colors (Violet #7361F7, Orange #FF7833, Teal #35C7B2, Dark Navy #1E222A, Slate #565E76) are defined as named Asset Catalog color sets with light/dark variants — zero inline hex Color values in feature views
-**Plans**: TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Asset Catalog color sets (10 colors with light/dark), Inter font registration, BlossomFont enum, BlossomTheme refactor
+- [ ] 02-02-PLAN.md — Shared UI components (BlossomCard, BlossomButton, VerifiedBadge, TagView, SectionHeader, EmptyStateView, LockedContentOverlay), AvatarView enhancement, Phase 1 view retrofit
+- [ ] 02-03-PLAN.md — Data models (Community, Creator, Tier, Post, ForumThread, FAQEntry), CommunityStore with 6 communities, ambassador photos, logo assets, environment injection, visual checkpoint
 
 ### Phase 3: Discovery and Community Preview
 **Goal**: A subscriber opening the Communities tab can browse available communities, see enough information on each card to choose one, and view a full preview page with tier options that makes the value proposition clear before committing to subscribe
@@ -141,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Scaffold and Swift Architecture | 2/2 | Complete   | 2026-03-11 |
-| 2. Design System and Mock Data | 0/TBD | Not started | - |
+| 2. Design System and Mock Data | 0/3 | Planning complete | - |
 | 3. Discovery and Community Preview | 0/TBD | Not started | - |
 | 4. Subscription Flow and Celebration | 0/TBD | Not started | - |
 | 5. Community Hub and Navigation Structure | 0/TBD | Not started | - |
