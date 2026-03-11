@@ -40,8 +40,8 @@ struct HubsView: View {
         .navigationBarHidden(true)
         .navigationDestination(for: HubsRoute.self) { route in
             switch route {
-            case .communityPreview:
-                EmptyView() // Plan 03-02
+            case .communityPreview(let id):
+                CommunityPreviewView(communityID: id)
             case .communityDetail:
                 EmptyView() // Phase 5
             }
