@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: "01-01-PLAN.md complete — ready for 01-02-PLAN.md"
-last_updated: "2026-03-11T02:22:03Z"
-last_activity: 2026-03-11 — Phase 1 Plan 01 complete (Xcode project scaffold, ComponentsKit SPM, AppTab enum, BlossomTheme)
+status: executing
+stopped_at: "01-02-PLAN.md complete (Tasks 1-2 done) — awaiting checkpoint:human-verify at Task 3 before marking phase 1 complete"
+last_updated: "2026-03-11T02:36:36.462Z"
+last_activity: "2026-03-11 — 01-01-PLAN.md complete: Xcode project scaffold, iOS 26, Swift 6 strict concurrency, ComponentsKit SPM, AppTab enum, BlossomTheme"
 progress:
   total_phases: 9
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
   percent: 50
 ---
 
@@ -50,6 +50,7 @@ Progress: [█████░░░░░] 50%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01 P02 | 2 | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,9 @@ Recent decisions affecting current work:
 - [Init]: Per-tab NavigationStack isolation is non-negotiable — must be established in Phase 1 before any feature screens are built (irreversible pitfall if deferred)
 - [Init]: All @Observable classes must be @MainActor — synchronous mock data returns avoid actor isolation complexity entirely
 - [Init]: Subscriber journey (Phases 3-7) takes priority over creator tools (Phase 8) — demo critical path is subscriber-side
+- [Phase 01]: NavigationStack placed inside each TabView tab (not wrapping it) — enforces per-tab back-stack isolation from day one
+- [Phase 01]: connectedScenes API used for safe area inset reading — replaces deprecated UIApplication.shared.windows, iOS 26 compliant
+- [Phase 01]: HubsView does NOT contain its own NavigationStack — ContentView wraps it; pattern must be maintained for all future tab content views
 
 ### Pending Todos
 
@@ -74,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T01:57:41.273Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-project-scaffold-and-swift-architecture/01-CONTEXT.md
+Last session: 2026-03-11T02:36:36.459Z
+Stopped at: 01-02-PLAN.md complete (Tasks 1-2 done) — awaiting checkpoint:human-verify at Task 3 before marking phase 1 complete
+Resume file: None

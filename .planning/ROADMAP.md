@@ -12,7 +12,7 @@ Build a Patreon-inspired paid communities feature as a native SwiftUI prototype,
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Scaffold and Swift Architecture** - Xcode project, tab bar, per-tab NavigationStack, Swift 6.2 conventions, ComponentsKit SPM
+- [x] **Phase 1: Project Scaffold and Swift Architecture** - Xcode project, tab bar, per-tab NavigationStack, Swift 6.2 conventions, ComponentsKit SPM (completed 2026-03-11)
 - [ ] **Phase 2: Design System and Mock Data** - Brand tokens, Inter font, dark mode, shared components, MockDataService, all seed data and ambassador assets
 - [ ] **Phase 3: Discovery and Community Preview** - Splash intro, community browse cards, community preview page, tier listing and benefit expansion
 - [ ] **Phase 4: Subscription Flow and Celebration** - Mocked Stripe sheet, payment state machine, confetti animation, subscription transition, subscription management
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Tapping between tabs does not bleed navigation state — each tab maintains its own independent back-stack
   3. All @Observable view model classes are annotated @MainActor and the project compiles with zero Swift 6 strict concurrency warnings
   4. ComponentsKit resolves as an SPM dependency and the project builds cleanly
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 01-01-PLAN.md — Xcode project scaffold, build settings, ComponentsKit SPM, core types (AppTab enum, BlossomTheme)
@@ -140,7 +140,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Scaffold and Swift Architecture | 0/2 | Planning complete | - |
+| 1. Project Scaffold and Swift Architecture | 2/2 | Complete   | 2026-03-11 |
 | 2. Design System and Mock Data | 0/TBD | Not started | - |
 | 3. Discovery and Community Preview | 0/TBD | Not started | - |
 | 4. Subscription Flow and Celebration | 0/TBD | Not started | - |
