@@ -30,9 +30,9 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 
 ### Subscription
 
-- [ ] **SUBS-01**: Community preview page showing full description, value proposition, and creator bio
-- [ ] **SUBS-02**: Flexible 1-4 tier display with creator-defined tier names and monthly prices
-- [ ] **SUBS-03**: Tier detail expansion (tappable tray) showing benefits list, included content types, and monthly cost
+- [x] **SUBS-01**: Community preview page showing full description, value proposition, and creator bio
+- [x] **SUBS-02**: Flexible 1-4 tier display with creator-defined tier names and monthly prices
+- [x] **SUBS-03**: Tier detail expansion (tappable tray) showing benefits list, included content types, and monthly cost
 - [ ] **SUBS-04**: Mocked Stripe payment screen (card number, expiry, CVC fields) presented as a sheet — no real processing
 - [ ] **SUBS-05**: Payment validation simulation (brief loading state, then success)
 - [ ] **SUBS-06**: Confetti celebration animation with Blossom logo centered on screen upon successful subscription
@@ -134,9 +134,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DISC-02 | Phase 3 | Pending |
 | DISC-03 | Phase 3 | Pending |
 | DISC-04 | Phase 3 | Pending |
-| SUBS-01 | Phase 3 | Pending |
-| SUBS-02 | Phase 3 | Pending |
-| SUBS-03 | Phase 3 | Pending |
+| SUBS-01 | Phase 3 | Complete |
+| SUBS-02 | Phase 3 | Complete |
+| SUBS-03 | Phase 3 | Complete |
 | SUBS-04 | Phase 4 | Pending |
 | SUBS-05 | Phase 4 | Pending |
 | SUBS-06 | Phase 4 | Pending |
