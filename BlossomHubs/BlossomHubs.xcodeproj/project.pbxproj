@@ -11,6 +11,7 @@
 		166CBDF7F5E6B582F74EB230 /* InsightsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */; };
 		202F9045CCFF0A1AC00F68AC /* HubsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */; };
 		2767FAD6994EAA8A9CC62362 /* LearnNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BED777A2B6E1402277AE6A /* LearnNavigation.swift */; };
+		31ABE915175F2598D1A3B964 /* TierCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AAC386A452D8AFCE411DFB /* TierCardView.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -44,6 +45,7 @@
 		D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */; };
 		DEC5FF90FBCD54F282EF591B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B0B0E5BE45529E47DE703 /* CommunityCardView.swift */; };
 		E6C67D20BAFC940471149D66 /* CommunityPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C13A3CB355D6DD680099E /* CommunityPreviewView.swift */; };
+		EFF91A3C034AA3CA8C3CA458 /* TiersBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22A0C3C545D53BC2DB63E5 /* TiersBottomSheet.swift */; };
 		F40D87608C86380C32936957 /* PortfolioNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */; };
 		FF7B80191D4F65B697C2C7DF /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,7 @@
 		106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PortfolioNavigation.swift; sourceTree = "<group>"; };
 		1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarketsNavigation.swift; sourceTree = "<group>"; };
 		1AB3D46D21C47ACC5C42714C /* HubsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsView.swift; sourceTree = "<group>"; };
+		2B22A0C3C545D53BC2DB63E5 /* TiersBottomSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TiersBottomSheet.swift; sourceTree = "<group>"; };
 		322EFE0E0060815629A31849 /* LockedContentOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LockedContentOverlay.swift; sourceTree = "<group>"; };
 		350B18EB99061DB47CA15FCA /* Inter-Regular.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
 		3B9C13A3CB355D6DD680099E /* CommunityPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityPreviewView.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		C264E03E234F388C74367472 /* BlossomCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomCard.swift; sourceTree = "<group>"; };
 		C4D5E6F7A8B9C0D1E2F3A4B5 /* CommunityStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityStore.swift; sourceTree = "<group>"; };
 		C8B78606FFF17AD77C0D22B4 /* HubsDiscoveryViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsDiscoveryViewModel.swift; path = Features/Hubs/Discovery/HubsDiscoveryViewModel.swift; sourceTree = "<group>"; };
+		C9AAC386A452D8AFCE411DFB /* TierCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TierCardView.swift; sourceTree = "<group>"; };
 		D76966A902C2E8B189CF7695 /* Inter-Medium.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		D792B01C0B7F56ECEC95FB55 /* EmptyStateView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			children = (
 				3B9C13A3CB355D6DD680099E /* CommunityPreviewView.swift */,
 				BC9EE4E93FD20305DAE4C424 /* CommunityPreviewViewModel.swift */,
+				2B22A0C3C545D53BC2DB63E5 /* TiersBottomSheet.swift */,
+				C9AAC386A452D8AFCE411DFB /* TierCardView.swift */,
 			);
 			name = Preview;
 			path = Preview;
@@ -419,6 +425,8 @@
 				DEC5FF90FBCD54F282EF591B /* CommunityCardView.swift in Sources */,
 				E6C67D20BAFC940471149D66 /* CommunityPreviewView.swift in Sources */,
 				86F3DBA0F13E5F5985A62712 /* CommunityPreviewViewModel.swift in Sources */,
+				EFF91A3C034AA3CA8C3CA458 /* TiersBottomSheet.swift in Sources */,
+				31ABE915175F2598D1A3B964 /* TierCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
