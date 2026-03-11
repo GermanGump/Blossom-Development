@@ -2,13 +2,23 @@
 import SwiftUI
 
 enum BlossomTheme {
-    static let teal = Color(hex: "#35C7B2")
-    static let violet = Color(hex: "#7361F7")
-    static let orange = Color(hex: "#FF7833")
-    static let darkNavy = Color(hex: "#1E222A")
-    static let slate = Color(hex: "#565E76")
+    // Brand accents — identical in light and dark mode
+    static let teal = Color("BlossomTeal")
+    static let violet = Color("BlossomViolet")
+    static let orange = Color("BlossomOrange")
 
-    // Tab bar specific
+    // Legacy convenience aliases (preserved for existing callers)
+    static let darkNavy = Color("BlossomDarkNavy")
+    static let slate = Color("BlossomSlate")
+
+    // Semantic tokens — automatically adapt between light and dark via colorsets
+    static let background = Color("BlossomBackground")
+    static let cardSurface = Color("BlossomCardSurface")
+    static let cardBorder = Color("BlossomCardBorder")
+    static let primaryText = Color("BlossomPrimaryText")
+    static let secondaryText = Color("BlossomSecondaryText")
+
+    // Tab bar (systemBackground auto-adapts — correct for both modes)
     static let tabActive = teal
     static let tabInactive = Color(UIColor.systemGray3)
     static let tabBarBackground = Color(UIColor.systemBackground)

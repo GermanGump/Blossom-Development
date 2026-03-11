@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import ComponentsKit
 
 @main
@@ -10,12 +11,24 @@ struct BlossomHubsApp: App {
         appearance.backgroundColor = UIColor.systemBackground
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
+
+        #if DEBUG
+        // Verify Inter font files are correctly bundled and registered.
+        // If any assertion fires, check UIAppFonts in Info.plist and
+        // that the .otf files are in the Copy Bundle Resources build phase.
+        assert(UIFont(name: "Inter-Regular", size: 17) != nil,
+               "Inter-Regular font not loaded — check UIAppFonts in Info.plist")
+        assert(UIFont(name: "Inter-Medium", size: 17) != nil,
+               "Inter-Medium font not loaded — check UIAppFonts in Info.plist")
+        assert(UIFont(name: "Inter-SemiBold", size: 17) != nil,
+               "Inter-SemiBold font not loaded — check UIAppFonts in Info.plist")
+        #endif
     }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .preferredColorScheme(.light) // Default to light mode for demo
+            // .preferredColorScheme(.light) removed to enable dark mode testing
         }
     }
 }
