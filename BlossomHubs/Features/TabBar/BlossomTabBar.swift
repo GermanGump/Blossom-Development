@@ -26,15 +26,6 @@ struct BlossomTabBar: View {
             }
         }
         .background(BlossomTheme.tabBarBackground)
-        .padding(.bottom, safeAreaBottomInset)
-    }
-
-    private var safeAreaBottomInset: CGFloat {
-        let keyWindow = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap { $0.windows }
-            .first(where: { $0.isKeyWindow })
-        return keyWindow?.safeAreaInsets.bottom ?? 0
     }
 }
 
@@ -53,7 +44,7 @@ struct BlossomTabItem: View {
                     .fontWeight(.medium)
             }
             .foregroundColor(isSelected ? BlossomTheme.tabActive : BlossomTheme.tabInactive)
-            .frame(width: UIScreen.main.bounds.width / 5)
+            .frame(minWidth: 70)
             .padding(.top, 8)
         }
         .buttonStyle(.plain)
