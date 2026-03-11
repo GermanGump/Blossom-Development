@@ -96,14 +96,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		466679C585890817677A6412 /* Assets.xcassets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets.xcassets;
-			sourceTree = "<group>";
-		};
-		4744BCAE0E60151BE5BB7F8C /* Home */ = {
+4744BCAE0E60151BE5BB7F8C /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */,
@@ -181,7 +174,6 @@
 				8ED69A54995A0AB0A2CE0885 /* App */,
 				499282665E1E922E516EEC5F /* Features */,
 				D9D52CF63E41499F808ADAAE /* Core */,
-				466679C585890817677A6412 /* Assets.xcassets */,
 				51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */,
 				D91C95A2DBA97700EAA0354E /* Info.plist */,
 			);
