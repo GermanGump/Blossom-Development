@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,25 +28,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PortfolioNavigation.swift; path = Features/Portfolio/PortfolioNavigation.swift; sourceTree = "<group>"; };
-		1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarketsNavigation.swift; path = Features/Markets/MarketsNavigation.swift; sourceTree = "<group>"; };
-		1AB3D46D21C47ACC5C42714C /* HubsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsView.swift; path = Features/Hubs/HubsView.swift; sourceTree = "<group>"; };
-		3C47A0DA3F6F3A877423872E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
-		42BED777A2B6E1402277AE6A /* LearnNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LearnNavigation.swift; path = Features/Learn/LearnNavigation.swift; sourceTree = "<group>"; };
-		4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomTabBar.swift; path = Features/TabBar/BlossomTabBar.swift; sourceTree = "<group>"; };
-		503A16D311E9E96EDCCE313F /* BlossomTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomTheme.swift; path = Core/Theme/BlossomTheme.swift; sourceTree = "<group>"; };
+		106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PortfolioNavigation.swift; sourceTree = "<group>"; };
+		1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarketsNavigation.swift; sourceTree = "<group>"; };
+		1AB3D46D21C47ACC5C42714C /* HubsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsView.swift; sourceTree = "<group>"; };
+		3C47A0DA3F6F3A877423872E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		42BED777A2B6E1402277AE6A /* LearnNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearnNavigation.swift; sourceTree = "<group>"; };
+		4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomTabBar.swift; sourceTree = "<group>"; };
+		503A16D311E9E96EDCCE313F /* BlossomTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomTheme.swift; sourceTree = "<group>"; };
 		51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AvatarView.swift; path = Core/Components/AvatarView.swift; sourceTree = "<group>"; };
-		604B8200FCCAB049F5D29CE2 /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = Features/TabBar/TabItem.swift; sourceTree = "<group>"; };
+		5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		604B8200FCCAB049F5D29CE2 /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		6CF207F658E44D9FBB0772C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomHubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsNavigation.swift; path = Features/Hubs/HubsNavigation.swift; sourceTree = "<group>"; };
-		778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsTopNavBar.swift; path = Features/Hubs/HubsTopNavBar.swift; sourceTree = "<group>"; };
-		8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsightsNavigation.swift; path = Features/Insights/InsightsNavigation.swift; sourceTree = "<group>"; };
-		A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeNavigation.swift; path = Features/Home/HomeNavigation.swift; sourceTree = "<group>"; };
+		76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsNavigation.swift; sourceTree = "<group>"; };
+		778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsTopNavBar.swift; sourceTree = "<group>"; };
+		8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InsightsNavigation.swift; sourceTree = "<group>"; };
+		A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeNavigation.swift; sourceTree = "<group>"; };
 		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaceholderTabView.swift; path = Core/Components/PlaceholderTabView.swift; sourceTree = "<group>"; };
-		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlossomHubsApp.swift; path = App/BlossomHubsApp.swift; sourceTree = "<group>"; };
+		EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaceholderTabView.swift; sourceTree = "<group>"; };
+		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomHubsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,6 @@
 				EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */,
 				5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -101,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Assets.xcassets;
 			path = Assets.xcassets;
 			sourceTree = "<group>";
 		};
@@ -110,7 +108,6 @@
 			children = (
 				A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -125,7 +122,6 @@
 				B055A2F2B27B3F6AD39260AE /* Portfolio */,
 				979E5CAF5ECB5B945E42FE46 /* Insights */,
 			);
-			name = Features;
 			path = Features;
 			sourceTree = "<group>";
 		};
@@ -134,7 +130,6 @@
 			children = (
 				42BED777A2B6E1402277AE6A /* LearnNavigation.swift */,
 			);
-			name = Learn;
 			path = Learn;
 			sourceTree = "<group>";
 		};
@@ -143,7 +138,6 @@
 			children = (
 				503A16D311E9E96EDCCE313F /* BlossomTheme.swift */,
 			);
-			name = Theme;
 			path = Theme;
 			sourceTree = "<group>";
 		};
@@ -153,7 +147,6 @@
 				604B8200FCCAB049F5D29CE2 /* TabItem.swift */,
 				4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */,
 			);
-			name = TabBar;
 			path = TabBar;
 			sourceTree = "<group>";
 		};
@@ -171,7 +164,6 @@
 				F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */,
 				3C47A0DA3F6F3A877423872E /* ContentView.swift */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -180,7 +172,6 @@
 			children = (
 				8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */,
 			);
-			name = Insights;
 			path = Insights;
 			sourceTree = "<group>";
 		};
@@ -195,7 +186,6 @@
 				D91C95A2DBA97700EAA0354E /* Info.plist */,
 			);
 			name = BlossomHubs;
-			path = BlossomHubs;
 			sourceTree = "<group>";
 		};
 		B055A2F2B27B3F6AD39260AE /* Portfolio */ = {
@@ -203,7 +193,6 @@
 			children = (
 				106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */,
 			);
-			name = Portfolio;
 			path = Portfolio;
 			sourceTree = "<group>";
 		};
@@ -214,7 +203,6 @@
 				76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */,
 				778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */,
 			);
-			name = Hubs;
 			path = Hubs;
 			sourceTree = "<group>";
 		};
@@ -223,7 +211,6 @@
 			children = (
 				1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */,
 			);
-			name = Markets;
 			path = Markets;
 			sourceTree = "<group>";
 		};
@@ -233,7 +220,6 @@
 				6C8D1AB44CE169AC0628EE57 /* Theme */,
 				0DA1A1DE9AA1BAEDD191A34E /* Components */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -278,11 +264,9 @@
 				Base,
 			);
 			mainGroup = 1D78AF911C3FE2A5668F5C95;
-			minimizedProjectReferenceProxies = 0;
 			packageReferences = (
 				E90ED9A069755CF5D0B647A9 /* XCRemoteSwiftPackageReference "ComponentsKit" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 8960ABC2420B5484FA9ABAB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,16 +380,20 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				INFOPLIST_FILE = BlossomHubs/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blossom.hubs-prototype";
 				PRODUCT_NAME = BlossomHubs;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_LANGUAGE_VERSION = 6;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
 				SWIFT_VERSION = 6.0;
@@ -425,9 +413,12 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				INFOPLIST_FILE = BlossomHubs/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blossom.hubs-prototype";
