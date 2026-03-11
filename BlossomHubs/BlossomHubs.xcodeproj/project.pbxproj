@@ -10,8 +10,10 @@
 		166CBDF7F5E6B582F74EB230 /* InsightsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */; };
 		202F9045CCFF0A1AC00F68AC /* HubsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */; };
 		2767FAD6994EAA8A9CC62362 /* LearnNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BED777A2B6E1402277AE6A /* LearnNavigation.swift */; };
+		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
+		5F56B861CF0ED32AEB814909 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D76966A902C2E8B189CF7695 /* Inter-Medium.otf */; };
 		6C44D6FC0BFE4D0932020D53 /* BlossomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A16D311E9E96EDCCE313F /* BlossomTheme.swift */; };
 		771E30086BE612562D01269D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */; };
 		891D3652AD087DEF57310006 /* MarketsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */; };
@@ -19,8 +21,10 @@
 		9D252AC79C26D8D1A1B4F899 /* HubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3D46D21C47ACC5C42714C /* HubsView.swift */; };
 		A1F14A95FF6DAE8A51EDDE61 /* ComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */; };
 		B96E0E6F774CB89D0145D3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF207F658E44D9FBB0772C8 /* Foundation.framework */; };
+		BBF9D065872A061C5D33B654 /* BlossomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96F1BDC6EB7A7E87CE223A3 /* BlossomFont.swift */; };
 		C8A9B06F3D538B9E0BF33102 /* PlaceholderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */; };
 		C9A9C81E3DE742B608162789 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B8200FCCAB049F5D29CE2 /* TabItem.swift */; };
+		CE14C931417676B9F746DFE5 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84803389C72F21C0BAE061DF /* Inter-SemiBold.otf */; };
 		D2D9D037D7F2E41C0A0C1A6B /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */; };
 		D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */; };
 		F40D87608C86380C32936957 /* PortfolioNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */; };
@@ -31,6 +35,7 @@
 		106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PortfolioNavigation.swift; sourceTree = "<group>"; };
 		1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarketsNavigation.swift; sourceTree = "<group>"; };
 		1AB3D46D21C47ACC5C42714C /* HubsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsView.swift; sourceTree = "<group>"; };
+		350B18EB99061DB47CA15FCA /* Inter-Regular.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
 		3C47A0DA3F6F3A877423872E /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		42BED777A2B6E1402277AE6A /* LearnNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearnNavigation.swift; sourceTree = "<group>"; };
 		4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomTabBar.swift; sourceTree = "<group>"; };
@@ -42,9 +47,12 @@
 		763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomHubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsNavigation.swift; sourceTree = "<group>"; };
 		778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsTopNavBar.swift; sourceTree = "<group>"; };
+		84803389C72F21C0BAE061DF /* Inter-SemiBold.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-SemiBold.otf"; sourceTree = "<group>"; };
 		8A6EC3F27F2B1F4A774BF773 /* InsightsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InsightsNavigation.swift; sourceTree = "<group>"; };
 		A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeNavigation.swift; sourceTree = "<group>"; };
+		D76966A902C2E8B189CF7695 /* Inter-Medium.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D96F1BDC6EB7A7E87CE223A3 /* BlossomFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomFont.swift; sourceTree = "<group>"; };
 		EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaceholderTabView.swift; sourceTree = "<group>"; };
 		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomHubsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				503A16D311E9E96EDCCE313F /* BlossomTheme.swift */,
+				D96F1BDC6EB7A7E87CE223A3 /* BlossomFont.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -176,6 +185,9 @@
 				D9D52CF63E41499F808ADAAE /* Core */,
 				51B5E23D24897AEAAFDEE4E1 /* Assets.xcassets */,
 				D91C95A2DBA97700EAA0354E /* Info.plist */,
+				350B18EB99061DB47CA15FCA /* Inter-Regular.otf */,
+				D76966A902C2E8B189CF7695 /* Inter-Medium.otf */,
+				84803389C72F21C0BAE061DF /* Inter-SemiBold.otf */,
 			);
 			name = BlossomHubs;
 			sourceTree = "<group>";
@@ -275,6 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				771E30086BE612562D01269D /* Assets.xcassets in Resources */,
+				38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */,
+				5F56B861CF0ED32AEB814909 /* Inter-Medium.otf in Resources */,
+				CE14C931417676B9F746DFE5 /* Inter-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +315,7 @@
 				202F9045CCFF0A1AC00F68AC /* HubsNavigation.swift in Sources */,
 				D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */,
 				D2D9D037D7F2E41C0A0C1A6B /* AvatarView.swift in Sources */,
+				BBF9D065872A061C5D33B654 /* BlossomFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
