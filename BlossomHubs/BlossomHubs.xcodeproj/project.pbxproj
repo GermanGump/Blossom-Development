@@ -24,9 +24,11 @@
 		891D3652AD087DEF57310006 /* MarketsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1354B469AC8815E6F6E12B09 /* MarketsNavigation.swift */; };
 		8A201F350CFAFDBAEBF5DFCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A0DA3F6F3A877423872E /* ContentView.swift */; };
 		8E108D05782098FC13B444D4 /* BlossomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264E03E234F388C74367472 /* BlossomCard.swift */; };
+		998B7DC4468901BD6DE78260 /* CommunityHeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1784856369ADC032F61CA1 /* CommunityHeroCardView.swift */; };
 		9D252AC79C26D8D1A1B4F899 /* HubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3D46D21C47ACC5C42714C /* HubsView.swift */; };
 		A1F14A95FF6DAE8A51EDDE61 /* ComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16DFD9B1AD952AA1ECEDB888 /* ComponentsKit */; };
 		A2C4F8B1D3E56781AB234567 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5A6B7C8D9E0F1A2 /* Community.swift */; };
+		AA14FC682B6C0E0003D36B10 /* HubsDiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B78606FFF17AD77C0D22B4 /* HubsDiscoveryViewModel.swift */; };
 		B3C4D5E6F7A8B9C0D1E2F3A4 /* CommunityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D5E6F7A8B9C0D1E2F3A4B5 /* CommunityStore.swift */; };
 		B96E0E6F774CB89D0145D3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF207F658E44D9FBB0772C8 /* Foundation.framework */; };
 		BBF9D065872A061C5D33B654 /* BlossomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96F1BDC6EB7A7E87CE223A3 /* BlossomFont.swift */; };
@@ -39,6 +41,7 @@
 		D2E3EB164B2D8F2FE1B09F84 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9313992C0158EB21D3BDCD /* TagView.swift */; };
 		D32BF9CC13033EBE65C96E2F /* SearchDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EF3D5C6324D1C2E4D6B92 /* SearchDropdownView.swift */; };
 		D7EF01A37A49E6E0A1CFEAAD /* HubsTopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778F05C1E3A3CDE77CF07ECA /* HubsTopNavBar.swift */; };
+		DEC5FF90FBCD54F282EF591B /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B0B0E5BE45529E47DE703 /* CommunityCardView.swift */; };
 		F40D87608C86380C32936957 /* PortfolioNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C80A552AF4C954E66D31D /* PortfolioNavigation.swift */; };
 		FF7B80191D4F65B697C2C7DF /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +60,9 @@
 		53B34A131E3D410921B69BFC /* SectionHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5A2156F81D8D0B976860392A /* HubsSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsSplashView.swift; path = Features/Hubs/Discovery/HubsSplashView.swift; sourceTree = "<group>"; };
 		5AA2DC0FD00A07D64A6CF0A6 /* AvatarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		5B3B0B0E5BE45529E47DE703 /* CommunityCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommunityCardView.swift; path = Features/Hubs/Discovery/CommunityCardView.swift; sourceTree = "<group>"; };
 		604B8200FCCAB049F5D29CE2 /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		6A1784856369ADC032F61CA1 /* CommunityHeroCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommunityHeroCardView.swift; path = Features/Hubs/Discovery/CommunityHeroCardView.swift; sourceTree = "<group>"; };
 		6CF207F658E44D9FBB0772C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		763A8DBE29784DF03D0AA1D3 /* BlossomHubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomHubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A3AFEBBA05E3AFB2F407DB /* HubsNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HubsNavigation.swift; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		B1C2D3E4F5A6B7C8D9E0F1A2 /* Community.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		C264E03E234F388C74367472 /* BlossomCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomCard.swift; sourceTree = "<group>"; };
 		C4D5E6F7A8B9C0D1E2F3A4B5 /* CommunityStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityStore.swift; sourceTree = "<group>"; };
+		C8B78606FFF17AD77C0D22B4 /* HubsDiscoveryViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubsDiscoveryViewModel.swift; path = Features/Hubs/Discovery/HubsDiscoveryViewModel.swift; sourceTree = "<group>"; };
 		D76966A902C2E8B189CF7695 /* Inter-Medium.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		D792B01C0B7F56ECEC95FB55 /* EmptyStateView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		D91C95A2DBA97700EAA0354E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 			children = (
 				5A2156F81D8D0B976860392A /* HubsSplashView.swift */,
 				D9B19952DAF999AF87C36000 /* HubsDiscoveryView.swift */,
+				C8B78606FFF17AD77C0D22B4 /* HubsDiscoveryViewModel.swift */,
+				6A1784856369ADC032F61CA1 /* CommunityHeroCardView.swift */,
+				5B3B0B0E5BE45529E47DE703 /* CommunityCardView.swift */,
 			);
 			name = Discovery;
 			path = Discovery;
@@ -390,6 +399,9 @@
 				554ADCDEC9ECCB29D3799145 /* HubsSplashView.swift in Sources */,
 				55675CA8022C91092C9AA81C /* HubsDiscoveryView.swift in Sources */,
 				D32BF9CC13033EBE65C96E2F /* SearchDropdownView.swift in Sources */,
+				AA14FC682B6C0E0003D36B10 /* HubsDiscoveryViewModel.swift in Sources */,
+				998B7DC4468901BD6DE78260 /* CommunityHeroCardView.swift in Sources */,
+				DEC5FF90FBCD54F282EF591B /* CommunityCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
