@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-11T21:05:01.372Z"
-last_activity: 2026-03-11 — Phase 1 complete and verified (10/10 must-haves)
+status: executing
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-11T17:42:00.000Z"
+last_activity: 2026-03-11 — Phase 2 Plan 01 complete (color tokens, Inter fonts, BlossomFont, BlossomTheme refactor)
 progress:
   total_phases: 9
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
-  percent: 11
+  total_plans: 5
+  completed_plans: 3
+  percent: 14
 ---
 
 # Project State
@@ -21,36 +21,38 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 2 — Design System and Mock Data
+**Current focus:** Phase 2 — Design System and Mock Data (Plan 2 of 3 remaining)
 
 ## Current Position
 
 Phase: 2 of 9 (Design System and Mock Data)
-Plan: 0 of 0 in current phase (not yet planned)
-Status: Ready to plan
-Last activity: 2026-03-11 — Phase 1 complete and verified (10/10 must-haves)
+Plan: 1 of 3 complete in current phase
+Status: Executing
+Last activity: 2026-03-11 — Phase 2 Plan 01 complete — 10 colorsets, Inter fonts, BlossomFont enum, BlossomTheme refactor
 
-Progress: [█░░░░░░░░░] 11%
+Progress: [█░░░░░░░░░] 14%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 3 min
-- Total execution time: 0.05 hours
+- Total plans completed: 3
+- Average duration: 6 min
+- Total execution time: 0.22 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 1 | 1 | 3 min | 3 min |
+| Phase 1 | 2 | 3 min | 1.5 min |
+| Phase 2 | 1 | 12 min | 12 min |
 
 **Recent Trend:**
-- Last 5 plans: 3 min (01-01)
+- Last 5 plans: 12 min (02-01), 3 min (01-01)
 - Trend: —
 
 *Updated after each plan completion*
 | Phase 01 P02 | 2 | 2 tasks | 13 files |
+| Phase 02 P01 | 2 | 2 tasks | 20 files |
 
 ## Accumulated Context
 
@@ -66,6 +68,10 @@ Recent decisions affecting current work:
 - [Phase 01]: NavigationStack placed inside each TabView tab (not wrapping it) — enforces per-tab back-stack isolation from day one
 - [Phase 01]: connectedScenes API used for safe area inset reading — replaces deprecated UIApplication.shared.windows, iOS 26 compliant
 - [Phase 01]: HubsView does NOT contain its own NavigationStack — ContentView wraps it; pattern must be maintained for all future tab content views
+- [Phase 02-01]: Inter font v4.0 sourced from rsms/inter GitHub release — PostScript names Inter-Regular, Inter-Medium, Inter-SemiBold confirmed via binary inspection
+- [Phase 02-01]: BlossomSecondaryText dark value #8B92A8 — mid-tone blue-gray readable on #2A2E38 dark card surface
+- [Phase 02-01]: Color(hex:) extension retained in BlossomTheme.swift for utility but no brand color properties use it
+- [Phase 02-01]: preferredColorScheme(.light) removed from BlossomHubsApp to enable real device dark mode testing
 
 ### Pending Todos
 
@@ -78,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T21:05:01.369Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-design-system-and-mock-data/02-CONTEXT.md
+Last session: 2026-03-11T17:42:00.000Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: .planning/phases/02-design-system-and-mock-data/02-02-PLAN.md

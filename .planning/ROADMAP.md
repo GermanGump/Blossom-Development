@@ -52,7 +52,7 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Asset Catalog color sets (10 colors with light/dark), Inter font registration, BlossomFont enum, BlossomTheme refactor
+- [x] 02-01-PLAN.md — Asset Catalog color sets (10 colors with light/dark), Inter font registration, BlossomFont enum, BlossomTheme refactor (completed 2026-03-11)
 - [ ] 02-02-PLAN.md — Shared UI components (BlossomCard, BlossomButton, VerifiedBadge, TagView, SectionHeader, EmptyStateView, LockedContentOverlay), AvatarView enhancement, Phase 1 view retrofit
 - [ ] 02-03-PLAN.md — Data models (Community, Creator, Tier, Post, ForumThread, FAQEntry), CommunityStore with 6 communities, ambassador photos, logo assets, environment injection, visual checkpoint
 
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Scaffold and Swift Architecture | 2/2 | Complete   | 2026-03-11 |
-| 2. Design System and Mock Data | 0/3 | Planning complete | - |
+| 2. Design System and Mock Data | 1/3 | In progress | - |
 | 3. Discovery and Community Preview | 0/TBD | Not started | - |
 | 4. Subscription Flow and Celebration | 0/TBD | Not started | - |
 | 5. Community Hub and Navigation Structure | 0/TBD | Not started | - |
