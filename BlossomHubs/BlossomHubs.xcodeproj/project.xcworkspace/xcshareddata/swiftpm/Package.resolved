@@ -1,0 +1,24 @@
+{
+  "originHash" : "d880dd4676099a82b4cdf40dc89e546db08108b0faed47b8715e9167faa7577f",
+  "pins" : [
+    {
+      "identity" : "autolayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/componentskit/AutoLayout",
+      "state" : {
+        "revision" : "fb4d7ea7ad5cfbaaf972506e6e23f87824345e4d",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "componentskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/componentskit/ComponentsKit.git",
+      "state" : {
+        "revision" : "e47e4976667b9a34c9c39d5a1227d2c73ef2154e",
+        "version" : "1.6.1"
+      }
+    }
+  ],
+  "version" : 3
+}
