@@ -199,7 +199,7 @@ private extension CommunityStore {
         let tiers = [
             Tier(
                 name: "Basic",
-                monthlyPrice: 9,
+                monthlyPrice: 29.99,
                 benefits: [
                     "Weekly growth stock watchlist",
                     "Community forum access",
@@ -329,7 +329,7 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 287,
-            category: "Growth Investing"
+            category: "Education & Swing Trading"
         )
     }
 }

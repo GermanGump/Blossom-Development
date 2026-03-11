@@ -1,26 +1,50 @@
 import SwiftUI
 
 struct HubsView: View {
+    @AppStorage("hasSeenHubsSplash") private var hasSeenSplash = false
+    @State private var showDiscovery = false
     @State private var searchText = ""
 
+    @Environment(CommunityStore.self) private var store
+
     var body: some View {
-        VStack(spacing: 0) {
-            HubsTopNavBar(searchText: $searchText)
-            Spacer()
-            VStack(spacing: 8) {
-                Text("Hubs")
-                    .font(BlossomFont.title)
-                    .foregroundColor(BlossomTheme.primaryText)
-                Text("Communities will appear here")
-                    .font(BlossomFont.subhead)
-                    .foregroundColor(BlossomTheme.secondaryText)
+        ZStack {
+            if !hasSeenSplash && !showDiscovery {
+                HubsSplashView {
+                    withAnimation(.easeOut(duration: 0.3)) {
+                        showDiscovery = true
+                    } completion: {
+                        hasSeenSplash = true
+                    }
+                }
+                .transition(.opacity)
+            } else {
+                VStack(spacing: 0) {
+                    HubsTopNavBar(searchText: $searchText)
+                    HubsDiscoveryView(searchText: searchText)
+                }
+                .transition(.opacity)
             }
-            Spacer()
+
+            // Search overlay on top
+            if !searchText.isEmpty {
+                VStack(spacing: 0) {
+                    Color.clear.frame(height: 60)
+                    SearchDropdownView(query: searchText, store: store)
+                    Spacer()
+                }
+                .ignoresSafeArea(edges: .bottom)
+            }
         }
         .background(BlossomTheme.background)
         .navigationBarHidden(true)
-        .navigationDestination(for: HubsRoute.self) { _ in
-            EmptyView()
+        .navigationDestination(for: HubsRoute.self) { route in
+            switch route {
+            case .communityPreview:
+                EmptyView() // Plan 03-02
+            case .communityDetail:
+                EmptyView() // Phase 5
+            }
         }
     }
 }
@@ -28,5 +52,6 @@ struct HubsView: View {
 #Preview {
     NavigationStack {
         HubsView()
+            .environment(CommunityStore())
     }
 }
