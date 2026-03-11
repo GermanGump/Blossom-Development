@@ -4,6 +4,8 @@ import ComponentsKit
 
 @main
 struct BlossomHubsApp: App {
+    @State private var store = CommunityStore()
+
     init() {
         // Suppress iOS 26 Liquid Glass on native tab bar (belt-and-suspenders with custom tab bar)
         let appearance = UITabBarAppearance()
@@ -28,7 +30,13 @@ struct BlossomHubsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            // .preferredColorScheme(.light) removed to enable dark mode testing
+                .environment(store)
+                .task {
+                    #if DEBUG
+                    assert(store.communities.count >= 3,
+                           "Mock data should have at least 3 communities")
+                    #endif
+                }
         }
     }
 }
