@@ -5,6 +5,7 @@ import ComponentsKit
 @main
 struct BlossomHubsApp: App {
     @State private var store = CommunityStore()
+    @State private var subscriptionStore = SubscriptionStore()
 
     init() {
         // Suppress iOS 26 Liquid Glass on native tab bar (belt-and-suspenders with custom tab bar)
@@ -31,6 +32,7 @@ struct BlossomHubsApp: App {
         WindowGroup {
             ContentView()
                 .environment(store)
+                .environment(subscriptionStore)
                 .task {
                     #if DEBUG
                     assert(store.communities.count >= 3,
