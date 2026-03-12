@@ -18,6 +18,7 @@
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* MockPaymentSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C6D7E8F9A0B1C2D3E4F5 /* MockPaymentSheetView.swift */; };
 		E5F6A7B8C9D0E1F2A3B4C5D6 /* ConfettiCelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C6D7E8F9A0B1C2D3E4F5A6 /* ConfettiCelebrationView.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* CancelRetentionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */; };
+		A8B9C0D1E2F3A4B5C6D7E8F9 /* MySubscriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1E2F3A4B5C6D7E8F9A0 /* MySubscriptionsView.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -105,6 +106,7 @@
 		EBB1D901D3BDAA3AA5F50109 /* PlaceholderTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaceholderTabView.swift; sourceTree = "<group>"; };
 		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomHubsApp.swift; sourceTree = "<group>"; };
 		A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CancelRetentionSheet.swift; sourceTree = "<group>"; };
+		B9C0D1E2F3A4B5C6D7E8F9A0 /* MySubscriptionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MySubscriptionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */,
+				B9C0D1E2F3A4B5C6D7E8F9A0 /* MySubscriptionsView.swift */,
 			);
 			name = Subscription;
 			path = Subscription;
@@ -469,6 +472,7 @@
 				D4E5F6A7B8C9D0E1F2A3B4C5 /* MockPaymentSheetView.swift in Sources */,
 				E5F6A7B8C9D0E1F2A3B4C5D6 /* ConfettiCelebrationView.swift in Sources */,
 				F6A7B8C9D0E1F2A3B4C5D6E7 /* CancelRetentionSheet.swift in Sources */,
+				A8B9C0D1E2F3A4B5C6D7E8F9 /* MySubscriptionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

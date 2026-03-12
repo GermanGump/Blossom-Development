@@ -40,10 +40,12 @@ struct HubsTopNavBar: View {
                     .offset(x: 8, y: -6)
             }
 
-            // Right: violet speech bubble with dollar sign
-            Image(systemName: "dollarsign.bubble.fill")
-                .foregroundColor(BlossomTheme.violet)
-                .font(.system(size: 28))
+            // Right: violet speech bubble with dollar sign -> My Subscriptions
+            NavigationLink(value: HubsRoute.mySubscriptions) {
+                Image(systemName: "dollarsign.bubble.fill")
+                    .foregroundColor(BlossomTheme.violet)
+                    .font(.system(size: 28))
+            }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)

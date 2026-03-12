@@ -48,6 +48,8 @@ struct HubsView: View {
                 CommunityPreviewView(communityID: id)
             case .communityDetail:
                 EmptyView() // Phase 5
+            case .mySubscriptions:
+                MySubscriptionsView()
             }
         }
     }
