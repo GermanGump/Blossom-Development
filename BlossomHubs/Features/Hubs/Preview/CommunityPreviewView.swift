@@ -45,9 +45,7 @@ struct CommunityPreviewView: View {
                                 .frame(maxWidth: .infinity)
                                 .visualEffect { content, proxy in
                                     let offsetY = proxy.frame(in: .scrollView).minY
-                                    return offsetY > 0
-                                        ? content.offset(y: -offsetY * 0.4)
-                                        : content
+                                    content.offset(y: offsetY > 0 ? -offsetY * 0.4 : 0)
                                 }
                         } else {
                             LinearGradient(
@@ -57,9 +55,7 @@ struct CommunityPreviewView: View {
                             )
                             .visualEffect { content, proxy in
                                 let offsetY = proxy.frame(in: .scrollView).minY
-                                return offsetY > 0
-                                    ? content.offset(y: -offsetY * 0.4)
-                                    : content
+                                content.offset(y: offsetY > 0 ? -offsetY * 0.4 : 0)
                             }
                         }
                     }
