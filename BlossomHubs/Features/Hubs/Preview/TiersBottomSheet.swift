@@ -1,11 +1,14 @@
 import SwiftUI
 
 struct TiersBottomSheet: View {
+    let community: Community
     let tiers: [Tier]
     let popularTierIndex: Int
 
     @State private var expandedTierID: UUID? = nil
+    @State private var tierForPayment: Tier? = nil
     @Environment(\.dismiss) private var dismiss
+    @Environment(SubscriptionStore.self) private var subscriptionStore
 
     var body: some View {
         VStack(spacing: 0) {
@@ -47,6 +50,9 @@ struct TiersBottomSheet: View {
                                 withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
                                     expandedTierID = expandedTierID == tier.id ? nil : tier.id
                                 }
+                            },
+                            onSubscribe: { selectedTier in
+                                tierForPayment = selectedTier
                             }
                         )
                     }
@@ -55,6 +61,17 @@ struct TiersBottomSheet: View {
             }
         }
         .background(BlossomTheme.background)
+        .sheet(item: $tierForPayment) { selectedTier in
+            MockPaymentSheetView(
+                community: community,
+                tier: selectedTier,
+                onSuccess: {
+                    subscriptionStore.subscribe(to: community, tier: selectedTier)
+                    tierForPayment = nil
+                    dismiss()
+                }
+            )
+        }
     }
 }
 
@@ -92,5 +109,19 @@ struct TiersBottomSheet: View {
         )
     ]
 
-    TiersBottomSheet(tiers: tiers, popularTierIndex: 1)
+    let community = Community(
+        name: "Preview Community",
+        description: "A preview community",
+        logoImageName: "logo",
+        creator: Creator(name: "Test", username: "@test", profileImageName: "test", bio: "Test bio"),
+        tiers: tiers,
+        posts: [],
+        threads: [],
+        faqEntries: [],
+        memberCount: 100,
+        category: "Investing"
+    )
+
+    TiersBottomSheet(community: community, tiers: tiers, popularTierIndex: 1)
+        .environment(SubscriptionStore())
 }

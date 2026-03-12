@@ -40,7 +40,7 @@ struct Creator: Identifiable {
 
 // MARK: - Tier
 
-struct Tier: Identifiable {
+struct Tier: Identifiable, Hashable {
     let id: UUID
     let name: String
     let monthlyPrice: Decimal

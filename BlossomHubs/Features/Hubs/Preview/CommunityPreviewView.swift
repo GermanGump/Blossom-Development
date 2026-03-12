@@ -169,6 +169,7 @@ struct CommunityPreviewView: View {
         }
         .sheet(isPresented: $showTiers) {
             TiersBottomSheet(
+                community: community,
                 tiers: community.tiers,
                 popularTierIndex: viewModel.popularTierIndex
             )

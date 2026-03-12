@@ -5,6 +5,7 @@ struct TierCardView: View {
     var isPopular: Bool = false
     let isExpanded: Bool
     let onTap: () -> Void
+    var onSubscribe: ((Tier) -> Void)? = nil
 
     private var formattedPrice: String {
         let decimal = NSDecimalNumber(decimal: tier.monthlyPrice)
@@ -64,7 +65,7 @@ struct TierCardView: View {
                     }
 
                     Button("Subscribe") {
-                        // Phase 4 wires this
+                        onSubscribe?(tier)
                     }
                     .buttonStyle(BlossomPrimaryButton())
                     .padding(.top, 8)
