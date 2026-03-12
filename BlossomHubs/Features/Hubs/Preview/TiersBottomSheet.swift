@@ -4,6 +4,7 @@ struct TiersBottomSheet: View {
     let community: Community
     let tiers: [Tier]
     let popularTierIndex: Int
+    var onSubscriptionComplete: (() -> Void)? = nil
 
     @State private var expandedTierID: UUID? = nil
     @State private var tierForPayment: Tier? = nil
@@ -69,6 +70,7 @@ struct TiersBottomSheet: View {
                     subscriptionStore.subscribe(to: community, tier: selectedTier)
                     tierForPayment = nil
                     dismiss()
+                    onSubscriptionComplete?()
                 }
             )
         }

@@ -5,12 +5,14 @@ enum TagStyle {
     case stock
     case tier
     case category
+    case subscribed
 
     var foregroundColor: Color {
         switch self {
         case .stock: return BlossomTheme.orange
         case .tier: return BlossomTheme.violet
         case .category: return BlossomTheme.primaryText
+        case .subscribed: return .white
         }
     }
 
@@ -19,6 +21,7 @@ enum TagStyle {
         case .stock: return BlossomTheme.orange.opacity(0.12)
         case .tier: return BlossomTheme.violet.opacity(0.12)
         case .category: return BlossomTheme.slate.opacity(0.12)
+        case .subscribed: return BlossomTheme.teal
         }
     }
 }

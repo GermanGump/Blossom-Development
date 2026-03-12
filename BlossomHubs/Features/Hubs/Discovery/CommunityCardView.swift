@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CommunityCardView: View {
     let community: Community
+    @Environment(SubscriptionStore.self) private var subscriptionStore
 
     private var startingPrice: Decimal? {
         community.tiers
@@ -63,6 +64,12 @@ struct CommunityCardView: View {
             }
             .padding(14)
             .blossomCard()
+            .overlay(alignment: .topTrailing) {
+                if subscriptionStore.isSubscribed(to: community.id) {
+                    TagView("Subscribed", style: .subscribed)
+                        .padding(8)
+                }
+            }
         }
         .buttonStyle(.plain)
     }
@@ -79,4 +86,5 @@ struct CommunityCardView: View {
     }
     .background(BlossomTheme.background)
     .environment(CommunityStore())
+    .environment(SubscriptionStore())
 }

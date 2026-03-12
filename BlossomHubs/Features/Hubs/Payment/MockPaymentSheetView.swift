@@ -66,6 +66,31 @@ struct MockPaymentSheetView: View {
     // MARK: - Body
 
     var body: some View {
+        Group {
+            if viewModel.state == .success {
+                ConfettiCelebrationView(
+                    communityName: community.name,
+                    onContinue: {
+                        onSuccess()
+                        dismiss()
+                    }
+                )
+            } else {
+                paymentFormContent
+            }
+        }
+        .background(Color(red: 0.067, green: 0.078, blue: 0.149))
+        .presentationDetents([.large])
+        .presentationDragIndicator(.visible)
+        .interactiveDismissDisabled(viewModel.isProcessing || viewModel.state == .success)
+        .sensoryFeedback(.success, trigger: viewModel.state) { _, newValue in
+            newValue == .success
+        }
+    }
+
+    // MARK: - Payment Form
+
+    private var paymentFormContent: some View {
         VStack(spacing: 0) {
 
             // MARK: - Header
@@ -259,19 +284,5 @@ struct MockPaymentSheetView: View {
                 .padding(.bottom, 32)
             }
         }
-        .background(Color(red: 0.067, green: 0.078, blue: 0.149))
-        .presentationDetents([.large])
-        .presentationDragIndicator(.visible)
-        .interactiveDismissDisabled(viewModel.isProcessing)
-        .sensoryFeedback(.success, trigger: viewModel.state) { _, newValue in
-            newValue == .success
-        }
-        .onChange(of: viewModel.state) { _, newValue in
-            if newValue == .success {
-                onSuccess()
-                dismiss()
-            }
-        }
-        .disabled(viewModel.state == .success)
     }
 }

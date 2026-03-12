@@ -171,7 +171,14 @@ struct CommunityPreviewView: View {
             TiersBottomSheet(
                 community: community,
                 tiers: community.tiers,
-                popularTierIndex: viewModel.popularTierIndex
+                popularTierIndex: viewModel.popularTierIndex,
+                onSubscriptionComplete: {
+                    showTiers = false
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .milliseconds(300))
+                        dismiss()
+                    }
+                }
             )
             .presentationDetents([.fraction(0.55), .large])
             .presentationDragIndicator(.visible)
