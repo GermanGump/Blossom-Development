@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HubsView: View {
+    let isSelected: Bool
+
     @AppStorage("hasSeenHubsSplash") private var hasSeenSplash = false
     @State private var showDiscovery = false
     @State private var searchText = ""
@@ -10,7 +12,7 @@ struct HubsView: View {
     var body: some View {
         ZStack {
             if !hasSeenSplash && !showDiscovery {
-                HubsSplashView {
+                HubsSplashView(isActive: isSelected) {
                     withAnimation(.easeOut(duration: 0.3)) {
                         showDiscovery = true
                     } completion: {
@@ -53,7 +55,7 @@ struct HubsView: View {
 
 #Preview {
     NavigationStack {
-        HubsView()
+        HubsView(isSelected: true)
             .environment(CommunityStore())
     }
 }

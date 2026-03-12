@@ -13,7 +13,7 @@ struct ContentView: View {
                 .toolbar(.hidden, for: .tabBar)
 
                 NavigationStack {
-                    HubsView()
+                    HubsView(isSelected: selectedTab == .hubs)
                 }
                 .tag(AppTab.hubs)
                 .toolbar(.hidden, for: .tabBar)
