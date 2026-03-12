@@ -35,8 +35,8 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 - [x] **SUBS-03**: Tier detail expansion (tappable tray) showing benefits list, included content types, and monthly cost
 - [x] **SUBS-04**: Mocked Stripe payment screen (card number, expiry, CVC fields) presented as a sheet — no real processing
 - [x] **SUBS-05**: Payment validation simulation (brief loading state, then success)
-- [ ] **SUBS-06**: Confetti celebration animation with Blossom logo centered on screen upon successful subscription
-- [ ] **SUBS-07**: After celebration, user transitions into the subscribed community landing page
+- [x] **SUBS-06**: Confetti celebration animation with Blossom logo centered on screen upon successful subscription
+- [x] **SUBS-07**: After celebration, user transitions into the subscribed community landing page
 - [ ] **SUBS-08**: Subscription management: user can upgrade tier, downgrade tier, or cancel subscription in-app
 
 ### Community Hub
@@ -139,8 +139,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SUBS-03 | Phase 3 | Complete |
 | SUBS-04 | Phase 4 | Complete |
 | SUBS-05 | Phase 4 | Complete |
-| SUBS-06 | Phase 4 | Pending |
-| SUBS-07 | Phase 4 | Pending |
+| SUBS-06 | Phase 4 | Complete |
+| SUBS-07 | Phase 4 | Complete |
 | SUBS-08 | Phase 4 | Pending |
 | HUB-01 | Phase 5 | Pending |
 | HUB-02 | Phase 5 | Pending |
