@@ -22,7 +22,9 @@ struct HubsView: View {
                 VStack(spacing: 0) {
                     HubsTopNavBar(searchText: $searchText)
                     HubsDiscoveryView(searchText: searchText)
+                        .frame(maxHeight: .infinity)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .transition(.opacity)
             }
 
