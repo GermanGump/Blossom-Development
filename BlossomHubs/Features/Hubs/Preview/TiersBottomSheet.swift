@@ -8,15 +8,27 @@ struct TiersBottomSheet: View {
 
     @State private var expandedTierID: UUID? = nil
     @State private var tierForPayment: Tier? = nil
+    @State private var showChangeTierAlert = false
+    @State private var pendingTierChange: PendingTierChange? = nil
+    @State private var showCancelRetention = false
     @Environment(\.dismiss) private var dismiss
     @Environment(SubscriptionStore.self) private var subscriptionStore
+
+    private var isManageMode: Bool {
+        subscriptionStore.isSubscribed(to: community.id)
+    }
+
+    private var currentTierIndex: Int? {
+        guard let currentTierID = subscriptionStore.currentTier(for: community.id) else { return nil }
+        return tiers.firstIndex(where: { $0.id == currentTierID })
+    }
 
     var body: some View {
         VStack(spacing: 0) {
 
             // MARK: - Manual header
             HStack {
-                Text("Choose Your Tier")
+                Text(isManageMode ? "Your Subscription" : "Choose Your Tier")
                     .font(BlossomFont.title)
                     .foregroundStyle(BlossomTheme.primaryText)
 
@@ -43,25 +55,84 @@ struct TiersBottomSheet: View {
             ScrollView {
                 VStack(spacing: 8) {
                     ForEach(Array(tiers.enumerated()), id: \.element.id) { index, tier in
-                        TierCardView(
-                            tier: tier,
-                            isPopular: index == popularTierIndex,
-                            isExpanded: expandedTierID == tier.id,
-                            onTap: {
-                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                                    expandedTierID = expandedTierID == tier.id ? nil : tier.id
+                        if isManageMode {
+                            let isCurrent = subscriptionStore.currentTier(for: community.id) == tier.id
+                            let action: SubscriptionAction? = {
+                                guard !isCurrent, let currentIdx = currentTierIndex else { return nil }
+                                return index > currentIdx ? .upgrade : .downgrade
+                            }()
+
+                            TierCardView(
+                                tier: tier,
+                                isPopular: index == popularTierIndex,
+                                isCurrentPlan: isCurrent,
+                                subscriptionAction: action,
+                                isExpanded: expandedTierID == tier.id,
+                                onTap: {
+                                    withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                                        expandedTierID = expandedTierID == tier.id ? nil : tier.id
+                                    }
+                                },
+                                onSubscriptionAction: { selectedTier, selectedAction in
+                                    pendingTierChange = PendingTierChange(tier: selectedTier, action: selectedAction)
+                                    showChangeTierAlert = true
                                 }
-                            },
-                            onSubscribe: { selectedTier in
-                                tierForPayment = selectedTier
-                            }
-                        )
+                            )
+                        } else {
+                            TierCardView(
+                                tier: tier,
+                                isPopular: index == popularTierIndex,
+                                isExpanded: expandedTierID == tier.id,
+                                onTap: {
+                                    withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                                        expandedTierID = expandedTierID == tier.id ? nil : tier.id
+                                    }
+                                },
+                                onSubscribe: { selectedTier in
+                                    tierForPayment = selectedTier
+                                }
+                            )
+                        }
+                    }
+
+                    // Cancel button in manage mode
+                    if isManageMode {
+                        Button("Cancel Subscription") {
+                            showCancelRetention = true
+                        }
+                        .font(BlossomFont.buttonLabel)
+                        .foregroundStyle(.red)
+                        .padding(.top, 12)
+                        .padding(.bottom, 8)
                     }
                 }
                 .padding(16)
             }
         }
         .background(BlossomTheme.background)
+        .alert(
+            alertTitle,
+            isPresented: $showChangeTierAlert,
+            presenting: pendingTierChange
+        ) { change in
+            Button("Confirm") {
+                subscriptionStore.changeTier(for: community.id, to: change.tier)
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
+                pendingTierChange = nil
+            }
+            Button("Cancel", role: .cancel) {
+                pendingTierChange = nil
+            }
+        }
+        .sheet(isPresented: $showCancelRetention) {
+            CancelRetentionSheet {
+                subscriptionStore.cancel(communityID: community.id)
+                showCancelRetention = false
+                dismiss()
+            }
+            .presentationDetents([.medium])
+        }
         .sheet(item: $tierForPayment) { selectedTier in
             MockPaymentSheetView(
                 community: community,
@@ -75,6 +146,37 @@ struct TiersBottomSheet: View {
             )
         }
     }
+
+    private var alertTitle: String {
+        guard let change = pendingTierChange else { return "" }
+        let priceStr = formattedPrice(change.tier.monthlyPrice)
+        switch change.action {
+        case .upgrade:
+            return "Upgrade to \(change.tier.name) for \(priceStr)?"
+        case .downgrade:
+            return "Downgrade to \(change.tier.name) for \(priceStr)?"
+        }
+    }
+
+    private func formattedPrice(_ price: Decimal) -> String {
+        let decimal = NSDecimalNumber(decimal: price)
+        let value = decimal.doubleValue
+        if value == 0 {
+            return "Free"
+        } else if value == Double(Int(value)) {
+            return "$\(Int(value))/mo"
+        } else {
+            return String(format: "$%.2f/mo", value)
+        }
+    }
+}
+
+// MARK: - Pending Tier Change
+
+private struct PendingTierChange: Identifiable {
+    let id = UUID()
+    let tier: Tier
+    let action: SubscriptionAction
 }
 
 #Preview {

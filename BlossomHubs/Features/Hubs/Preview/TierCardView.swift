@@ -1,11 +1,21 @@
 import SwiftUI
 
+// MARK: - Subscription Action
+
+enum SubscriptionAction: Sendable {
+    case upgrade
+    case downgrade
+}
+
 struct TierCardView: View {
     let tier: Tier
     var isPopular: Bool = false
+    var isCurrentPlan: Bool = false
+    var subscriptionAction: SubscriptionAction? = nil
     let isExpanded: Bool
     let onTap: () -> Void
     var onSubscribe: ((Tier) -> Void)? = nil
+    var onSubscriptionAction: ((Tier, SubscriptionAction) -> Void)? = nil
 
     private var formattedPrice: String {
         let decimal = NSDecimalNumber(decimal: tier.monthlyPrice)
@@ -25,9 +35,17 @@ struct TierCardView: View {
             // MARK: - Header row (always visible)
             HStack(spacing: 8) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(tier.name)
-                        .font(BlossomFont.headline)
-                        .foregroundStyle(BlossomTheme.primaryText)
+                    HStack(spacing: 8) {
+                        Text(tier.name)
+                            .font(BlossomFont.headline)
+                            .foregroundStyle(BlossomTheme.primaryText)
+
+                        if isCurrentPlan {
+                            Text("Current Plan")
+                                .font(BlossomFont.caption)
+                                .foregroundStyle(BlossomTheme.teal)
+                        }
+                    }
                     Text(formattedPrice)
                         .font(BlossomFont.caption)
                         .foregroundStyle(BlossomTheme.secondaryText)
@@ -35,7 +53,7 @@ struct TierCardView: View {
 
                 Spacer()
 
-                if isPopular {
+                if !isCurrentPlan && isPopular {
                     TagView("Most Popular", style: .tier)
                 }
 
@@ -64,11 +82,27 @@ struct TierCardView: View {
                         }
                     }
 
-                    Button("Subscribe") {
-                        onSubscribe?(tier)
+                    if isCurrentPlan {
+                        // No button for current plan
+                    } else if subscriptionAction == .upgrade {
+                        Button("Upgrade") {
+                            onSubscriptionAction?(tier, .upgrade)
+                        }
+                        .buttonStyle(BlossomPrimaryButton())
+                        .padding(.top, 8)
+                    } else if subscriptionAction == .downgrade {
+                        Button("Downgrade") {
+                            onSubscriptionAction?(tier, .downgrade)
+                        }
+                        .buttonStyle(BlossomSecondaryButton())
+                        .padding(.top, 8)
+                    } else {
+                        Button("Subscribe") {
+                            onSubscribe?(tier)
+                        }
+                        .buttonStyle(BlossomPrimaryButton())
+                        .padding(.top, 8)
                     }
-                    .buttonStyle(BlossomPrimaryButton())
-                    .padding(.top, 8)
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 16)

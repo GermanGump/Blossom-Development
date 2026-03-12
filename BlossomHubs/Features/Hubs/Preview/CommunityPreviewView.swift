@@ -4,6 +4,7 @@ struct CommunityPreviewView: View {
     let communityID: String
 
     @Environment(CommunityStore.self) private var store
+    @Environment(SubscriptionStore.self) private var subscriptionStore
     @Environment(\.dismiss) private var dismiss
 
     @State private var viewModel: CommunityPreviewViewModel?
@@ -158,7 +159,8 @@ struct CommunityPreviewView: View {
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: 0) {
                 Divider()
-                Button("View Tiers") {
+                Button(subscriptionStore.isSubscribed(to: UUID(uuidString: communityID) ?? UUID())
+                       ? "Your Subscription" : "View Tiers") {
                     showTiers = true
                 }
                 .buttonStyle(BlossomPrimaryButton())
@@ -317,5 +319,6 @@ private struct SocialProofSection: View {
     NavigationStack {
         CommunityPreviewView(communityID: CommunityStore().communities.first!.id.uuidString)
             .environment(CommunityStore())
+            .environment(SubscriptionStore())
     }
 }
