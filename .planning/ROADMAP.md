@@ -86,7 +86,7 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — SubscriptionStore + UserSession model, mock Stripe payment sheet, PaymentViewModel state machine, tier card wiring
+- [x] 04-01-PLAN.md — SubscriptionStore + UserSession model, mock Stripe payment sheet, PaymentViewModel state machine, tier card wiring (completed 2026-03-12)
 - [ ] 04-02-PLAN.md — Confetti celebration with Canvas burst animation, post-payment transition, Subscribed badges on discovery cards
 - [ ] 04-03-PLAN.md — Subscription management: dual-mode tier sheet (upgrade/downgrade), cancel retention flow, My Subscriptions screen
 
@@ -158,7 +158,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 1. Project Scaffold and Swift Architecture | 2/2 | Complete   | 2026-03-11 |
 | 2. Design System and Mock Data | 3/3 | Complete   | 2026-03-11 |
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
-| 4. Subscription Flow and Celebration | 0/3 | Not started | - |
+| 4. Subscription Flow and Celebration | 1/3 | In progress | - |
 | 5. Community Hub and Navigation Structure | 0/TBD | Not started | - |
 | 6. Content Feed and Tier-Gated Access | 0/TBD | Not started | - |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |

@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed Phase 3 — Discovery and Community Preview verified and approved
-last_updated: "2026-03-12T01:00:00.000Z"
-last_activity: 2026-03-12 — Phase 3 complete — discovery, preview, tiers verified end-to-end
+stopped_at: Completed 04-01-PLAN.md — SubscriptionStore and mock payment sheet
+last_updated: "2026-03-12T22:06:00.000Z"
+last_activity: 2026-03-12 — Phase 4 Plan 1 complete — subscription data layer and payment sheet
 progress:
   total_phases: 9
   completed_phases: 3
-  total_plans: 8
-  completed_plans: 8
-  percent: 33
+  total_plans: 11
+  completed_plans: 9
+  percent: 36
 ---
 
 # Project State
@@ -21,23 +21,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 4 — Subscription Flow and Celebration (next)
+**Current focus:** Phase 4 — Subscription Flow and Celebration (in progress)
 
 ## Current Position
 
-Phase: 4 of 9 NOT STARTED — Phase 3 complete, ready for Phase 4
-Plan: 0 of TBD in Phase 4
-Status: Phase 3 complete and verified — ready to plan Phase 4
-Last activity: 2026-03-12 — Phase 3 complete — discovery, preview, tiers verified end-to-end
+Phase: 4 of 9 IN PROGRESS
+Plan: 1 of 3 in Phase 4 complete
+Status: Phase 4 Plan 1 complete — SubscriptionStore and mock payment sheet built
+Last activity: 2026-03-12 — Phase 4 Plan 1 complete — subscription data layer and payment sheet
 
-Progress: [███░░░░░░░] 33%
+Progress: [████░░░░░░] 36%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 10 min
-- Total execution time: 1.3 hours
+- Total execution time: 1.4 hours
 
 **By Phase:**
 
@@ -46,9 +46,10 @@ Progress: [███░░░░░░░] 33%
 | Phase 1 | 2 | 3 min | 1.5 min |
 | Phase 2 | 3 | 32 min | 10.7 min |
 | Phase 3 | 3 | 73 min | 24.3 min |
+| Phase 4 | 1 (in progress) | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 45 min (03-03), 3 min (03-02), 25 min (03-01), 5 min (02-03), 15 min (02-02)
+- Last 5 plans: 5 min (04-01), 45 min (03-03), 3 min (03-02), 25 min (03-01), 5 min (02-03)
 - Trend: —
 
 *Updated after each plan completion*
@@ -59,6 +60,7 @@ Progress: [███░░░░░░░] 33%
 | Phase 03 P01 | 25 | 2 tasks | 9 files |
 | Phase 03 P02 | 3 | 2 tasks | 6 files |
 | Phase 03 P03 | 45 | 1 task | 4 files |
+| Phase 04 P01 | 5 | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -92,6 +94,10 @@ Recent decisions affecting current work:
 - [Phase 03-03]: Default tab changed from .hubs to .home — app opens on Home tab
 - [Phase 03-03]: HubsSplashView requires isActive parameter — TabView eager rendering requires explicit tab-selection gating
 - [Phase 03-03]: PBXFileReference path must be filename-only when inside nested groups — Xcode concatenates group paths
+- [Phase 04-01]: SubscriptionStore is separate from CommunityStore — mutable user state vs immutable mock data
+- [Phase 04-01]: Tier gains Hashable conformance for .sheet(item:) binding support
+- [Phase 04-01]: TiersBottomSheet now requires community parameter for subscription recording
+- [Phase 04-01]: Payment sheet dismissal triggers subscription recording then tier sheet dismissal via callback chain
 
 ### Pending Todos
 
@@ -104,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T01:00:00.000Z
-Stopped at: Completed Phase 3 — Discovery and Community Preview verified and approved
-Resume file: None — ready for Phase 4 planning
+Last session: 2026-03-12T22:06:00.000Z
+Stopped at: Completed 04-01-PLAN.md — SubscriptionStore and mock payment sheet
+Resume file: None — ready for 04-02-PLAN.md
