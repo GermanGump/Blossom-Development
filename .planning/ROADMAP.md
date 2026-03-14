@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Design System and Mock Data** - Brand tokens, Inter font, dark mode, shared components, MockDataService, all seed data and ambassador assets (completed 2026-03-11)
 - [x] **Phase 3: Discovery and Community Preview** - Splash intro, community browse cards, community preview page, tier listing and benefit expansion (completed 2026-03-12)
 - [x] **Phase 4: Subscription Flow and Celebration** - Mocked Stripe sheet, payment state machine, confetti animation, subscription transition, subscription management (completed 2026-03-12)
-- [ ] **Phase 5: Community Hub and Navigation Structure** - Community landing page, link-tree navigation, section tab bar, per-community routing
+- [x] **Phase 5: Community Hub and Navigation Structure** - Community landing page, link-tree navigation, section tab bar, per-community routing (completed 2026-03-14)
 - [ ] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections
 - [ ] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers
 - [ ] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge
@@ -98,11 +98,11 @@ Plans:
   1. The community landing page displays the community logo, banner image, title, and a 1-2 sentence description for every community in the mock data set
   2. The link-tree style navigation on the landing page shows tappable section buttons (Discussion, Videos, FAQ, etc.) that navigate to the correct community section
   3. A segmented control or tab switcher at the top of the community allows switching between Posts, Discussions, FAQ, and Videos without leaving the community
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 05-01-PLAN.md — Community hub landing page with parallax banner, overlapping logo, tier badge, data-driven link-tree, navigation wiring (completed 2026-03-14)
-- [ ] 05-02-PLAN.md — Segmented section pager with sticky control, welcome overlay, post-confetti navigation routing
+- [x] 05-02-PLAN.md — Segmented section pager with sticky control, welcome overlay, post-confetti navigation routing (completed 2026-03-14)
 
 ### Phase 6: Content Feed and Tier-Gated Access
 **Goal**: A subscribed user can browse the creator's content feed, see investing-native post types including trade highlights, tap YouTube links to open the YouTube app, and see locked-content prompts when accessing content above their tier — with content organized by collection
@@ -163,7 +163,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 2. Design System and Mock Data | 3/3 | Complete   | 2026-03-11 |
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
-| 5. Community Hub and Navigation Structure | 1/2 | In progress | - |
+| 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
 | 6. Content Feed and Tier-Gated Access | 0/TBD | Not started | - |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
