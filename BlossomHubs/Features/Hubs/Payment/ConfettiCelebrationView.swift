@@ -15,10 +15,10 @@ struct ConfettiCelebrationView: View {
             VStack(spacing: 24) {
                 Spacer()
 
-                Image("blossom-logo-light")
+                Image("blossom-logo-white")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 80, height: 80)
+                    .frame(height: 48)
 
                 Text("Welcome to \(communityName)!")
                     .font(BlossomFont.title)
