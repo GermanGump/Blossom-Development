@@ -46,8 +46,8 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 - [x] **HUB-03**: Content feed showing creator posts chronologically — supports text, trade highlights, and YouTube video links
 - [x] **HUB-04**: Investing-native content types: trade highlight cards with stock ticker tags, portfolio summary posts matching Blossom's Home feed visual patterns
 - [x] **HUB-05**: YouTube video links that open the YouTube app on tap (URL deep link, no inline player)
-- [ ] **HUB-06**: Tier-gated content access — lower-tier subscribers see locked post previews with an upgrade prompt
-- [ ] **HUB-07**: Collections / content organization — named categories (e.g., "Swing Trade Alerts", "Portfolio Updates", "Education") that users can browse by topic
+- [x] **HUB-06**: Tier-gated content access — lower-tier subscribers see locked post previews with an upgrade prompt
+- [x] **HUB-07**: Collections / content organization — named categories (e.g., "Swing Trade Alerts", "Portfolio Updates", "Education") that users can browse by topic
 - [x] **HUB-08**: Segmented control or tab switching at top of community for navigating between sections (Posts, Discussions, FAQ, Videos, etc.)
 
 ### Engagement
@@ -147,8 +147,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HUB-03 | Phase 6 | Complete |
 | HUB-04 | Phase 6 | Complete |
 | HUB-05 | Phase 6 | Complete |
-| HUB-06 | Phase 6 | Pending |
-| HUB-07 | Phase 6 | Pending |
+| HUB-06 | Phase 6 | Complete |
+| HUB-07 | Phase 6 | Complete |
 | HUB-08 | Phase 5 | Complete |
 | ENGR-01 | Phase 7 | Pending |
 | ENGR-02 | Phase 7 | Pending |

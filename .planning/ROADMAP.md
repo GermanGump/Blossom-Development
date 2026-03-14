@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Discovery and Community Preview** - Splash intro, community browse cards, community preview page, tier listing and benefit expansion (completed 2026-03-12)
 - [x] **Phase 4: Subscription Flow and Celebration** - Mocked Stripe sheet, payment state machine, confetti animation, subscription transition, subscription management (completed 2026-03-12)
 - [x] **Phase 5: Community Hub and Navigation Structure** - Community landing page, link-tree navigation, section tab bar, per-community routing (completed 2026-03-14)
-- [ ] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections
+- [x] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections (completed 2026-03-14)
 - [ ] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers
 - [ ] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge
 - [ ] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish
@@ -113,11 +113,11 @@ Plans:
   2. Tapping a YouTube link card opens the YouTube app (or Safari fallback) — no inline video player appears
   3. A subscriber on a lower tier sees locked post previews for above-tier content with a specific upgrade prompt naming the required tier (not a generic padlock)
   4. Content is browseable by named collection — tapping "Swing Trade Alerts" or "Education" filters the feed to that collection
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 06-01-PLAN.md — Post card components (text, trade highlight, YouTube), ticker price lookup, feed ViewModel (completed 2026-03-14)
-- [ ] 06-02-PLAN.md — Content feed assembly, locked content overlays, collection filtering, CommunitySectionPager wiring
+- [x] 06-02-PLAN.md — Content feed assembly, locked content overlays, collection filtering, CommunitySectionPager wiring (completed 2026-03-14)
 
 ### Phase 7: Engagement: Forums and FAQ
 **Goal**: Subscribed users can participate in tier-gated discussion forums — creating threads, replying, and liking — and access the FAQ zone to submit questions that creators can answer, with all creator replies visually distinguished
@@ -168,7 +168,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
-| 6. Content Feed and Tier-Gated Access | 1/2 | In progress | - |
+| 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |
