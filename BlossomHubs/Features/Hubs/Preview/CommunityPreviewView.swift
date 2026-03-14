@@ -9,6 +9,7 @@ struct CommunityPreviewView: View {
 
     @State private var viewModel: CommunityPreviewViewModel?
     @State private var showTiers = false
+    @State private var navigateToHub = false
 
     var body: some View {
         Group {
@@ -165,7 +166,8 @@ struct CommunityPreviewView: View {
                 }
                 .buttonStyle(BlossomPrimaryButton())
                 .padding(.horizontal, 16)
-                .padding(.vertical, 12)
+                .padding(.top, 12)
+                .padding(.bottom, 64)
             }
             .background(BlossomTheme.background)
         }
@@ -178,12 +180,15 @@ struct CommunityPreviewView: View {
                     showTiers = false
                     Task { @MainActor in
                         try? await Task.sleep(for: .milliseconds(300))
-                        dismiss()
+                        navigateToHub = true
                     }
                 }
             )
             .presentationDetents([.fraction(0.55), .large])
             .presentationDragIndicator(.visible)
+        }
+        .navigationDestination(isPresented: $navigateToHub) {
+            CommunityHubView(communityID: communityID)
         }
     }
 }
