@@ -27,6 +27,11 @@
 		06A2B3C4D5E6F7A8B9C0D1E3 /* CommunityHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2B3C4D5E6F7A8B9C0D1E2 /* CommunityHubView.swift */; };
 		07A2B3C4D5E6F7A8B9C0D1E3 /* CommunitySectionPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySectionPager.swift */; };
 		08A2B3C4D5E6F7A8B9C0D1E3 /* WelcomeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3C4D5E6F7A8B9C0D1E2 /* WelcomeOverlayView.swift */; };
+		F601A2B3C4D5E6F7A8B9C0D1 /* TickerPriceLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F611A2B3C4D5E6F7A8B9C0D1 /* TickerPriceLookup.swift */; };
+		F602A2B3C4D5E6F7A8B9C0D1 /* PostAuthorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F612A2B3C4D5E6F7A8B9C0D1 /* PostAuthorRow.swift */; };
+		F603A2B3C4D5E6F7A8B9C0D1 /* TextPostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A2B3C4D5E6F7A8B9C0D1 /* TextPostCard.swift */; };
+		F604A2B3C4D5E6F7A8B9C0D1 /* TradeHighlightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F614A2B3C4D5E6F7A8B9C0D1 /* TradeHighlightCard.swift */; };
+		F605A2B3C4D5E6F7A8B9C0D1 /* YouTubeLinkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615A2B3C4D5E6F7A8B9C0D1 /* YouTubeLinkCard.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -123,6 +128,11 @@
 		16A2B3C4D5E6F7A8B9C0D1E2 /* CommunityHubView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityHubView.swift; sourceTree = "<group>"; };
 		17A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySectionPager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunitySectionPager.swift; sourceTree = "<group>"; };
 		18A2B3C4D5E6F7A8B9C0D1E2 /* WelcomeOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeOverlayView.swift; sourceTree = "<group>"; };
+		F611A2B3C4D5E6F7A8B9C0D1 /* TickerPriceLookup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TickerPriceLookup.swift; sourceTree = "<group>"; };
+		F612A2B3C4D5E6F7A8B9C0D1 /* PostAuthorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostAuthorRow.swift; sourceTree = "<group>"; };
+		F613A2B3C4D5E6F7A8B9C0D1 /* TextPostCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextPostCard.swift; sourceTree = "<group>"; };
+		F614A2B3C4D5E6F7A8B9C0D1 /* TradeHighlightCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TradeHighlightCard.swift; sourceTree = "<group>"; };
+		F615A2B3C4D5E6F7A8B9C0D1 /* YouTubeLinkCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YouTubeLinkCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,8 +343,22 @@
 				A1B2C3D4E5F60718293A4B5D /* Payment */,
 				C8D9E0F1A2B3C4D5E6F7A8B9 /* Subscription */,
 				05A2B3C4D5E6F7A8B9C0D1E2 /* Community */,
+				F620A2B3C4D5E6F7A8B9C0D1 /* Feed */,
 			);
 			path = Hubs;
+			sourceTree = "<group>";
+		};
+		F620A2B3C4D5E6F7A8B9C0D1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F611A2B3C4D5E6F7A8B9C0D1 /* TickerPriceLookup.swift */,
+				F612A2B3C4D5E6F7A8B9C0D1 /* PostAuthorRow.swift */,
+				F613A2B3C4D5E6F7A8B9C0D1 /* TextPostCard.swift */,
+				F614A2B3C4D5E6F7A8B9C0D1 /* TradeHighlightCard.swift */,
+				F615A2B3C4D5E6F7A8B9C0D1 /* YouTubeLinkCard.swift */,
+			);
+			name = Feed;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		05A2B3C4D5E6F7A8B9C0D1E2 /* Community */ = {
@@ -514,6 +538,11 @@
 				06A2B3C4D5E6F7A8B9C0D1E3 /* CommunityHubView.swift in Sources */,
 				07A2B3C4D5E6F7A8B9C0D1E3 /* CommunitySectionPager.swift in Sources */,
 				08A2B3C4D5E6F7A8B9C0D1E3 /* WelcomeOverlayView.swift in Sources */,
+				F601A2B3C4D5E6F7A8B9C0D1 /* TickerPriceLookup.swift in Sources */,
+				F602A2B3C4D5E6F7A8B9C0D1 /* PostAuthorRow.swift in Sources */,
+				F603A2B3C4D5E6F7A8B9C0D1 /* TextPostCard.swift in Sources */,
+				F604A2B3C4D5E6F7A8B9C0D1 /* TradeHighlightCard.swift in Sources */,
+				F605A2B3C4D5E6F7A8B9C0D1 /* YouTubeLinkCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
