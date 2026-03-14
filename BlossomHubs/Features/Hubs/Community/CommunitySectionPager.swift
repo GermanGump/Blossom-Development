@@ -26,11 +26,7 @@ struct CommunitySectionPager: View {
     private func sectionPage(for section: CommunitySection) -> some View {
         switch section {
         case .posts:
-            EmptyStateView(
-                icon: "doc.text",
-                title: "Posts",
-                subtitle: "Posts coming in Phase 6"
-            )
+            ContentFeedView(community: community)
         case .discussions:
             EmptyStateView(
                 icon: "bubble.left.and.bubble.right",
@@ -44,11 +40,7 @@ struct CommunitySectionPager: View {
                 subtitle: "FAQ coming in Phase 7"
             )
         case .videos:
-            EmptyStateView(
-                icon: "play.rectangle",
-                title: "Videos",
-                subtitle: "Videos coming in Phase 6"
-            )
+            ContentFeedView(community: community, filterToVideos: true)
         case .landing:
             EmptyView()
         }
