@@ -57,6 +57,11 @@ final class SubscriptionStore {
         session.subscriptions[communityID]?.tierID
     }
 
+    func markWelcomeSeen(for communityID: UUID) {
+        session.subscriptions[communityID]?.hasSeenWelcome = true
+        persist()
+    }
+
     #if DEBUG
     func resetAll() {
         session.subscriptions = [:]

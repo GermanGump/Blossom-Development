@@ -9,6 +9,7 @@ struct Subscription: Codable, Identifiable, Sendable {
     let tierName: String
     let monthlyPrice: Decimal
     let subscribedAt: Date
+    var hasSeenWelcome: Bool
 
     init(
         id: UUID = UUID(),
@@ -16,7 +17,8 @@ struct Subscription: Codable, Identifiable, Sendable {
         tierID: UUID,
         tierName: String,
         monthlyPrice: Decimal,
-        subscribedAt: Date = .now
+        subscribedAt: Date = .now,
+        hasSeenWelcome: Bool = false
     ) {
         self.id = id
         self.communityID = communityID
@@ -24,6 +26,7 @@ struct Subscription: Codable, Identifiable, Sendable {
         self.tierName = tierName
         self.monthlyPrice = monthlyPrice
         self.subscribedAt = subscribedAt
+        self.hasSeenWelcome = hasSeenWelcome
     }
 }
 
