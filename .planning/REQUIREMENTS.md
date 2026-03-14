@@ -41,8 +41,8 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 
 ### Community Hub
 
-- [ ] **HUB-01**: Community landing page (mandatory per community) with: community logo, banner image, title, short description (1-2 sentences)
-- [ ] **HUB-02**: Link-tree style navigation on landing page — tappable buttons/trays defined by creator linking to community sections (Discussion, Videos, FAQ, etc.)
+- [x] **HUB-01**: Community landing page (mandatory per community) with: community logo, banner image, title, short description (1-2 sentences)
+- [x] **HUB-02**: Link-tree style navigation on landing page — tappable buttons/trays defined by creator linking to community sections (Discussion, Videos, FAQ, etc.)
 - [ ] **HUB-03**: Content feed showing creator posts chronologically — supports text, trade highlights, and YouTube video links
 - [ ] **HUB-04**: Investing-native content types: trade highlight cards with stock ticker tags, portfolio summary posts matching Blossom's Home feed visual patterns
 - [ ] **HUB-05**: YouTube video links that open the YouTube app on tap (URL deep link, no inline player)
@@ -142,8 +142,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SUBS-06 | Phase 4 | Complete |
 | SUBS-07 | Phase 4 | Complete |
 | SUBS-08 | Phase 4 | Complete |
-| HUB-01 | Phase 5 | Pending |
-| HUB-02 | Phase 5 | Pending |
+| HUB-01 | Phase 5 | Complete |
+| HUB-02 | Phase 5 | Complete |
 | HUB-03 | Phase 6 | Pending |
 | HUB-04 | Phase 6 | Pending |
 | HUB-05 | Phase 6 | Pending |

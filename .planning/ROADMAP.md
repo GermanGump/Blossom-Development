@@ -101,7 +101,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Community hub landing page with parallax banner, overlapping logo, tier badge, data-driven link-tree, navigation wiring
+- [x] 05-01-PLAN.md — Community hub landing page with parallax banner, overlapping logo, tier badge, data-driven link-tree, navigation wiring (completed 2026-03-14)
 - [ ] 05-02-PLAN.md — Segmented section pager with sticky control, welcome overlay, post-confetti navigation routing
 
 ### Phase 6: Content Feed and Tier-Gated Access
@@ -163,7 +163,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 2. Design System and Mock Data | 3/3 | Complete   | 2026-03-11 |
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
-| 5. Community Hub and Navigation Structure | 0/2 | Not started | - |
+| 5. Community Hub and Navigation Structure | 1/2 | In progress | - |
 | 6. Content Feed and Tier-Gated Access | 0/TBD | Not started | - |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
