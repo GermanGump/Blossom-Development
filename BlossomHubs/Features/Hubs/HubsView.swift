@@ -46,8 +46,8 @@ struct HubsView: View {
             switch route {
             case .communityPreview(let id):
                 CommunityPreviewView(communityID: id)
-            case .communityDetail:
-                EmptyView() // Phase 5
+            case .communityDetail(let id):
+                CommunityHubView(communityID: id)
             case .mySubscriptions:
                 MySubscriptionsView()
             }
