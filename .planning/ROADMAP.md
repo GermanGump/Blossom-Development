@@ -116,7 +116,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Post card components (text, trade highlight, YouTube), ticker price lookup, feed ViewModel
+- [x] 06-01-PLAN.md — Post card components (text, trade highlight, YouTube), ticker price lookup, feed ViewModel (completed 2026-03-14)
 - [ ] 06-02-PLAN.md — Content feed assembly, locked content overlays, collection filtering, CommunitySectionPager wiring
 
 ### Phase 7: Engagement: Forums and FAQ
@@ -168,7 +168,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
-| 6. Content Feed and Tier-Gated Access | 0/2 | Not started | - |
+| 6. Content Feed and Tier-Gated Access | 1/2 | In progress | - |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |

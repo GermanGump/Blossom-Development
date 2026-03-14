@@ -43,9 +43,9 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 
 - [x] **HUB-01**: Community landing page (mandatory per community) with: community logo, banner image, title, short description (1-2 sentences)
 - [x] **HUB-02**: Link-tree style navigation on landing page — tappable buttons/trays defined by creator linking to community sections (Discussion, Videos, FAQ, etc.)
-- [ ] **HUB-03**: Content feed showing creator posts chronologically — supports text, trade highlights, and YouTube video links
-- [ ] **HUB-04**: Investing-native content types: trade highlight cards with stock ticker tags, portfolio summary posts matching Blossom's Home feed visual patterns
-- [ ] **HUB-05**: YouTube video links that open the YouTube app on tap (URL deep link, no inline player)
+- [x] **HUB-03**: Content feed showing creator posts chronologically — supports text, trade highlights, and YouTube video links
+- [x] **HUB-04**: Investing-native content types: trade highlight cards with stock ticker tags, portfolio summary posts matching Blossom's Home feed visual patterns
+- [x] **HUB-05**: YouTube video links that open the YouTube app on tap (URL deep link, no inline player)
 - [ ] **HUB-06**: Tier-gated content access — lower-tier subscribers see locked post previews with an upgrade prompt
 - [ ] **HUB-07**: Collections / content organization — named categories (e.g., "Swing Trade Alerts", "Portfolio Updates", "Education") that users can browse by topic
 - [x] **HUB-08**: Segmented control or tab switching at top of community for navigating between sections (Posts, Discussions, FAQ, Videos, etc.)
@@ -144,9 +144,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SUBS-08 | Phase 4 | Complete |
 | HUB-01 | Phase 5 | Complete |
 | HUB-02 | Phase 5 | Complete |
-| HUB-03 | Phase 6 | Pending |
-| HUB-04 | Phase 6 | Pending |
-| HUB-05 | Phase 6 | Pending |
+| HUB-03 | Phase 6 | Complete |
+| HUB-04 | Phase 6 | Complete |
+| HUB-05 | Phase 6 | Complete |
 | HUB-06 | Phase 6 | Pending |
 | HUB-07 | Phase 6 | Pending |
 | HUB-08 | Phase 5 | Complete |
