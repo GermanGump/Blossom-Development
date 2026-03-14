@@ -19,6 +19,10 @@
 		E5F6A7B8C9D0E1F2A3B4C5D6 /* ConfettiCelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C6D7E8F9A0B1C2D3E4F5A6 /* ConfettiCelebrationView.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* CancelRetentionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */; };
 		A8B9C0D1E2F3A4B5C6D7E8F9 /* MySubscriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1E2F3A4B5C6D7E8F9A0 /* MySubscriptionsView.swift */; };
+		01A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySection.swift */; };
+		02A2B3C4D5E6F7A8B9C0D1E2 /* CommunityBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2B3C4D5E6F7A8B9C0D1E2 /* CommunityBannerView.swift */; };
+		03A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLinkTreeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLinkTreeRow.swift */; };
+		04A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLandingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLandingSection.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -107,6 +111,10 @@
 		F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlossomHubsApp.swift; sourceTree = "<group>"; };
 		A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CancelRetentionSheet.swift; sourceTree = "<group>"; };
 		B9C0D1E2F3A4B5C6D7E8F9A0 /* MySubscriptionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MySubscriptionsView.swift; sourceTree = "<group>"; };
+		11A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunitySection.swift; sourceTree = "<group>"; };
+		12A2B3C4D5E6F7A8B9C0D1E2 /* CommunityBannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityBannerView.swift; sourceTree = "<group>"; };
+		13A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLinkTreeRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityLinkTreeRow.swift; sourceTree = "<group>"; };
+		14A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLandingSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityLandingSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,8 +324,21 @@
 				622DE101B61A372F6090574A /* Preview */,
 				A1B2C3D4E5F60718293A4B5D /* Payment */,
 				C8D9E0F1A2B3C4D5E6F7A8B9 /* Subscription */,
+				05A2B3C4D5E6F7A8B9C0D1E2 /* Community */,
 			);
 			path = Hubs;
+			sourceTree = "<group>";
+		};
+		05A2B3C4D5E6F7A8B9C0D1E2 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				11A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySection.swift */,
+				12A2B3C4D5E6F7A8B9C0D1E2 /* CommunityBannerView.swift */,
+				13A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLinkTreeRow.swift */,
+				14A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLandingSection.swift */,
+			);
+			name = Community;
+			path = Community;
 			sourceTree = "<group>";
 		};
 		C8D9E0F1A2B3C4D5E6F7A8B9 /* Subscription */ = {
@@ -473,6 +494,10 @@
 				E5F6A7B8C9D0E1F2A3B4C5D6 /* ConfettiCelebrationView.swift in Sources */,
 				F6A7B8C9D0E1F2A3B4C5D6E7 /* CancelRetentionSheet.swift in Sources */,
 				A8B9C0D1E2F3A4B5C6D7E8F9 /* MySubscriptionsView.swift in Sources */,
+				01A2B3C4D5E6F7A8B9C0D1E2 /* CommunitySection.swift in Sources */,
+				02A2B3C4D5E6F7A8B9C0D1E2 /* CommunityBannerView.swift in Sources */,
+				03A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLinkTreeRow.swift in Sources */,
+				04A2B3C4D5E6F7A8B9C0D1E2 /* CommunityLandingSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
