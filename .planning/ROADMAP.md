@@ -113,7 +113,11 @@ Plans:
   2. Tapping a YouTube link card opens the YouTube app (or Safari fallback) — no inline video player appears
   3. A subscriber on a lower tier sees locked post previews for above-tier content with a specific upgrade prompt naming the required tier (not a generic padlock)
   4. Content is browseable by named collection — tapping "Swing Trade Alerts" or "Education" filters the feed to that collection
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Post card components (text, trade highlight, YouTube), ticker price lookup, feed ViewModel
+- [ ] 06-02-PLAN.md — Content feed assembly, locked content overlays, collection filtering, CommunitySectionPager wiring
 
 ### Phase 7: Engagement: Forums and FAQ
 **Goal**: Subscribed users can participate in tier-gated discussion forums — creating threads, replying, and liking — and access the FAQ zone to submit questions that creators can answer, with all creator replies visually distinguished
@@ -164,7 +168,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 3. Discovery and Community Preview | 3/3 | Complete   | 2026-03-12 |
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
-| 6. Content Feed and Tier-Gated Access | 0/TBD | Not started | - |
+| 6. Content Feed and Tier-Gated Access | 0/2 | Not started | - |
 | 7. Engagement: Forums and FAQ | 0/TBD | Not started | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |
