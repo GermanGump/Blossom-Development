@@ -45,6 +45,12 @@
 		0721A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift */; };
 		0722A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift */; };
 		0723A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift */; };
+		0801A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardView.swift */; };
+		0802A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0812A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardViewModel.swift */; };
+		0803A2B3C4D5E6F7A8B9C0D1 /* CommunityEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813A2B3C4D5E6F7A8B9C0D1 /* CommunityEditView.swift */; };
+		0804A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */; };
+		0805A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */; };
+		0806A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -159,6 +165,12 @@
 		0731A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		0732A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQEntryRow.swift; sourceTree = "<group>"; };
 		0733A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQListView.swift; sourceTree = "<group>"; };
+		0811A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorDashboardView.swift; sourceTree = "<group>"; };
+		0812A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorDashboardViewModel.swift; sourceTree = "<group>"; };
+		0813A2B3C4D5E6F7A8B9C0D1 /* CommunityEditView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommunityEditView.swift; sourceTree = "<group>"; };
+		0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TierEditorView.swift; sourceTree = "<group>"; };
+		0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsMatrixView.swift; sourceTree = "<group>"; };
+		0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComposePostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +384,7 @@
 				F620A2B3C4D5E6F7A8B9C0D1 /* Feed */,
 				0720A2B3C4D5E6F7A8B9C0D1 /* Forums */,
 				0740A2B3C4D5E6F7A8B9C0D1 /* FAQ */,
+				0820A2B3C4D5E6F7A8B9C0D1 /* Creator */,
 			);
 			path = Hubs;
 			sourceTree = "<group>";
@@ -399,6 +412,20 @@
 			);
 			name = FAQ;
 			path = FAQ;
+			sourceTree = "<group>";
+		};
+		0820A2B3C4D5E6F7A8B9C0D1 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				0811A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardView.swift */,
+				0812A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardViewModel.swift */,
+				0813A2B3C4D5E6F7A8B9C0D1 /* CommunityEditView.swift */,
+				0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */,
+				0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */,
+				0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */,
+			);
+			name = Creator;
+			path = Creator;
 			sourceTree = "<group>";
 		};
 		F620A2B3C4D5E6F7A8B9C0D1 /* Feed */ = {
@@ -613,6 +640,12 @@
 				0721A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift in Sources */,
 				0722A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift in Sources */,
 				0723A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift in Sources */,
+				0801A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardView.swift in Sources */,
+				0802A2B3C4D5E6F7A8B9C0D1 /* CreatorDashboardViewModel.swift in Sources */,
+				0803A2B3C4D5E6F7A8B9C0D1 /* CommunityEditView.swift in Sources */,
+				0804A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift in Sources */,
+				0805A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift in Sources */,
+				0806A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

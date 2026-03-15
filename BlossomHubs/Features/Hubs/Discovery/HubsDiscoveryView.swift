@@ -51,6 +51,36 @@ struct HubsDiscoveryView: View {
                 }
                 .padding(.bottom, 4)
 
+                // Creator entry point
+                if subscriptionStore.session.creatorCommunityID != nil {
+                    NavigationLink(value: HubsRoute.creatorDashboard) {
+                        HStack(spacing: 12) {
+                            Image(systemName: "gearshape.fill")
+                                .font(.system(size: 20))
+                                .foregroundStyle(BlossomTheme.violet)
+
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Manage my Hub")
+                                    .font(BlossomFont.subhead)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(BlossomTheme.primaryText)
+                                Text("Edit community, tiers & content")
+                                    .font(BlossomFont.caption)
+                                    .foregroundStyle(BlossomTheme.secondaryText)
+                            }
+
+                            Spacer()
+
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 13, weight: .semibold))
+                                .foregroundStyle(BlossomTheme.secondaryText)
+                        }
+                        .padding(16)
+                        .background(BlossomTheme.cardSurface)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
+
                 // My Hubs — subscribed communities
                 if !subscribedCommunities.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {

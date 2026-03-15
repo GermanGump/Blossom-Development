@@ -51,15 +51,15 @@ struct HubsView: View {
             case .mySubscriptions:
                 MySubscriptionsView()
             case .creatorDashboard:
-                Text("Creator Dashboard")
+                CreatorDashboardView()
             case .creatorEditCommunity:
-                Text("Edit Community")
+                CommunityEditView()
             case .creatorManageTiers:
-                Text("Manage Tiers")
+                TierEditorView()
             case .creatorPermissions:
-                Text("Permissions")
+                PermissionsMatrixView()
             case .creatorPublishContent:
-                Text("Publish Content")
+                ComposePostView()
             }
         }
     }
