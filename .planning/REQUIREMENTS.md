@@ -52,12 +52,12 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 
 ### Engagement
 
-- [ ] **ENGR-01**: Discussion forums with threaded conversations — tier-based access permissions per forum
-- [ ] **ENGR-02**: Full post interaction in forums: create new discussion threads, reply to existing threads, like posts
-- [ ] **ENGR-03**: Visible tier badges on forum posts showing which tier the poster belongs to
+- [x] **ENGR-01**: Discussion forums with threaded conversations — tier-based access permissions per forum
+- [x] **ENGR-02**: Full post interaction in forums: create new discussion threads, reply to existing threads, like posts
+- [x] **ENGR-03**: Visible tier badges on forum posts showing which tier the poster belongs to
 - [ ] **ENGR-04**: FAQ zone where members with permission (defined by creator per tier) can submit questions
 - [ ] **ENGR-05**: Creator/ambassador can answer FAQ questions — answered questions become persistent, discoverable entries
-- [ ] **ENGR-06**: Forum posts and FAQ entries show creator/ambassador replies with a distinct visual treatment (highlighted, badged)
+- [x] **ENGR-06**: Forum posts and FAQ entries show creator/ambassador replies with a distinct visual treatment (highlighted, badged)
 
 ### Creator Dashboard
 
@@ -150,12 +150,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HUB-06 | Phase 6 | Complete |
 | HUB-07 | Phase 6 | Complete |
 | HUB-08 | Phase 5 | Complete |
-| ENGR-01 | Phase 7 | Pending |
-| ENGR-02 | Phase 7 | Pending |
-| ENGR-03 | Phase 7 | Pending |
+| ENGR-01 | Phase 7 | Complete |
+| ENGR-02 | Phase 7 | Complete |
+| ENGR-03 | Phase 7 | Complete |
 | ENGR-04 | Phase 7 | Pending |
 | ENGR-05 | Phase 7 | Pending |
-| ENGR-06 | Phase 7 | Pending |
+| ENGR-06 | Phase 7 | Complete |
 | CRTR-01 | Phase 8 | Pending |
 | CRTR-02 | Phase 8 | Pending |
 | CRTR-03 | Phase 8 | Pending |

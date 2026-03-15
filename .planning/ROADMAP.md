@@ -132,7 +132,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 07-01-PLAN.md — Discussion forums: thread list, thread detail, reply, like, compose, tier gating, creator visual treatment
+- [x] 07-01-PLAN.md — Discussion forums: thread list, thread detail, reply, like, compose, tier gating, creator visual treatment (completed 2026-03-15)
 - [ ] 07-02-PLAN.md — FAQ zone: accordion list, tier-gated question submission, creator answer attribution, pager wiring
 
 ### Phase 8: Creator Dashboard
@@ -173,6 +173,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
 | 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
-| 7. Engagement: Forums and FAQ | 0/2 | Not started | - |
+| 7. Engagement: Forums and FAQ | 1/2 | In progress | - |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |
