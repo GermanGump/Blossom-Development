@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Subscription Flow and Celebration** - Mocked Stripe sheet, payment state machine, confetti animation, subscription transition, subscription management (completed 2026-03-12)
 - [x] **Phase 5: Community Hub and Navigation Structure** - Community landing page, link-tree navigation, section tab bar, per-community routing (completed 2026-03-14)
 - [x] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections (completed 2026-03-14)
-- [ ] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers
+- [x] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers (completed 2026-03-15)
 - [ ] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge
 - [ ] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish
 
@@ -129,11 +129,11 @@ Plans:
   3. The FAQ zone is visible to all subscribed users, but only users with the correct tier permission can tap "Ask a Question" — users without permission see a prompt naming the required tier
   4. Submitted FAQ questions can be answered by the creator, and answered entries appear as persistent discoverable records in the FAQ view
   5. Creator and ambassador replies in both forums and FAQ have a distinct visual treatment (highlighted background or badge) that distinguishes them from member posts
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 07-01-PLAN.md — Discussion forums: thread list, thread detail, reply, like, compose, tier gating, creator visual treatment (completed 2026-03-15)
-- [ ] 07-02-PLAN.md — FAQ zone: accordion list, tier-gated question submission, creator answer attribution, pager wiring
+- [x] 07-02-PLAN.md — FAQ zone: accordion list, tier-gated question submission, creator answer attribution, pager wiring (completed 2026-03-15)
 
 ### Phase 8: Creator Dashboard
 **Goal**: A user identified as a community creator can access a dashboard to set up their community, define tiers with names and prices, configure permissions per tier, publish posts to collections, and see their verified creator badge throughout the app
@@ -173,6 +173,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 4. Subscription Flow and Celebration | 3/3 | Complete   | 2026-03-12 |
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
 | 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
-| 7. Engagement: Forums and FAQ | 1/2 | In progress | - |
+| 7. Engagement: Forums and FAQ | 2/2 | Complete | 2026-03-15 |
 | 8. Creator Dashboard | 0/TBD | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |

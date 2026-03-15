@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 07-01-PLAN.md — discussion forums with tier-gated threads, replies, likes, creator highlights
-last_updated: "2026-03-15T14:33:13.000Z"
-last_activity: 2026-03-15 — Phase 7 plan 1 complete — discussion forums with thread list, detail, compose, like, creator teal tint
+stopped_at: Completed 07-02-PLAN.md — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
+last_updated: "2026-03-15T14:40:07.000Z"
+last_activity: 2026-03-15 — Phase 7 complete — forums and FAQ engagement features built
 progress:
   total_phases: 9
-  completed_phases: 6
+  completed_phases: 7
   total_plans: 17
-  completed_plans: 16
-  percent: 65
+  completed_plans: 17
+  percent: 71
 ---
 
 # Project State
@@ -21,23 +21,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 7 in progress — engagement forums complete, FAQ next
+**Current focus:** Phase 7 complete — engagement forums and FAQ built, ready for Phase 8 creator dashboard
 
 ## Current Position
 
-Phase: 7 of 9 IN PROGRESS
-Plan: 1 of 2 in Phase 7 complete
-Status: Phase 7 plan 1 complete — discussion forums with tier-gated threads, replies, likes, creator highlights
-Last activity: 2026-03-15 — Completed 07-01 — discussion forums with thread list, detail, compose, like, creator teal tint
+Phase: 7 of 9 COMPLETE
+Plan: 2 of 2 in Phase 7 complete
+Status: Phase 7 complete — forums and FAQ engagement features built
+Last activity: 2026-03-15 — Completed 07-02 — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
 
-Progress: [██████▌░░░] 65%
+Progress: [███████░░░] 71%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
-- Average duration: 7.5 min
-- Total execution time: 1.87 hours
+- Total plans completed: 17
+- Average duration: 7.2 min
+- Total execution time: 1.9 hours
 
 **By Phase:**
 
@@ -49,10 +49,10 @@ Progress: [██████▌░░░] 65%
 | Phase 4 | 3 | 15 min | 5 min |
 | Phase 5 | 2 | 8 min | 4 min |
 | Phase 6 | 2 | 5 min | 2.5 min |
-| Phase 7 | 1 | 5 min | 5 min |
+| Phase 7 | 2 | 7 min | 3.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 5 min (07-01), 2 min (06-02), 3 min (06-01), 4 min (05-02), 4 min (05-01)
+- Last 5 plans: 2 min (07-02), 5 min (07-01), 2 min (06-02), 3 min (06-01), 4 min (05-02)
 - Trend: improving
 
 *Updated after each plan completion*
@@ -71,6 +71,7 @@ Progress: [██████▌░░░] 65%
 | Phase 06 P01 | 3 | 2 tasks | 8 files |
 | Phase 06 P02 | 2 | 1 task | 4 files |
 | Phase 07 P01 | 5 | 2 tasks | 10 files |
+| Phase 07 P02 | 2 | 1 task | 5 files |
 
 ## Accumulated Context
 
@@ -131,6 +132,9 @@ Recent decisions affecting current work:
 - [Phase 07-01]: NavigationLink(value: UUID) used for thread detail push -- integrates with existing NavigationStack without path binding
 - [Phase 07-01]: ForumReply stores isCreator/isAmbassador booleans directly to avoid re-resolving identity in every view
 - [Phase 07-01]: Mock replies generated in ForumViewModel init with at least one creator reply per thread for realistic demo
+- [Phase 07-02]: FAQ accordion uses expandedEntryID UUID? pattern matching TiersBottomSheet for single-expansion
+- [Phase 07-02]: Teal tint opacity(0.08) reused from forum creator replies for answered FAQ entry backgrounds (ENGR-06 consistency)
+- [Phase 07-02]: FAQListView follows ContentFeedView pattern: no own ScrollView, lazy init viewModel, TiersBottomSheet reuse
 
 ### Pending Todos
 
@@ -143,6 +147,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T14:33:13.000Z
-Stopped at: Completed 07-01-PLAN.md — discussion forums with tier-gated threads, replies, likes, creator highlights
-Resume file: 07-02-PLAN.md (FAQ zone)
+Last session: 2026-03-15T14:40:07.000Z
+Stopped at: Completed 07-02-PLAN.md — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
+Resume file: Phase 8 (Creator Dashboard)
