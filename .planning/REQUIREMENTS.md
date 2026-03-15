@@ -61,8 +61,8 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 
 ### Creator Dashboard
 
-- [ ] **CRTR-01**: Creator dashboard accessible via role toggle or separate entry point in the app
-- [ ] **CRTR-02**: Community setup: create community with logo, banner, title, description, and link-tree section configuration
+- [x] **CRTR-01**: Creator dashboard accessible via role toggle or separate entry point in the app
+- [x] **CRTR-02**: Community setup: create community with logo, banner, title, description, and link-tree section configuration
 - [ ] **CRTR-03**: Tier configuration: create 1-4 tiers with custom names, prices, benefit descriptions, and content/forum access permissions
 - [ ] **CRTR-04**: Permission management: define which tiers can access which forums, submit FAQ questions, and view which content collections
 - [ ] **CRTR-05**: Content publishing: creator can create posts, assign them to collections, and set tier-gate level
@@ -156,8 +156,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ENGR-04 | Phase 7 | Complete |
 | ENGR-05 | Phase 7 | Complete |
 | ENGR-06 | Phase 7 | Complete |
-| CRTR-01 | Phase 8 | Pending |
-| CRTR-02 | Phase 8 | Pending |
+| CRTR-01 | Phase 8 | Complete |
+| CRTR-02 | Phase 8 | Complete |
 | CRTR-03 | Phase 8 | Pending |
 | CRTR-04 | Phase 8 | Pending |
 | CRTR-05 | Phase 8 | Pending |

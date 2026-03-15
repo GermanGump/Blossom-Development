@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 07-02-PLAN.md — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
-last_updated: "2026-03-15T14:40:07.000Z"
-last_activity: 2026-03-15 — Phase 7 complete — forums and FAQ engagement features built
+stopped_at: Completed 08-01-PLAN.md — Creator dashboard shell with mutable models, stat cards, section links, community edit form
+last_updated: "2026-03-15T19:54:02.000Z"
+last_activity: 2026-03-15 — Completed 08-01 — Creator dashboard shell and community editing
 progress:
   total_phases: 9
   completed_phases: 7
   total_plans: 17
-  completed_plans: 17
-  percent: 71
+  completed_plans: 18
+  percent: 75
 ---
 
 # Project State
@@ -21,23 +21,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 7 complete — engagement forums and FAQ built, ready for Phase 8 creator dashboard
+**Current focus:** Phase 8 in progress — creator dashboard shell complete, tier editor and permissions matrix next
 
 ## Current Position
 
-Phase: 7 of 9 COMPLETE
-Plan: 2 of 2 in Phase 7 complete
-Status: Phase 7 complete — forums and FAQ engagement features built
-Last activity: 2026-03-15 — Completed 07-02 — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
+Phase: 8 of 9 IN PROGRESS
+Plan: 1 of 3 in Phase 8 complete
+Status: Creator dashboard shell built — tier editor and permissions next
+Last activity: 2026-03-15 — Completed 08-01 — Creator dashboard shell with mutable models and community editing
 
-Progress: [███████░░░] 71%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17
-- Average duration: 7.2 min
-- Total execution time: 1.9 hours
+- Total plans completed: 18
+- Average duration: 7.1 min
+- Total execution time: 2.0 hours
 
 **By Phase:**
 
@@ -50,9 +50,10 @@ Progress: [███████░░░] 71%
 | Phase 5 | 2 | 8 min | 4 min |
 | Phase 6 | 2 | 5 min | 2.5 min |
 | Phase 7 | 2 | 7 min | 3.5 min |
+| Phase 8 | 1 | 6 min | 6 min |
 
 **Recent Trend:**
-- Last 5 plans: 2 min (07-02), 5 min (07-01), 2 min (06-02), 3 min (06-01), 4 min (05-02)
+- Last 5 plans: 6 min (08-01), 2 min (07-02), 5 min (07-01), 2 min (06-02), 3 min (06-01)
 - Trend: improving
 
 *Updated after each plan completion*
@@ -72,6 +73,7 @@ Progress: [███████░░░] 71%
 | Phase 06 P02 | 2 | 1 task | 4 files |
 | Phase 07 P01 | 5 | 2 tasks | 10 files |
 | Phase 07 P02 | 2 | 1 task | 5 files |
+| Phase 08 P01 | 6 | 2 tasks | 15 files |
 
 ## Accumulated Context
 
@@ -135,6 +137,10 @@ Recent decisions affecting current work:
 - [Phase 07-02]: FAQ accordion uses expandedEntryID UUID? pattern matching TiersBottomSheet for single-expansion
 - [Phase 07-02]: Teal tint opacity(0.08) reused from forum creator replies for answered FAQ entry backgrounds (ENGR-06 consistency)
 - [Phase 07-02]: FAQListView follows ContentFeedView pattern: no own ScrollView, lazy init viewModel, TiersBottomSheet reuse
+- [Phase 08-01]: creatorCommunityID UUID? on UserSession instead of separate isCreator bool -- single field provides both role check and community reference
+- [Phase 08-01]: wealthmaticaID as static UUID constant on CommunityStore -- stable ID links SubscriptionStore to CommunityStore
+- [Phase 08-01]: CommunityStore.updateCommunity(id:update:) inout closure pattern for all creator mutations
+- [Phase 08-01]: Community.permissions [String: Set<Int>] dictionary for section-level tier access control
 
 ### Pending Todos
 
@@ -147,6 +153,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T14:40:07.000Z
-Stopped at: Completed 07-02-PLAN.md — FAQ zone with accordion entries, tier-gated ask field, creator answer attribution
-Resume file: Phase 8 (Creator Dashboard)
+Last session: 2026-03-15T19:54:02.000Z
+Stopped at: Completed 08-01-PLAN.md — Creator dashboard shell with mutable models, stat cards, section links, community edit form
+Resume file: Phase 8 Plan 02 (Tier Editor & Permissions Matrix)
