@@ -33,11 +33,7 @@ struct CommunitySectionPager: View {
         case .discussions:
             DiscussionsFeedView(community: community)
         case .faq:
-            EmptyStateView(
-                icon: "questionmark.circle",
-                title: "FAQ",
-                subtitle: "FAQ coming in Phase 7"
-            )
+            FAQListView(community: community)
         case .videos:
             ContentFeedView(community: community, filterToVideos: true)
         case .landing:

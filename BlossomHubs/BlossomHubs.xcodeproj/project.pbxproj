@@ -42,6 +42,9 @@
 		0704A2B3C4D5E6F7A8B9C0D1 /* ForumThreadDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714A2B3C4D5E6F7A8B9C0D1 /* ForumThreadDetailView.swift */; };
 		0705A2B3C4D5E6F7A8B9C0D1 /* ForumReplyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A2B3C4D5E6F7A8B9C0D1 /* ForumReplyRow.swift */; };
 		0706A2B3C4D5E6F7A8B9C0D1 /* ForumComposeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716A2B3C4D5E6F7A8B9C0D1 /* ForumComposeSheet.swift */; };
+		0721A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift */; };
+		0722A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift */; };
+		0723A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -153,6 +156,9 @@
 		0714A2B3C4D5E6F7A8B9C0D1 /* ForumThreadDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ForumThreadDetailView.swift; sourceTree = "<group>"; };
 		0715A2B3C4D5E6F7A8B9C0D1 /* ForumReplyRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ForumReplyRow.swift; sourceTree = "<group>"; };
 		0716A2B3C4D5E6F7A8B9C0D1 /* ForumComposeSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ForumComposeSheet.swift; sourceTree = "<group>"; };
+		0731A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		0732A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQEntryRow.swift; sourceTree = "<group>"; };
+		0733A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAQListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +371,7 @@
 				05A2B3C4D5E6F7A8B9C0D1E2 /* Community */,
 				F620A2B3C4D5E6F7A8B9C0D1 /* Feed */,
 				0720A2B3C4D5E6F7A8B9C0D1 /* Forums */,
+				0740A2B3C4D5E6F7A8B9C0D1 /* FAQ */,
 			);
 			path = Hubs;
 			sourceTree = "<group>";
@@ -381,6 +388,17 @@
 			);
 			name = Forums;
 			path = Forums;
+			sourceTree = "<group>";
+		};
+		0740A2B3C4D5E6F7A8B9C0D1 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				0731A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift */,
+				0732A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift */,
+				0733A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift */,
+			);
+			name = FAQ;
+			path = FAQ;
 			sourceTree = "<group>";
 		};
 		F620A2B3C4D5E6F7A8B9C0D1 /* Feed */ = {
@@ -592,6 +610,9 @@
 				0704A2B3C4D5E6F7A8B9C0D1 /* ForumThreadDetailView.swift in Sources */,
 				0705A2B3C4D5E6F7A8B9C0D1 /* ForumReplyRow.swift in Sources */,
 				0706A2B3C4D5E6F7A8B9C0D1 /* ForumComposeSheet.swift in Sources */,
+				0721A2B3C4D5E6F7A8B9C0D1 /* FAQViewModel.swift in Sources */,
+				0722A2B3C4D5E6F7A8B9C0D1 /* FAQEntryRow.swift in Sources */,
+				0723A2B3C4D5E6F7A8B9C0D1 /* FAQListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
