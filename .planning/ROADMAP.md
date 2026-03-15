@@ -146,7 +146,12 @@ Plans:
   4. The permissions matrix shows a grid of content sections versus tier levels — the creator can grant or revoke access per cell, and those changes drive the PermissionGate evaluations seen by subscribers
   5. The creator can write and publish a new post, assign it to a named collection, and set a tier-gate level — the post appears in the content feed with the correct gating applied
   6. A verified badge appears on creator/ambassador profiles throughout the app — discovery cards, forum posts, FAQ entries
-**Plans**: TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 08-01-PLAN.md — Data model mutations (let->var), creator role on UserSession, dashboard home with stat cards and section links, community edit form
+- [ ] 08-02-PLAN.md — Tier editor with add/edit/remove and 4-tier limit, permissions matrix toggle grid
+- [ ] 08-03-PLAN.md — Content publishing compose form with post type switcher, collection/tier-gate pickers, ticker parsing, verified badge audit
 
 ### Phase 9: Creator Earnings and Demo Polish
 **Goal**: The creator earnings view presents a clear revenue breakdown with a SwiftUI Charts visualization, and the complete subscriber demo flow runs end-to-end without dark mode gaps, font rendering issues, or broken permission states — the prototype is demo-ready
@@ -174,5 +179,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 5. Community Hub and Navigation Structure | 2/2 | Complete   | 2026-03-14 |
 | 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
 | 7. Engagement: Forums and FAQ | 2/2 | Complete | 2026-03-15 |
-| 8. Creator Dashboard | 0/TBD | Not started | - |
+| 8. Creator Dashboard | 0/3 | Not started | - |
 | 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |
