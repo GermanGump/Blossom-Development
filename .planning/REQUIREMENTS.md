@@ -65,9 +65,9 @@ Requirements for initial prototype release. Each maps to roadmap phases.
 - [x] **CRTR-02**: Community setup: create community with logo, banner, title, description, and link-tree section configuration
 - [x] **CRTR-03**: Tier configuration: create 1-4 tiers with custom names, prices, benefit descriptions, and content/forum access permissions
 - [x] **CRTR-04**: Permission management: define which tiers can access which forums, submit FAQ questions, and view which content collections
-- [ ] **CRTR-05**: Content publishing: creator can create posts, assign them to collections, and set tier-gate level
+- [x] **CRTR-05**: Content publishing: creator can create posts, assign them to collections, and set tier-gate level
 - [ ] **CRTR-06**: Earnings view with SwiftUI Charts: gross earnings, 10% Blossom platform fee deduction, net payout, member count, and revenue trend
-- [ ] **CRTR-07**: Verified creator/ambassador badge displayed on creator profiles throughout the app
+- [x] **CRTR-07**: Verified creator/ambassador badge displayed on creator profiles throughout the app
 
 ## v2 Requirements
 
@@ -160,9 +160,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CRTR-02 | Phase 8 | Complete |
 | CRTR-03 | Phase 8 | Complete |
 | CRTR-04 | Phase 8 | Complete |
-| CRTR-05 | Phase 8 | Pending |
+| CRTR-05 | Phase 8 | Complete |
 | CRTR-06 | Phase 9 | Pending |
-| CRTR-07 | Phase 8 | Pending |
+| CRTR-07 | Phase 8 | Complete |
 
 **Coverage:**
 - v1 requirements: 44 total
