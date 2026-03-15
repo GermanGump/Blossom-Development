@@ -27,6 +27,8 @@ struct ContentFeedView: View {
         if let viewModel {
             // CRITICAL: No ScrollView here — participates in outer CommunityHubView ScrollView
             VStack(alignment: .leading, spacing: 0) {
+                Spacer().frame(height: 12)
+
                 if !filterToVideos {
                     CollectionFilterPicker(
                         collections: viewModel.collections,

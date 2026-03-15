@@ -14,12 +14,15 @@ struct CommunitySectionPager: View {
         // Paged TabView — segmented control is in the pinned Section header above
         TabView(selection: $selectedSection) {
             ForEach(pagerSections) { section in
-                sectionPage(for: section)
-                    .tag(section)
+                VStack {
+                    sectionPage(for: section)
+                    Spacer()
+                }
+                .tag(section)
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .frame(minHeight: 400)
+        .frame(minHeight: UIScreen.main.bounds.height)
     }
 
     @ViewBuilder
