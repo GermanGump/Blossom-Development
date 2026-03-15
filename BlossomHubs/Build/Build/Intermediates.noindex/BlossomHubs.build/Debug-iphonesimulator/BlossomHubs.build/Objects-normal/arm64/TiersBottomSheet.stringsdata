@@ -1,0 +1,48 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Preview/TiersBottomSheet.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Your Subscription",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose Your Tier",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel Subscription",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "Confirm",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 124
+        }
+      }
+    ]
+  },
+  "version": 1
+}

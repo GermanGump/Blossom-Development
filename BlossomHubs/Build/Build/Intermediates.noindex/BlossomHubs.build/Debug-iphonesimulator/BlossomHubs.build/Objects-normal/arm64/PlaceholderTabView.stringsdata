@@ -1,0 +1,16 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Core/Components/PlaceholderTabView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Coming soon",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 15
+        }
+      }
+    ]
+  },
+  "version": 1
+}

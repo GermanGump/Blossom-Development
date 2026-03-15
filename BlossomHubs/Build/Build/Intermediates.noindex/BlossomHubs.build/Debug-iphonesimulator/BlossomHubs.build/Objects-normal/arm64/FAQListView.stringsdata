@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/FAQ/FAQListView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Ask a question...",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Upgrade to %@ to ask questions",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 56
+        }
+      }
+    ]
+  },
+  "version": 1
+}

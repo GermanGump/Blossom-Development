@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Payment/ConfettiCelebrationView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Welcome to %@!",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Enter Community",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 30
+        }
+      }
+    ]
+  },
+  "version": 1
+}

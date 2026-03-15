@@ -1,0 +1,32 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumReplyRow.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "·",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reply",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 61
+        }
+      }
+    ]
+  },
+  "version": 1
+}

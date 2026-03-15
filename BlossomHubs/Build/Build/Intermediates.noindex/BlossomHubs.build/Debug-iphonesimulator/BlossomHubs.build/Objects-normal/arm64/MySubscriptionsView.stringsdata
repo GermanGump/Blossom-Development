@@ -1,0 +1,72 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Subscription/MySubscriptionsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "My Subscriptions",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset All Subscriptions?",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset All Subscriptions",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Reset",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "This will remove all active subscriptions. This action cannot be undone.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "Subscribed since %@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 139
+        }
+      }
+    ]
+  },
+  "version": 1
+}

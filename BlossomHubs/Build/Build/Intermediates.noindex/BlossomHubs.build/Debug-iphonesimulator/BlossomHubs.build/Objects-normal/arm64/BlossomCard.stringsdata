@@ -1,0 +1,32 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Core/Components/BlossomCard.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hub Card Example",
+        "location": {
+          "startingColumn": 1,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Investor Community",
+        "location": {
+          "startingColumn": 1,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Premium stock picks and analysis",
+        "location": {
+          "startingColumn": 1,
+          "startingLine": 23
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/AvatarGroup/UIKit/UKAvatarGroup.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKAvatarGroup.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKAvatarGroup.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKAvatarGroup.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKAvatarGroup.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKAvatarGroup.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Badge/Models/BadgeStyle.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeStyle.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeStyle.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeStyle.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeStyle.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeStyle.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Badge/Models/BadgeVM.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeVM.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeVM.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeVM.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeVM.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/BadgeVM.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Badge/SUBadge.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUBadge.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUBadge.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUBadge.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUBadge.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUBadge.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Badge/UKBadge.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKBadge.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKBadge.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKBadge.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKBadge.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKBadge.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Button/Models/ButtonImageLocation.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageLocation.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageLocation.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageLocation.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageLocation.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageLocation.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Button/Models/ButtonImageSource.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageSource.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageSource.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageSource.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageSource.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonImageSource.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Button/Models/ButtonVM.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonVM.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonVM.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonVM.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonVM.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/ButtonVM.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Button/SUButton.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUButton.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUButton.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUButton.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUButton.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUButton.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Button/UKButton.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKButton.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKButton.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKButton.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKButton.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKButton.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Card/Models/CardVM.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CardVM.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CardVM.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CardVM.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CardVM.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CardVM.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Card/SUCard.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCard.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCard.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCard.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCard.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCard.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Card/UKCard.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCard.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCard.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCard.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCard.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCard.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Checkbox/Helpers/CheckboxAnimationDurations.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxAnimationDurations.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxAnimationDurations.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxAnimationDurations.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxAnimationDurations.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxAnimationDurations.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Checkbox/Models/CheckboxVM.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxVM.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxVM.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxVM.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxVM.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/CheckboxVM.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Checkbox/SUCheckbox.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCheckbox.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCheckbox.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCheckbox.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCheckbox.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/SUCheckbox.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/ComponentsKit/Sources/ComponentsKit/Components/Checkbox/UKCheckbox.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCheckbox.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCheckbox.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCheckbox.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCheckbox.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/ComponentsKit.build/Debug-iphonesimulator/ComponentsKit.build/Objects-normal/arm64/UKCheckbox.swiftdeps"
+  }
+}

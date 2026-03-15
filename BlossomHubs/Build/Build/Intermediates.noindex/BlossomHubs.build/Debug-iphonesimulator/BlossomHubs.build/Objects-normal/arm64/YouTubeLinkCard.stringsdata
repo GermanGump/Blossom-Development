@@ -1,0 +1,16 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/YouTubeLinkCard.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Tap to watch on YouTube",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 32
+        }
+      }
+    ]
+  },
+  "version": 1
+}

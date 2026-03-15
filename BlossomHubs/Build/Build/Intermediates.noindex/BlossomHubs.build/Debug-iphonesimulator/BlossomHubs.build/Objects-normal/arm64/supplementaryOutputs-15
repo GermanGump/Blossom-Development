@@ -1,0 +1,58 @@
+{
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/CollectionFilterPicker.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CollectionFilterPicker.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CollectionFilterPicker.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CollectionFilterPicker.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CollectionFilterPicker.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CollectionFilterPicker.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/ContentFeedView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/ContentFeedViewModel.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedViewModel.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedViewModel.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedViewModel.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedViewModel.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ContentFeedViewModel.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/PostCardView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PostCardView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PostCardView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PostCardView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PostCardView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PostCardView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/TradeHighlightCard.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/TradeHighlightCard.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/TradeHighlightCard.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/TradeHighlightCard.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/TradeHighlightCard.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/TradeHighlightCard.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/YouTubeLinkCard.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/YouTubeLinkCard.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/YouTubeLinkCard.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/YouTubeLinkCard.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/YouTubeLinkCard.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/YouTubeLinkCard.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumThreadRow.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadRow.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadRow.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadRow.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadRow.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadRow.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumViewModel.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumViewModel.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumViewModel.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumViewModel.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumViewModel.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumViewModel.swiftdeps"
+  }
+}

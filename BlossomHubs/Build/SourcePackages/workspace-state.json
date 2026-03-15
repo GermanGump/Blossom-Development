@@ -1,0 +1,47 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "autolayout",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/componentskit/AutoLayout",
+          "name" : "AutoLayout"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "fb4d7ea7ad5cfbaaf972506e6e23f87824345e4d",
+            "version" : "1.0.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "AutoLayout"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "componentskit",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/componentskit/ComponentsKit.git",
+          "name" : "ComponentsKit"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "e47e4976667b9a34c9c39d5a1227d2c73ef2154e",
+            "version" : "1.6.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "ComponentsKit"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

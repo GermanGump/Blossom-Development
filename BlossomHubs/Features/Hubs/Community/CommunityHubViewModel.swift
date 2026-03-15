@@ -5,6 +5,7 @@ import Foundation
 final class CommunityHubViewModel {
     let community: Community
     var selectedSection: CommunitySection = .landing
+    let forumViewModel: ForumViewModel
 
     var availableSections: [CommunitySection] {
         var sections: [CommunitySection] = [.landing]
@@ -18,5 +19,6 @@ final class CommunityHubViewModel {
 
     init(community: Community) {
         self.community = community
+        self.forumViewModel = ForumViewModel(community: community)
     }
 }

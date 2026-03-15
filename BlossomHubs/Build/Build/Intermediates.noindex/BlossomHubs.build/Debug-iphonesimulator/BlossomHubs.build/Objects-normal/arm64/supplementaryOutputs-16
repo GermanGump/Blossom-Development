@@ -1,0 +1,58 @@
+{
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/FAQ/FAQEntryRow.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQEntryRow.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQEntryRow.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQEntryRow.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQEntryRow.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQEntryRow.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/FAQ/FAQListView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQListView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQListView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQListView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQListView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQListView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/FAQ/FAQViewModel.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQViewModel.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQViewModel.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQViewModel.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQViewModel.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/FAQViewModel.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/DiscussionsFeedView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/DiscussionsFeedView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/DiscussionsFeedView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/DiscussionsFeedView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/DiscussionsFeedView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/DiscussionsFeedView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumComposeSheet.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumComposeSheet.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumComposeSheet.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumComposeSheet.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumComposeSheet.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumComposeSheet.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumReplyRow.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumReplyRow.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumReplyRow.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumReplyRow.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumReplyRow.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumReplyRow.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumThreadDetailView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadDetailView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadDetailView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadDetailView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadDetailView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ForumThreadDetailView.swiftdeps"
+  }
+}

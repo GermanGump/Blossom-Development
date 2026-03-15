@@ -33,6 +33,7 @@ struct Subscription: Codable, Identifiable, Sendable {
 // MARK: - UserSession
 
 struct UserSession: Codable, Sendable {
+    let id: UUID
     let name: String
     let username: String
     let profileImageName: String

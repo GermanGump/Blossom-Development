@@ -6,60 +6,74 @@ struct ForumReplyRow: View {
     let profileImage: String
     let isLiked: Bool
     let onLike: () -> Void
+    var isNested: Bool = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // Author row
-            HStack(spacing: 6) {
-                AvatarView(
-                    image: Image(systemName: profileImage),
-                    showVerifiedBadge: reply.isCreator || reply.isAmbassador,
-                    size: AvatarSize.small.rawValue
-                )
+        HStack(alignment: .top, spacing: 10) {
+            AvatarView(
+                imageName: profileImage,
+                preset: .small,
+                showVerifiedBadge: reply.isCreator || reply.isAmbassador
+            )
 
-                Text(reply.authorName)
-                    .font(BlossomFont.subhead)
-                    .foregroundColor(BlossomTheme.primaryText)
-
-                TagView(reply.authorTierName, style: .tier)
-
-                if reply.isCreator {
-                    TagView("Creator", style: .role)
-                } else if reply.isAmbassador {
-                    TagView("Ambassador", style: .role)
-                }
-
-                Spacer()
-
-                Text(reply.publishedAt, format: .relative(presentation: .named))
-                    .font(BlossomFont.caption)
-                    .foregroundColor(BlossomTheme.secondaryText)
-            }
-
-            // Reply content
-            Text(reply.content)
-                .font(BlossomFont.body)
-                .foregroundColor(BlossomTheme.primaryText)
-
-            // Like button
-            Button(action: onLike) {
+            VStack(alignment: .leading, spacing: 6) {
+                // Author row
                 HStack(spacing: 4) {
-                    Image(systemName: isLiked ? "heart.fill" : "heart")
-                        .font(.system(size: 14))
-                        .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
-                    Text("\(reply.likeCount + (isLiked ? 1 : 0))")
+                    Text(reply.authorName)
+                        .font(BlossomFont.subhead)
+                        .fontWeight(.semibold)
+                        .foregroundColor(BlossomTheme.primaryText)
+
+                    if reply.isCreator || reply.isAmbassador {
+                        TagView(reply.isCreator ? "Creator" : "Ambassador", style: .role)
+                    } else {
+                        TagView(reply.authorTierName, style: .tier)
+                    }
+
+                    Text("·")
+                        .foregroundColor(BlossomTheme.secondaryText)
+
+                    Text(reply.publishedAt, format: .relative(presentation: .named))
                         .font(BlossomFont.caption)
                         .foregroundColor(BlossomTheme.secondaryText)
+
+                    Spacer()
+                }
+
+                // Reply content
+                Text(reply.content)
+                    .font(BlossomFont.body)
+                    .foregroundColor(BlossomTheme.primaryText)
+
+                // Action row
+                HStack(spacing: 16) {
+                    Text("Reply")
+                        .font(BlossomFont.caption)
+                        .foregroundColor(BlossomTheme.secondaryText)
+
+                    Spacer()
+
+                    Button(action: onLike) {
+                        HStack(spacing: 4) {
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .font(.system(size: 13))
+                                .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
+                            Text("\(reply.likeCount + (isLiked ? 1 : 0))")
+                                .font(BlossomFont.caption)
+                                .foregroundColor(BlossomTheme.secondaryText)
+                        }
+                    }
+                    .buttonStyle(.plain)
                 }
             }
-            .buttonStyle(.plain)
         }
-        .padding(12)
+        .padding(.vertical, 10)
+        .padding(.horizontal, isNested ? 0 : 16)
+        .padding(.leading, isNested ? 44 : 0)
         .background(
             (reply.isCreator || reply.isAmbassador)
                 ? BlossomTheme.teal.opacity(0.08)
                 : Color.clear
         )
-        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }

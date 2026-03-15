@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Core/Components/VerifiedBadge.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Verified",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 10
+        }
+      },
+      {
+        "comment": "",
+        "key": "Nick Simpson",
+        "location": {
+          "startingColumn": 1,
+          "startingLine": 21
+        }
+      }
+    ]
+  },
+  "version": 1
+}

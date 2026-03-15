@@ -1,0 +1,23 @@
+{
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/CommunityHeroCardView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityHeroCardView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityHeroCardView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityHeroCardView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityHeroCardView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityHeroCardView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/HubsDiscoveryView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/HubsDiscoveryView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/HubsDiscoveryView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/HubsDiscoveryView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/HubsDiscoveryView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/HubsDiscoveryView.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Search/SearchDropdownView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/SearchDropdownView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/SearchDropdownView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/SearchDropdownView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/SearchDropdownView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/SearchDropdownView.swiftdeps"
+  }
+}

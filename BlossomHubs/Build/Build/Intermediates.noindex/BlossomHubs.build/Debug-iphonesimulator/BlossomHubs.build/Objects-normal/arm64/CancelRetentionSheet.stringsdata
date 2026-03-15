@@ -1,0 +1,40 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Subscription/CancelRetentionSheet.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Why are you leaving?",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "We'd love to know so we can improve.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel Subscription",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "Never mind, keep subscription",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 72
+        }
+      }
+    ]
+  },
+  "version": 1
+}

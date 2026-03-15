@@ -1,0 +1,56 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumThreadDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Most Recent",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Back",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "0",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 192
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Comment",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 218
+        }
+      }
+    ]
+  },
+  "version": 1
+}

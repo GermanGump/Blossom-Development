@@ -1,0 +1,32 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/HubsDiscoveryView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Verified Blossom Communities",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Join, learn, invest.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "My Hubs",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 57
+        }
+      }
+    ]
+  },
+  "version": 1
+}

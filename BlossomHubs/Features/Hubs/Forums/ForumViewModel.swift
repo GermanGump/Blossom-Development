@@ -42,11 +42,12 @@ final class ForumViewModel {
         }
     }
 
-    func addThread(title: String, content: String, authorTierName: String) {
+    func addThread(title: String, content: String, authorTierIndex: Int, authorId: UUID) {
         let thread = ForumThread(
             title: title,
             content: content,
-            authorId: UUID(),
+            authorId: authorId,
+            requiredTierIndex: authorTierIndex,
             publishedAt: Date()
         )
         threads.insert(thread, at: 0)

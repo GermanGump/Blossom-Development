@@ -8,6 +8,7 @@ struct ForumThreadDetailView: View {
 
     @State private var replyText = ""
     @Environment(SubscriptionStore.self) private var subscriptionStore
+    @Environment(\.dismiss) private var dismiss
 
     /// Resolve the user's tier index within this community's tiers array.
     private var userTierIndex: Int? {
@@ -30,23 +31,41 @@ struct ForumThreadDetailView: View {
         viewModel.replies[thread.id] ?? []
     }
 
+    private var isLiked: Bool {
+        viewModel.likedThreadIDs.contains(thread.id)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 0) {
                     // Original post
                     originalPostSection
 
-                    Divider()
+                    // Engagement stats bar
+                    engagementBar
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 12)
 
-                    // Replies header
-                    Text("Replies (\(threadReplies.count))")
-                        .font(BlossomFont.headline)
-                        .foregroundColor(BlossomTheme.primaryText)
+                    Divider()
                         .padding(.horizontal, 16)
 
+                    // Sort label
+                    HStack {
+                        Text("Most Recent")
+                            .font(BlossomFont.caption)
+                            .fontWeight(.semibold)
+                            .foregroundColor(BlossomTheme.primaryText)
+                        Image(systemName: "chevron.down")
+                            .font(.system(size: 10, weight: .semibold))
+                            .foregroundColor(BlossomTheme.primaryText)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
+
                     // Replies list
-                    LazyVStack(spacing: 4) {
+                    LazyVStack(spacing: 0) {
                         ForEach(threadReplies) { reply in
                             let profileImg = (reply.isCreator || reply.isAmbassador)
                                 ? community.creator.profileImageName
@@ -58,11 +77,12 @@ struct ForumThreadDetailView: View {
                                 isLiked: viewModel.likedReplyIDs.contains(reply.id),
                                 onLike: { viewModel.toggleReplyLike(replyID: reply.id) }
                             )
+
+                            Divider()
+                                .padding(.leading, 60)
                         }
                     }
-                    .padding(.horizontal, 12)
                 }
-                .padding(.vertical, 16)
             }
 
             // Reply input bar
@@ -70,6 +90,21 @@ struct ForumThreadDetailView: View {
         }
         .navigationTitle(thread.title)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 16, weight: .semibold))
+                        Text("Back")
+                            .font(BlossomFont.subhead)
+                    }
+                    .foregroundStyle(BlossomTheme.violet)
+                }
+            }
+        }
     }
 
     // MARK: - Original Post
@@ -78,24 +113,25 @@ struct ForumThreadDetailView: View {
     private var originalPostSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             // Author row
-            HStack(spacing: 8) {
+            HStack(spacing: 10) {
                 AvatarView(
-                    image: Image(systemName: isCreatorThread ? community.creator.profileImageName : "person.circle"),
-                    showVerifiedBadge: isCreatorThread,
-                    size: AvatarSize.medium.rawValue
+                    imageName: isCreatorThread ? community.creator.profileImageName : "person.circle",
+                    preset: .medium,
+                    showVerifiedBadge: isCreatorThread
                 )
 
                 VStack(alignment: .leading, spacing: 2) {
                     HStack(spacing: 6) {
                         Text(isCreatorThread ? community.creator.name : "Member")
                             .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
                             .foregroundColor(BlossomTheme.primaryText)
-
-                        TagView(viewModel.tierName(for: thread.requiredTierIndex), style: .tier)
 
                         if isCreatorThread {
                             TagView("Creator", style: .role)
                         }
+
+                        TagView(viewModel.tierName(for: thread.requiredTierIndex), style: .tier)
                     }
 
                     Text(thread.publishedAt, format: .relative(presentation: .named))
@@ -115,22 +151,56 @@ struct ForumThreadDetailView: View {
             Text(thread.content)
                 .font(BlossomFont.body)
                 .foregroundColor(BlossomTheme.primaryText)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 16)
+    }
 
-            // Like button row
+    // MARK: - Engagement Stats Bar
+
+    @ViewBuilder
+    private var engagementBar: some View {
+        HStack(spacing: 20) {
+            // Likes
             Button(action: { viewModel.toggleThreadLike(threadID: thread.id) }) {
                 HStack(spacing: 4) {
-                    let isLiked = viewModel.likedThreadIDs.contains(thread.id)
                     Image(systemName: isLiked ? "heart.fill" : "heart")
                         .font(.system(size: 16))
                         .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
-                    Text("\(thread.likeCount + (viewModel.likedThreadIDs.contains(thread.id) ? 1 : 0))")
+                    Text("\(thread.likeCount + (isLiked ? 1 : 0))")
                         .font(BlossomFont.caption)
                         .foregroundColor(BlossomTheme.secondaryText)
                 }
             }
             .buttonStyle(.plain)
+
+            // Comments
+            HStack(spacing: 4) {
+                Image(systemName: "bubble.right")
+                    .font(.system(size: 15))
+                    .foregroundColor(BlossomTheme.secondaryText)
+                Text("\(threadReplies.count)")
+                    .font(BlossomFont.caption)
+                    .foregroundColor(BlossomTheme.secondaryText)
+            }
+
+            // Share
+            HStack(spacing: 4) {
+                Image(systemName: "arrowshape.turn.up.right")
+                    .font(.system(size: 15))
+                    .foregroundColor(BlossomTheme.secondaryText)
+                Text("0")
+                    .font(BlossomFont.caption)
+                    .foregroundColor(BlossomTheme.secondaryText)
+            }
+
+            Spacer()
+
+            // Bookmark
+            Image(systemName: "bookmark")
+                .font(.system(size: 15))
+                .foregroundColor(BlossomTheme.secondaryText)
         }
-        .padding(.horizontal, 16)
     }
 
     // MARK: - Reply Input Bar
@@ -139,7 +209,13 @@ struct ForumThreadDetailView: View {
     private var replyInputBar: some View {
         Divider()
         HStack(spacing: 10) {
-            TextField("Write a reply...", text: $replyText)
+            AvatarView(
+                imageName: subscriptionStore.session.profileImageName,
+                preset: .small,
+                showVerifiedBadge: false
+            )
+
+            TextField("Add Comment", text: $replyText)
                 .font(BlossomFont.body)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
@@ -149,7 +225,7 @@ struct ForumThreadDetailView: View {
             Button(action: sendReply) {
                 Image(systemName: "arrow.up.circle.fill")
                     .font(.system(size: 30))
-                    .foregroundColor(replyText.isEmpty ? BlossomTheme.secondaryText : BlossomTheme.violet)
+                    .foregroundColor(replyText.isEmpty ? BlossomTheme.secondaryText : BlossomTheme.teal)
             }
             .disabled(replyText.isEmpty)
         }

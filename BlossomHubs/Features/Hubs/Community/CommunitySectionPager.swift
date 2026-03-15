@@ -3,7 +3,9 @@ import SwiftUI
 struct CommunitySectionPager: View {
     let community: Community
     let availableSections: [CommunitySection]
+    let forumViewModel: ForumViewModel
     @Binding var selectedSection: CommunitySection
+    @Binding var showForumCompose: Bool
 
     /// Sections shown in the pager (excludes .landing)
     private var pagerSections: [CommunitySection] {
@@ -31,7 +33,7 @@ struct CommunitySectionPager: View {
         case .posts:
             ContentFeedView(community: community)
         case .discussions:
-            DiscussionsFeedView(community: community)
+            DiscussionsFeedView(community: community, forumViewModel: forumViewModel, showComposeSheet: $showForumCompose)
         case .faq:
             FAQListView(community: community)
         case .videos:

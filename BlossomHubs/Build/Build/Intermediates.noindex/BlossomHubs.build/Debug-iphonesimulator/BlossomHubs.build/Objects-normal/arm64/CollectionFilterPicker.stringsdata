@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/CollectionFilterPicker.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "All Posts",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "All Posts",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 22
+        }
+      }
+    ]
+  },
+  "version": 1
+}

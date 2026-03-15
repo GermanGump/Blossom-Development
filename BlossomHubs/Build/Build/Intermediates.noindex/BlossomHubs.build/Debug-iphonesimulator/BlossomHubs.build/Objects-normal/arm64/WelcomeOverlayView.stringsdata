@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Community/WelcomeOverlayView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Welcome to %@!",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explore",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 28
+        }
+      }
+    ]
+  },
+  "version": 1
+}

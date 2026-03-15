@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CommunityCardView: View {
     let community: Community
+    var route: HubsRoute?
     @Environment(SubscriptionStore.self) private var subscriptionStore
 
     private var startingPrice: Decimal? {
@@ -17,7 +18,7 @@ struct CommunityCardView: View {
     }
 
     var body: some View {
-        NavigationLink(value: HubsRoute.communityPreview(id: community.id.uuidString)) {
+        NavigationLink(value: route ?? HubsRoute.communityPreview(id: community.id.uuidString)) {
             HStack(alignment: .top, spacing: 12) {
                 AvatarView(
                     imageName: community.creator.profileImageName,

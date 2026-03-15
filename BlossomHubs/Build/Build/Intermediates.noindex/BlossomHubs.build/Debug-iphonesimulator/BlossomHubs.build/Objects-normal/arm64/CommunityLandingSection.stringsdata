@@ -1,0 +1,16 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Community/CommunityLandingSection.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%@ members",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 61
+        }
+      }
+    ]
+  },
+  "version": 1
+}

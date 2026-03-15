@@ -13,9 +13,10 @@ final class SubscriptionStore {
             self.session = saved
         } else {
             self.session = UserSession(
-                name: "Alex",
-                username: "@alex_investor",
-                profileImageName: "alex-profile",
+                id: UUID(),
+                name: "Nick",
+                username: "@nick",
+                profileImageName: "nick-profile-pic",
                 subscriptions: [:]
             )
         }

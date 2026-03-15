@@ -69,9 +69,7 @@ struct FAQListView: View {
                         entry: entry,
                         isExpanded: expandedEntryID == entry.id,
                         onToggle: {
-                            withAnimation {
-                                expandedEntryID = expandedEntryID == entry.id ? nil : entry.id
-                            }
+                            expandedEntryID = expandedEntryID == entry.id ? nil : entry.id
                         }
                     )
                     .padding(.horizontal, 16)

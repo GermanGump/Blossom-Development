@@ -15,9 +15,9 @@ struct ForumThreadRow: View {
         VStack(spacing: 0) {
             HStack(alignment: .top, spacing: 10) {
                 AvatarView(
-                    image: Image(systemName: authorProfileImage),
-                    showVerifiedBadge: isCreator || isAmbassador,
-                    size: AvatarSize.small.rawValue
+                    imageName: authorProfileImage,
+                    preset: .small,
+                    showVerifiedBadge: isCreator || isAmbassador
                 )
 
                 VStack(alignment: .leading, spacing: 4) {

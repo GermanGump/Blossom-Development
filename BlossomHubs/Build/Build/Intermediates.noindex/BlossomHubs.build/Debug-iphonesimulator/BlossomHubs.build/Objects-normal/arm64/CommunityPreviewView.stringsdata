@@ -1,0 +1,64 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Preview/CommunityPreviewView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Communities",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your Subscription",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "View Tiers",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ members",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 259
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld more",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 278
+        }
+      },
+      {
+        "comment": "",
+        "key": "\"%@\"",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 292
+        }
+      },
+      {
+        "comment": "",
+        "key": "— %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 298
+        }
+      }
+    ]
+  },
+  "version": 1
+}

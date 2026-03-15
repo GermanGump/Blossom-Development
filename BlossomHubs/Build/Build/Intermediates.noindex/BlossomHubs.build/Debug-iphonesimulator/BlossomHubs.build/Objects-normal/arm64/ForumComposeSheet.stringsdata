@@ -1,0 +1,48 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Forums/ForumComposeSheet.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "New Thread",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "Thread title",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 17
+        }
+      },
+      {
+        "comment": "",
+        "key": "What's on your mind?",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "Post",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 34
+        }
+      }
+    ]
+  },
+  "version": 1
+}

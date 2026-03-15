@@ -1,0 +1,24 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Feed/PostCardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Trade Highlight",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Video",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 79
+        }
+      }
+    ]
+  },
+  "version": 1
+}

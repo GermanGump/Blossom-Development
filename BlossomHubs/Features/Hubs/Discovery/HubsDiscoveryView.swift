@@ -4,47 +4,94 @@ struct HubsDiscoveryView: View {
     let searchText: String
 
     @Environment(CommunityStore.self) private var store
-    @State private var viewModel: HubsDiscoveryViewModel?
+    @Environment(SubscriptionStore.self) private var subscriptionStore
     @State private var cardsVisible = false
 
-    var body: some View {
-        Group {
-            if let vm = viewModel {
-                ScrollView {
-                    LazyVStack(spacing: 12) {
-                        if let hero = vm.heroCommunity {
-                            CommunityHeroCardView(community: hero)
-                                .opacity(cardsVisible ? 1 : 0)
-                                .offset(y: cardsVisible ? 0 : 20)
-                                .animation(.easeOut(duration: 0.35).delay(0), value: cardsVisible)
-                        }
+    private var subscribedCommunities: [Community] {
+        store.communities.filter { community in
+            subscriptionStore.currentTier(for: community.id) != nil
+        }
+    }
 
-                        ForEach(Array(vm.listCommunities.enumerated()), id: \.element.id) { index, community in
-                            CommunityCardView(community: community)
-                                .opacity(cardsVisible ? 1 : 0)
-                                .offset(y: cardsVisible ? 0 : 20)
-                                .animation(
-                                    .easeOut(duration: 0.35).delay(Double(index + 1) * 0.08),
-                                    value: cardsVisible
-                                )
+    private var heroCommunity: Community? {
+        store.communities.first { $0.creator.username == "@bdinvesting" }
+    }
+
+    private var listCommunities: [Community] {
+        let heroID = heroCommunity?.id
+        let subscribedIDs = Set(subscribedCommunities.map(\.id))
+        return store.communities
+            .filter { $0.id != heroID && !subscribedIDs.contains($0.id) }
+            .sorted { $0.memberCount > $1.memberCount }
+    }
+
+    @Environment(\.colorScheme) private var colorScheme
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                // Header
+                HStack(spacing: 10) {
+                    Image(colorScheme == .dark ? "blossom-logo-dark" : "blossom-logo-icon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 32)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Verified Blossom Communities")
+                            .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(BlossomTheme.primaryText)
+                        Text("Join, learn, invest.")
+                            .font(BlossomFont.caption)
+                            .foregroundStyle(BlossomTheme.secondaryText)
+                    }
+
+                    Spacer()
+                }
+                .padding(.bottom, 4)
+
+                // My Hubs — subscribed communities
+                if !subscribedCommunities.isEmpty {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("My Hubs")
+                            .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(BlossomTheme.primaryText)
+
+                        ForEach(subscribedCommunities) { community in
+                            CommunityCardView(
+                                community: community,
+                                route: .communityDetail(id: community.id.uuidString)
+                            )
                         }
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
+                    .padding(.bottom, 8)
                 }
-                .onChange(of: searchText) { _, newValue in
-                    vm.searchText = newValue
+
+                if let hero = heroCommunity {
+                    CommunityHeroCardView(community: hero)
+                        .opacity(cardsVisible ? 1 : 0)
+                        .offset(y: cardsVisible ? 0 : 20)
+                        .animation(.easeOut(duration: 0.35).delay(0), value: cardsVisible)
                 }
-                .task {
-                    guard !cardsVisible else { return }
-                    cardsVisible = true
+
+                ForEach(Array(listCommunities.enumerated()), id: \.element.id) { index, community in
+                    CommunityCardView(community: community)
+                        .opacity(cardsVisible ? 1 : 0)
+                        .offset(y: cardsVisible ? 0 : 20)
+                        .animation(
+                            .easeOut(duration: 0.35).delay(Double(index + 1) * 0.08),
+                            value: cardsVisible
+                        )
                 }
             }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
         }
-        .onAppear {
-            if viewModel == nil {
-                viewModel = HubsDiscoveryViewModel(store: store)
-            }
+        .task {
+            guard !cardsVisible else { return }
+            cardsVisible = true
         }
     }
 }
@@ -53,6 +100,7 @@ struct HubsDiscoveryView: View {
     NavigationStack {
         HubsDiscoveryView(searchText: "")
             .environment(CommunityStore())
+            .environment(SubscriptionStore())
     }
     .background(BlossomTheme.background)
 }

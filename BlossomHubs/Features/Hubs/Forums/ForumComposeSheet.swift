@@ -3,11 +3,12 @@ import SwiftUI
 
 struct ForumComposeSheet: View {
     let viewModel: ForumViewModel
-    let userTierName: String
+    let userTierIndex: Int
 
     @State private var title = ""
     @State private var content = ""
     @Environment(\.dismiss) private var dismiss
+    @Environment(SubscriptionStore.self) private var subscriptionStore
 
     var body: some View {
         NavigationStack {
@@ -34,7 +35,8 @@ struct ForumComposeSheet: View {
                         viewModel.addThread(
                             title: title,
                             content: content,
-                            authorTierName: userTierName
+                            authorTierIndex: userTierIndex,
+                            authorId: subscriptionStore.session.id
                         )
                         dismiss()
                     }

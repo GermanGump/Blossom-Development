@@ -1,0 +1,40 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Preview/TierCardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Current Plan",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "Upgrade",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Downgrade",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "Subscribe",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 100
+        }
+      }
+    ]
+  },
+  "version": 1
+}

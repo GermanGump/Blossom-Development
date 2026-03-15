@@ -9,6 +9,7 @@ struct CommunityHubView: View {
 
     @State private var viewModel: CommunityHubViewModel?
     @State private var showWelcome = false
+    @State private var showForumCompose = false
 
     var body: some View {
         Group {
@@ -86,10 +87,12 @@ struct CommunityHubView: View {
                     CommunitySectionPager(
                         community: viewModel.community,
                         availableSections: viewModel.availableSections,
+                        forumViewModel: viewModel.forumViewModel,
                         selectedSection: Binding(
                             get: { viewModel.selectedSection },
                             set: { viewModel.selectedSection = $0 }
-                        )
+                        ),
+                        showForumCompose: $showForumCompose
                     )
                 } header: {
                     if viewModel.availableSections.contains(where: { $0 != .landing }) {
@@ -107,6 +110,22 @@ struct CommunityHubView: View {
                         .background(BlossomTheme.background)
                     }
                 }
+            }
+        }
+        .overlay(alignment: .bottomTrailing) {
+            if viewModel.selectedSection == .discussions,
+               subscriptionStore.currentTier(for: viewModel.community.id) != nil {
+                Button(action: { showForumCompose = true }) {
+                    Image(systemName: "plus")
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(.white)
+                        .frame(width: 52, height: 52)
+                        .background(BlossomTheme.violet)
+                        .clipShape(Circle())
+                        .shadow(color: BlossomTheme.violet.opacity(0.4), radius: 8, y: 4)
+                }
+                .padding(.trailing, 20)
+                .padding(.bottom, 100)
             }
         }
     }

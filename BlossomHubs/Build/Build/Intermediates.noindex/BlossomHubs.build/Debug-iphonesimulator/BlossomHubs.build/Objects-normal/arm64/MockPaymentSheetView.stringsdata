@@ -1,0 +1,112 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Payment/MockPaymentSheetView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Payment",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@/mo",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld more benefits",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "Card number",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 163
+        }
+      },
+      {
+        "comment": "",
+        "key": "1234 5678 9012 3456",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expiry",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "MM/YY",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 201
+        }
+      },
+      {
+        "comment": "",
+        "key": "CVC",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "123",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 221
+        }
+      },
+      {
+        "comment": "",
+        "key": "Processing...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 249
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pay %@",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 253
+        }
+      },
+      {
+        "comment": "",
+        "key": "Powered by",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 271
+        }
+      },
+      {
+        "comment": "",
+        "key": "Stripe",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 277
+        }
+      }
+    ]
+  },
+  "version": 1
+}
