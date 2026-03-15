@@ -17,7 +17,8 @@ final class SubscriptionStore {
                 name: "Nick",
                 username: "@nick",
                 profileImageName: "nick-profile-pic",
-                subscriptions: [:]
+                subscriptions: [:],
+                creatorCommunityID: CommunityStore.wealthmaticaID
             )
         }
     }

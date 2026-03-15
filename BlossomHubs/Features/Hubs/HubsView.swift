@@ -50,6 +50,16 @@ struct HubsView: View {
                 CommunityHubView(communityID: id)
             case .mySubscriptions:
                 MySubscriptionsView()
+            case .creatorDashboard:
+                Text("Creator Dashboard")
+            case .creatorEditCommunity:
+                Text("Edit Community")
+            case .creatorManageTiers:
+                Text("Manage Tiers")
+            case .creatorPermissions:
+                Text("Permissions")
+            case .creatorPublishContent:
+                Text("Publish Content")
             }
         }
     }

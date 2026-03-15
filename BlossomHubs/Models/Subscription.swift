@@ -38,4 +38,35 @@ struct UserSession: Codable, Sendable {
     let username: String
     let profileImageName: String
     var subscriptions: [UUID: Subscription]
+    var creatorCommunityID: UUID?
+
+    init(
+        id: UUID = UUID(),
+        name: String,
+        username: String,
+        profileImageName: String,
+        subscriptions: [UUID: Subscription] = [:],
+        creatorCommunityID: UUID? = nil
+    ) {
+        self.id = id
+        self.name = name
+        self.username = username
+        self.profileImageName = profileImageName
+        self.subscriptions = subscriptions
+        self.creatorCommunityID = creatorCommunityID
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, username, profileImageName, subscriptions, creatorCommunityID
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        username = try container.decode(String.self, forKey: .username)
+        profileImageName = try container.decode(String.self, forKey: .profileImageName)
+        subscriptions = try container.decode([UUID: Subscription].self, forKey: .subscriptions)
+        creatorCommunityID = try container.decodeIfPresent(UUID.self, forKey: .creatorCommunityID)
+    }
 }

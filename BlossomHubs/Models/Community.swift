@@ -12,12 +12,12 @@ enum PostType: String, Codable, CaseIterable {
 
 struct Creator: Identifiable {
     let id: UUID
-    let name: String
-    let username: String
-    let profileImageName: String
-    let isVerified: Bool
-    let isAmbassador: Bool
-    let bio: String
+    var name: String
+    var username: String
+    var profileImageName: String
+    var isVerified: Bool
+    var isAmbassador: Bool
+    var bio: String
 
     init(
         id: UUID = UUID(),
@@ -42,9 +42,9 @@ struct Creator: Identifiable {
 
 struct Tier: Identifiable, Hashable {
     let id: UUID
-    let name: String
-    let monthlyPrice: Decimal
-    let benefits: [String]
+    var name: String
+    var monthlyPrice: Decimal
+    var benefits: [String]
 
     init(
         id: UUID = UUID(),
@@ -63,14 +63,14 @@ struct Tier: Identifiable, Hashable {
 
 struct Post: Identifiable {
     let id: UUID
-    let authorId: UUID
-    let content: String
-    let postType: PostType
-    let stockTickers: [String]
-    let youtubeURL: String?
-    let requiredTierIndex: Int
-    let publishedAt: Date
-    let collection: String?
+    var authorId: UUID
+    var content: String
+    var postType: PostType
+    var stockTickers: [String]
+    var youtubeURL: String?
+    var requiredTierIndex: Int
+    var publishedAt: Date
+    var collection: String?
 
     init(
         id: UUID = UUID(),
@@ -99,13 +99,13 @@ struct Post: Identifiable {
 
 struct ForumThread: Identifiable {
     let id: UUID
-    let title: String
-    let content: String
-    let authorId: UUID
-    let requiredTierIndex: Int
-    let replyCount: Int
-    let likeCount: Int
-    let publishedAt: Date
+    var title: String
+    var content: String
+    var authorId: UUID
+    var requiredTierIndex: Int
+    var replyCount: Int
+    var likeCount: Int
+    var publishedAt: Date
 
     init(
         id: UUID = UUID(),
@@ -132,15 +132,15 @@ struct ForumThread: Identifiable {
 
 struct ForumReply: Identifiable {
     let id: UUID
-    let threadID: UUID
-    let authorId: UUID
-    let authorName: String
-    let authorTierName: String
-    let content: String
-    let likeCount: Int
-    let publishedAt: Date
-    let isCreator: Bool
-    let isAmbassador: Bool
+    var threadID: UUID
+    var authorId: UUID
+    var authorName: String
+    var authorTierName: String
+    var content: String
+    var likeCount: Int
+    var publishedAt: Date
+    var isCreator: Bool
+    var isAmbassador: Bool
 
     init(
         id: UUID = UUID(),
@@ -171,11 +171,11 @@ struct ForumReply: Identifiable {
 
 struct FAQEntry: Identifiable {
     let id: UUID
-    let question: String
-    let answer: String?
-    let isAnswered: Bool
-    let askedBy: String
-    let answeredBy: String?
+    var question: String
+    var answer: String?
+    var isAnswered: Bool
+    var askedBy: String
+    var answeredBy: String?
 
     init(
         id: UUID = UUID(),
@@ -198,17 +198,18 @@ struct FAQEntry: Identifiable {
 
 struct Community: Identifiable {
     let id: UUID
-    let name: String
-    let description: String
-    let logoImageName: String
-    let bannerImageName: String?
-    let creator: Creator
-    let tiers: [Tier]
-    let posts: [Post]
-    let threads: [ForumThread]
-    let faqEntries: [FAQEntry]
-    let memberCount: Int
-    let category: String
+    var name: String
+    var description: String
+    var logoImageName: String
+    var bannerImageName: String?
+    var creator: Creator
+    var tiers: [Tier]
+    var posts: [Post]
+    var threads: [ForumThread]
+    var faqEntries: [FAQEntry]
+    var memberCount: Int
+    var category: String
+    var permissions: [String: Set<Int>]
 
     init(
         id: UUID = UUID(),
@@ -222,7 +223,8 @@ struct Community: Identifiable {
         threads: [ForumThread],
         faqEntries: [FAQEntry],
         memberCount: Int,
-        category: String
+        category: String,
+        permissions: [String: Set<Int>] = [:]
     ) {
         self.id = id
         self.name = name
@@ -236,5 +238,6 @@ struct Community: Identifiable {
         self.faqEntries = faqEntries
         self.memberCount = memberCount
         self.category = category
+        self.permissions = permissions
     }
 }

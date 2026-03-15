@@ -3,6 +3,8 @@ import Foundation
 @MainActor
 @Observable
 final class CommunityStore {
+    static let wealthmaticaID = UUID(uuidString: "A1B2C3D4-E5F6-7890-ABCD-EF1234567890")!
+
     var communities: [Community] = CommunityStore.makeMockData()
 
     static func makeMockData() -> [Community] {
@@ -14,6 +16,16 @@ final class CommunityStore {
             makeMoesWatchlist(),
             makeCanadianInvestor()
         ]
+    }
+
+    func updateCommunity(id: UUID, update: (inout Community) -> Void) {
+        guard let index = communities.firstIndex(where: { $0.id == id }) else { return }
+        update(&communities[index])
+    }
+
+    func addPost(to communityID: UUID, post: Post) {
+        guard let index = communities.firstIndex(where: { $0.id == communityID }) else { return }
+        communities[index].posts.insert(post, at: 0)
     }
 }
 
@@ -171,6 +183,7 @@ private extension CommunityStore {
         ]
 
         return Community(
+            id: CommunityStore.wealthmaticaID,
             name: "Wealthmatica",
             description: "Canadian dividend investing, TFSA/RRSP strategy, and passive income building. Join 400+ investors growing wealth the boring (profitable) way.",
             logoImageName: "nick-profile-pic",
@@ -180,7 +193,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 412,
-            category: "Dividend Investing"
+            category: "Dividend Investing",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
@@ -329,7 +343,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 287,
-            category: "Swing Trading"
+            category: "Swing Trading",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
@@ -507,7 +522,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 178,
-            category: "Options & Swing Trading"
+            category: "Options & Swing Trading",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
@@ -648,7 +664,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 356,
-            category: "Passive Investing"
+            category: "Passive Investing",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
@@ -827,7 +844,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 98,
-            category: "Momentum Trading"
+            category: "Momentum Trading",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
@@ -987,7 +1005,8 @@ private extension CommunityStore {
             threads: threads,
             faqEntries: faqEntries,
             memberCount: 503,
-            category: "Canadian Personal Finance"
+            category: "Canadian Personal Finance",
+            permissions: ["Posts": [0, 1, 2], "Discussions": [1, 2], "FAQ Submit": [2], "Videos": [0, 1, 2]]
         )
     }
 }
