@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Community Hub and Navigation Structure** - Community landing page, link-tree navigation, section tab bar, per-community routing (completed 2026-03-14)
 - [x] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections (completed 2026-03-14)
 - [x] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers (completed 2026-03-15)
-- [ ] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge
+- [x] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge (completed 2026-03-15)
 - [ ] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish
 
 ## Phase Details
@@ -146,12 +146,12 @@ Plans:
   4. The permissions matrix shows a grid of content sections versus tier levels — the creator can grant or revoke access per cell, and those changes drive the PermissionGate evaluations seen by subscribers
   5. The creator can write and publish a new post, assign it to a named collection, and set a tier-gate level — the post appears in the content feed with the correct gating applied
   6. A verified badge appears on creator/ambassador profiles throughout the app — discovery cards, forum posts, FAQ entries
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 
 Plans:
 - [x] 08-01-PLAN.md — Data model mutations (let->var), creator role on UserSession, dashboard home with stat cards and section links, community edit form (completed 2026-03-15)
-- [ ] 08-02-PLAN.md — Tier editor with add/edit/remove and 4-tier limit, permissions matrix toggle grid
-- [ ] 08-03-PLAN.md — Content publishing compose form with post type switcher, collection/tier-gate pickers, ticker parsing, verified badge audit
+- [x] 08-02-PLAN.md — Tier editor with add/edit/remove and 4-tier limit, permissions matrix toggle grid (completed 2026-03-15)
+- [x] 08-03-PLAN.md — Content publishing compose form with post type switcher, collection/tier-gate pickers, ticker parsing, verified badge audit (completed 2026-03-15)
 
 ### Phase 9: Creator Earnings and Demo Polish
 **Goal**: The creator earnings view presents a clear revenue breakdown with a SwiftUI Charts visualization, and the complete subscriber demo flow runs end-to-end without dark mode gaps, font rendering issues, or broken permission states — the prototype is demo-ready

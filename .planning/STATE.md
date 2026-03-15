@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 08-01-PLAN.md — Creator dashboard shell with mutable models, stat cards, section links, community edit form
-last_updated: "2026-03-15T19:54:02.000Z"
-last_activity: 2026-03-15 — Completed 08-01 — Creator dashboard shell and community editing
+stopped_at: Completed 08-03-PLAN.md — Content publishing compose form and verified badge audit
+last_updated: "2026-03-15T20:01:10.000Z"
+last_activity: 2026-03-15 — Completed 08-03 — ComposePostView with post type switching, ticker parsing, badge audit
 progress:
   total_phases: 9
-  completed_phases: 7
+  completed_phases: 8
   total_plans: 17
-  completed_plans: 18
-  percent: 75
+  completed_plans: 20
+  percent: 83
 ---
 
 # Project State
@@ -21,23 +21,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-10)
 
 **Core value:** Blossom ambassadors and creators can monetize their investing expertise through tiered paid communities, while subscribers get access to premium content and engagement they can't get from the free social feed.
-**Current focus:** Phase 8 in progress — creator dashboard shell complete, tier editor and permissions matrix next
+**Current focus:** Phase 8 complete — all creator dashboard plans done, Phase 9 earnings and polish next
 
 ## Current Position
 
-Phase: 8 of 9 IN PROGRESS
-Plan: 1 of 3 in Phase 8 complete
-Status: Creator dashboard shell built — tier editor and permissions next
-Last activity: 2026-03-15 — Completed 08-01 — Creator dashboard shell with mutable models and community editing
+Phase: 8 of 9 COMPLETE
+Plan: 3 of 3 in Phase 8 complete
+Status: Phase 8 complete — content publishing and badge audit done
+Last activity: 2026-03-15 — Completed 08-03 — ComposePostView with post type switching, ticker parsing, verified badge audit
 
-Progress: [████████░░] 75%
+Progress: [████████░░] 83%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 18
-- Average duration: 7.1 min
-- Total execution time: 2.0 hours
+- Total plans completed: 20
+- Average duration: 6.7 min
+- Total execution time: 2.1 hours
 
 **By Phase:**
 
@@ -50,10 +50,10 @@ Progress: [████████░░] 75%
 | Phase 5 | 2 | 8 min | 4 min |
 | Phase 6 | 2 | 5 min | 2.5 min |
 | Phase 7 | 2 | 7 min | 3.5 min |
-| Phase 8 | 1 | 6 min | 6 min |
+| Phase 8 | 3 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 6 min (08-01), 2 min (07-02), 5 min (07-01), 2 min (06-02), 3 min (06-01)
+- Last 5 plans: 3 min (08-03), 6 min (08-01), 2 min (07-02), 5 min (07-01), 2 min (06-02)
 - Trend: improving
 
 *Updated after each plan completion*
@@ -74,6 +74,8 @@ Progress: [████████░░] 75%
 | Phase 07 P01 | 5 | 2 tasks | 10 files |
 | Phase 07 P02 | 2 | 1 task | 5 files |
 | Phase 08 P01 | 6 | 2 tasks | 15 files |
+| Phase 08 P02 | 3 | 2 tasks | 4 files |
+| Phase 08 P03 | 3 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -141,6 +143,12 @@ Recent decisions affecting current work:
 - [Phase 08-01]: wealthmaticaID as static UUID constant on CommunityStore -- stable ID links SubscriptionStore to CommunityStore
 - [Phase 08-01]: CommunityStore.updateCommunity(id:update:) inout closure pattern for all creator mutations
 - [Phase 08-01]: Community.permissions [String: Set<Int>] dictionary for section-level tier access control
+- [Phase 08-02]: TierEditSheet uses @State copies of tier properties initialized in init, saved back via updateCommunity on Save
+- [Phase 08-02]: PermissionsMatrixView uses SwiftUI Grid with GridRow for clean matrix column alignment
+- [Phase 08-02]: Binding(get:set:) for dictionary-backed toggles -- get reads Set membership, set inserts/removes
+- [Phase 08-03]: Swift Regex /\$[A-Za-z.]+/ used for ticker parsing -- handles $AMD, $TSLA, $RY.TO, $BRK.B
+- [Phase 08-03]: Form-based compose layout with segmented picker, conditional sections, and success overlay feedback
+- [Phase 08-03]: FAQ answered-by attribution augmented with VerifiedBadge() for cross-surface consistency
 
 ### Pending Todos
 
@@ -153,6 +161,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T19:54:02.000Z
-Stopped at: Completed 08-01-PLAN.md — Creator dashboard shell with mutable models, stat cards, section links, community edit form
-Resume file: Phase 8 Plan 02 (Tier Editor & Permissions Matrix)
+Last session: 2026-03-15T20:01:10.000Z
+Stopped at: Completed 08-03-PLAN.md — Content publishing compose form and verified badge audit
+Resume file: Phase 9 (Creator Earnings and Demo Polish)
