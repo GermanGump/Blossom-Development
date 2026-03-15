@@ -20,10 +20,26 @@
       },
       {
         "comment": "",
+        "key": "Manage my Hub",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit community, tiers & content",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
         "key": "My Hubs",
         "location": {
           "startingColumn": 30,
-          "startingLine": 57
+          "startingLine": 87
         }
       }
     ]

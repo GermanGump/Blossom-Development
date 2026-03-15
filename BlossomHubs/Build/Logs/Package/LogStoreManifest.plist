@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>5BE3262C-0463-4ADB-8262-4214428D06A3</key>
+		<key>99462202-83B3-4FDB-8EDF-5F6D66CF3F94</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>5BE3262C-0463-4ADB-8262-4214428D06A3.xcactivitylog</string>
+			<string>99462202-83B3-4FDB-8EDF-5F6D66CF3F94.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -34,15 +34,15 @@
 			<key>signature</key>
 			<string>Resolve Packages</string>
 			<key>timeStartedRecording</key>
-			<real>795291830.393749</real>
+			<real>795297654.357674</real>
 			<key>timeStoppedRecording</key>
-			<real>795291830.61228597</real>
+			<real>795297654.51841295</real>
 			<key>title</key>
 			<string>Resolve Packages</string>
 			<key>uniqueIdentifier</key>
-			<string>5BE3262C-0463-4ADB-8262-4214428D06A3</string>
+			<string>99462202-83B3-4FDB-8EDF-5F6D66CF3F94</string>
 		</dict>
-		<key>9DC492E3-EA53-45A0-BD60-320981094919</key>
+		<key>C521AB82-C380-42B9-B93C-C90E1D66161A</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -51,7 +51,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>9DC492E3-EA53-45A0-BD60-320981094919.xcactivitylog</string>
+			<string>C521AB82-C380-42B9-B93C-C90E1D66161A.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -70,13 +70,13 @@
 			<key>signature</key>
 			<string>Resolve Packages</string>
 			<key>timeStartedRecording</key>
-			<real>795290745.88856697</real>
+			<real>795299472.45686102</real>
 			<key>timeStoppedRecording</key>
-			<real>795290746.09542406</real>
+			<real>795299472.646685</real>
 			<key>title</key>
 			<string>Resolve Packages</string>
 			<key>uniqueIdentifier</key>
-			<string>9DC492E3-EA53-45A0-BD60-320981094919</string>
+			<string>C521AB82-C380-42B9-B93C-C90E1D66161A</string>
 		</dict>
 	</dict>
 </dict>

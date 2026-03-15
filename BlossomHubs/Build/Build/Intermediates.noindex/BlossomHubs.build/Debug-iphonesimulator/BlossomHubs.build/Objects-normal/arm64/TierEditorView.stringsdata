@@ -1,0 +1,48 @@
+{
+  "source": "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Creator/TierEditorView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Manage Tiers",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "No community found",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Tier",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld benefit%@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "$%@/mo",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 89
+        }
+      }
+    ]
+  },
+  "version": 1
+}
