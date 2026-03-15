@@ -51,6 +51,7 @@
 		0804A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */; };
 		0805A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */; };
 		0806A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */; };
+		0807A2B3C4D5E6F7A8B9C0D1 /* TierEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0817A2B3C4D5E6F7A8B9C0D1 /* TierEditSheet.swift */; };
 		38C01D70E6B5EFADBBE3056F /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 350B18EB99061DB47CA15FCA /* Inter-Regular.otf */; };
 		4AA052092BD1ED2714C91C27 /* BlossomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39BEC2A28416B3F010FAED /* BlossomTabBar.swift */; };
 		5340F1DE3E32B29E43A23BCB /* BlossomHubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3851C07E8A9CBFAEEB8B555 /* BlossomHubsApp.swift */; };
@@ -171,6 +172,7 @@
 		0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TierEditorView.swift; sourceTree = "<group>"; };
 		0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsMatrixView.swift; sourceTree = "<group>"; };
 		0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ComposePostView.swift; sourceTree = "<group>"; };
+		0817A2B3C4D5E6F7A8B9C0D1 /* TierEditSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TierEditSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 				0814A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift */,
 				0815A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift */,
 				0816A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift */,
+				0817A2B3C4D5E6F7A8B9C0D1 /* TierEditSheet.swift */,
 			);
 			name = Creator;
 			path = Creator;
@@ -646,6 +649,7 @@
 				0804A2B3C4D5E6F7A8B9C0D1 /* TierEditorView.swift in Sources */,
 				0805A2B3C4D5E6F7A8B9C0D1 /* PermissionsMatrixView.swift in Sources */,
 				0806A2B3C4D5E6F7A8B9C0D1 /* ComposePostView.swift in Sources */,
+				0807A2B3C4D5E6F7A8B9C0D1 /* TierEditSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
