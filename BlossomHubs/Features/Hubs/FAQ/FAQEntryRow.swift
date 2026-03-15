@@ -41,7 +41,7 @@ struct FAQEntryRow: View {
                         .font(BlossomFont.body)
                         .foregroundStyle(BlossomTheme.primaryText)
 
-                    // Creator attribution
+                    // Creator attribution with verified badge
                     HStack(spacing: 4) {
                         Image(systemName: "checkmark.shield.fill")
                             .font(.system(size: 12))
@@ -50,6 +50,8 @@ struct FAQEntryRow: View {
                         Text("Answered by \(entry.answeredBy ?? "Creator")")
                             .font(BlossomFont.caption)
                             .foregroundStyle(BlossomTheme.secondaryText)
+
+                        VerifiedBadge()
                     }
                 }
                 .padding(12)
