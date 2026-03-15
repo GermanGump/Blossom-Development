@@ -128,6 +128,45 @@ struct ForumThread: Identifiable {
     }
 }
 
+// MARK: - ForumReply
+
+struct ForumReply: Identifiable {
+    let id: UUID
+    let threadID: UUID
+    let authorId: UUID
+    let authorName: String
+    let authorTierName: String
+    let content: String
+    let likeCount: Int
+    let publishedAt: Date
+    let isCreator: Bool
+    let isAmbassador: Bool
+
+    init(
+        id: UUID = UUID(),
+        threadID: UUID,
+        authorId: UUID,
+        authorName: String,
+        authorTierName: String,
+        content: String,
+        likeCount: Int = 0,
+        publishedAt: Date,
+        isCreator: Bool = false,
+        isAmbassador: Bool = false
+    ) {
+        self.id = id
+        self.threadID = threadID
+        self.authorId = authorId
+        self.authorName = authorName
+        self.authorTierName = authorTierName
+        self.content = content
+        self.likeCount = likeCount
+        self.publishedAt = publishedAt
+        self.isCreator = isCreator
+        self.isAmbassador = isAmbassador
+    }
+}
+
 // MARK: - FAQEntry
 
 struct FAQEntry: Identifiable {

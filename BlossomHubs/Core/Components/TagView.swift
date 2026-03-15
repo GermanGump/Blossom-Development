@@ -6,6 +6,7 @@ enum TagStyle {
     case tier
     case category
     case subscribed
+    case role
 
     var foregroundColor: Color {
         switch self {
@@ -13,6 +14,7 @@ enum TagStyle {
         case .tier: return BlossomTheme.violet
         case .category: return BlossomTheme.primaryText
         case .subscribed: return .white
+        case .role: return BlossomTheme.teal
         }
     }
 
@@ -22,6 +24,7 @@ enum TagStyle {
         case .tier: return BlossomTheme.violet.opacity(0.12)
         case .category: return BlossomTheme.slate.opacity(0.12)
         case .subscribed: return BlossomTheme.teal
+        case .role: return BlossomTheme.teal.opacity(0.12)
         }
     }
 }
@@ -38,6 +41,7 @@ struct TagView: View {
     var body: some View {
         Text(text)
             .font(BlossomFont.caption)
+            .lineLimit(1)
             .foregroundColor(style.foregroundColor)
             .padding(.horizontal, 10)
             .padding(.vertical, 4)
@@ -51,6 +55,7 @@ struct TagView: View {
         TagView("AAPL", style: .stock)
         TagView("Gold Tier", style: .tier)
         TagView("Tech", style: .category)
+        TagView("Creator", style: .role)
     }
     .padding()
     .background(BlossomTheme.background)

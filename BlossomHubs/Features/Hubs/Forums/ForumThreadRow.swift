@@ -1,0 +1,85 @@
+// Features/Hubs/Forums/ForumThreadRow.swift
+import SwiftUI
+
+struct ForumThreadRow: View {
+    let thread: ForumThread
+    let authorName: String
+    let authorProfileImage: String
+    let isCreator: Bool
+    let isAmbassador: Bool
+    let tierName: String
+    let isLiked: Bool
+    let onLike: () -> Void
+
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .top, spacing: 10) {
+                AvatarView(
+                    image: Image(systemName: authorProfileImage),
+                    showVerifiedBadge: isCreator || isAmbassador,
+                    size: AvatarSize.small.rawValue
+                )
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(thread.title)
+                        .font(BlossomFont.subhead)
+                        .foregroundColor(BlossomTheme.primaryText)
+                        .lineLimit(2)
+
+                    HStack(spacing: 6) {
+                        Text(authorName)
+                            .font(BlossomFont.caption)
+                            .foregroundColor(BlossomTheme.secondaryText)
+
+                        TagView(tierName, style: .tier)
+
+                        if isCreator {
+                            TagView("Creator", style: .role)
+                        } else if isAmbassador {
+                            TagView("Ambassador", style: .role)
+                        }
+
+                        Spacer()
+
+                        Text(thread.publishedAt, format: .relative(presentation: .named))
+                            .font(BlossomFont.caption)
+                            .foregroundColor(BlossomTheme.secondaryText)
+                    }
+                }
+
+                VStack(spacing: 8) {
+                    HStack(spacing: 3) {
+                        Image(systemName: "bubble.right")
+                            .font(.system(size: 12))
+                            .foregroundColor(BlossomTheme.secondaryText)
+                        Text("\(thread.replyCount)")
+                            .font(BlossomFont.caption)
+                            .foregroundColor(BlossomTheme.secondaryText)
+                    }
+
+                    Button(action: onLike) {
+                        HStack(spacing: 3) {
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .font(.system(size: 12))
+                                .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
+                            Text("\(thread.likeCount + (isLiked ? 1 : 0))")
+                                .font(BlossomFont.caption)
+                                .foregroundColor(BlossomTheme.secondaryText)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .background(
+                (isCreator || isAmbassador)
+                    ? BlossomTheme.teal.opacity(0.08)
+                    : Color.clear
+            )
+
+            Divider()
+                .padding(.leading, 54)
+        }
+    }
+}
