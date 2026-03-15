@@ -31,11 +31,7 @@ struct CommunitySectionPager: View {
         case .posts:
             ContentFeedView(community: community)
         case .discussions:
-            EmptyStateView(
-                icon: "bubble.left.and.bubble.right",
-                title: "Discussions",
-                subtitle: "Discussions coming in Phase 7"
-            )
+            DiscussionsFeedView(community: community)
         case .faq:
             EmptyStateView(
                 icon: "questionmark.circle",
