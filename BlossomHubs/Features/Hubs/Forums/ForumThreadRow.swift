@@ -8,6 +8,7 @@ struct ForumThreadRow: View {
     let isCreator: Bool
     let isAmbassador: Bool
     let tierName: String
+    var tierColor: Color? = nil
     let isLiked: Bool
     let onLike: () -> Void
 
@@ -31,7 +32,7 @@ struct ForumThreadRow: View {
                             .font(BlossomFont.caption)
                             .foregroundColor(BlossomTheme.secondaryText)
 
-                        TagView(tierName, style: .tier)
+                        TagView(tierName, style: .tier, customColor: tierColor)
 
                         if isCreator {
                             TagView("Creator", style: .role)

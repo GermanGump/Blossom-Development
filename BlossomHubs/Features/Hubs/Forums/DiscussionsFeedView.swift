@@ -35,6 +35,7 @@ struct DiscussionsFeedView: View {
                 let authorName = isCreator ? community.creator.name : (isCurrentUser ? subscriptionStore.session.name : "Member")
                 let authorImage = isCreator ? community.creator.profileImageName : (isCurrentUser ? subscriptionStore.session.profileImageName : "person.circle")
                 let threadTierName = forumViewModel.tierName(for: thread.requiredTierIndex)
+                let threadTierColor = forumViewModel.tierColor(for: thread.requiredTierIndex)
                 let canAccess = forumViewModel.canAccessThread(thread, userTierIndex: userTierIndex)
                 let isLiked = forumViewModel.likedThreadIDs.contains(thread.id)
 
@@ -49,6 +50,7 @@ struct DiscussionsFeedView: View {
                             isCreator: isCreator,
                             isAmbassador: isAmbassador,
                             tierName: threadTierName,
+                            tierColor: threadTierColor,
                             isLiked: isLiked,
                             onLike: { forumViewModel.toggleThreadLike(threadID: thread.id) }
                         )
@@ -66,6 +68,7 @@ struct DiscussionsFeedView: View {
                             isCreator: isCreator,
                             isAmbassador: isAmbassador,
                             tierName: threadTierName,
+                            tierColor: threadTierColor,
                             isLiked: false,
                             onLike: {}
                         )

@@ -48,7 +48,8 @@ private extension CommunityStore {
                     "Access to free market commentary",
                     "Monthly newsletter digest",
                     "Community forum (read only)"
-                ]
+                ],
+                colorHex: "10B981"
             ),
             Tier(
                 name: "Investor",
@@ -58,7 +59,8 @@ private extension CommunityStore {
                     "Canadian dividend stock watchlist",
                     "Community forum (full access)",
                     "Monthly portfolio snapshot"
-                ]
+                ],
+                colorHex: "3B82F6"
             ),
             Tier(
                 name: "Pro",
@@ -69,7 +71,8 @@ private extension CommunityStore {
                     "Direct message access",
                     "All Investor tier benefits",
                     "Exclusive deep-dive research reports"
-                ]
+                ],
+                colorHex: "7C3AED"
             )
         ]
 

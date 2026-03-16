@@ -1,5 +1,6 @@
 // Features/Hubs/Forums/ForumViewModel.swift
 import Foundation
+import SwiftUI
 
 @MainActor
 @Observable
@@ -24,6 +25,11 @@ final class ForumViewModel {
     func tierName(for requiredIndex: Int) -> String {
         guard requiredIndex < community.tiers.count else { return "Premium" }
         return community.tiers[requiredIndex].name
+    }
+
+    func tierColor(for requiredIndex: Int) -> Color? {
+        guard requiredIndex < community.tiers.count else { return nil }
+        return community.tiers[requiredIndex].color
     }
 
     func toggleThreadLike(threadID: UUID) {

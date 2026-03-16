@@ -7,7 +7,7 @@
         "key": "Edit Tier",
         "location": {
           "startingColumn": 30,
-          "startingLine": 87
+          "startingLine": 169
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Tier Details",
         "location": {
           "startingColumn": 25,
-          "startingLine": 25
+          "startingLine": 40
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Benefits",
         "location": {
           "startingColumn": 25,
-          "startingLine": 42
+          "startingLine": 124
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Tier Name",
         "location": {
           "startingColumn": 31,
-          "startingLine": 26
+          "startingLine": 41
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "$",
         "location": {
           "startingColumn": 30,
-          "startingLine": 30
+          "startingLine": 45
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "/mo",
         "location": {
           "startingColumn": 30,
-          "startingLine": 36
+          "startingLine": 51
         }
       },
       {
@@ -55,7 +55,47 @@
         "key": "Monthly Price",
         "location": {
           "startingColumn": 35,
-          "startingLine": 33
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Preview:",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "#",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "HEX Code",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tier Color",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "This color appears on the tier tag in discussions and FAQ",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 120
         }
       },
       {
@@ -63,7 +103,7 @@
         "key": "Benefit",
         "location": {
           "startingColumn": 39,
-          "startingLine": 45
+          "startingLine": 127
         }
       },
       {
@@ -71,7 +111,7 @@
         "key": "Add Benefit",
         "location": {
           "startingColumn": 34,
-          "startingLine": 64
+          "startingLine": 146
         }
       },
       {
@@ -79,7 +119,7 @@
         "key": "Delete Tier",
         "location": {
           "startingColumn": 34,
-          "startingLine": 79
+          "startingLine": 161
         }
       },
       {
@@ -87,7 +127,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 28,
-          "startingLine": 91
+          "startingLine": 173
         }
       },
       {
@@ -95,7 +135,7 @@
         "key": "Save",
         "location": {
           "startingColumn": 28,
-          "startingLine": 96
+          "startingLine": 178
         }
       }
     ]

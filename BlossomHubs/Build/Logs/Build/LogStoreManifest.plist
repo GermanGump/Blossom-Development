@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>3FE318A6-0A11-4716-A403-598209CD89FF</key>
+		<key>DBBBA0B9-1891-4624-87C8-9979C7DF6A32</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,21 +15,21 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>3FE318A6-0A11-4716-A403-598209CD89FF.xcactivitylog</string>
+			<string>DBBBA0B9-1891-4624-87C8-9979C7DF6A32.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 				<key>totalNumberOfAnalyzerIssues</key>
 				<integer>0</integer>
 				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>totalNumberOfTestFailures</key>
 				<integer>0</integer>
 				<key>totalNumberOfWarnings</key>
-				<integer>2</integer>
+				<integer>0</integer>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>BlossomHubs project</string>
@@ -40,55 +40,13 @@
 			<key>signature</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>timeStartedRecording</key>
-			<real>795308682.51933396</real>
+			<real>795314705.23445201</real>
 			<key>timeStoppedRecording</key>
-			<real>795308688.99784601</real>
+			<real>795314707.60382497</real>
 			<key>title</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>uniqueIdentifier</key>
-			<string>3FE318A6-0A11-4716-A403-598209CD89FF</string>
-		</dict>
-		<key>CA1A6C2D-249C-48F1-A3E0-805B990CAAFB</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>CA1A6C2D-249C-48F1-A3E0-805B990CAAFB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>2</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>BlossomHubs project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>BlossomHubs</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project BlossomHubs with scheme BlossomHubs</string>
-			<key>timeStartedRecording</key>
-			<real>795308311.16930795</real>
-			<key>timeStoppedRecording</key>
-			<real>795308321.50204098</real>
-			<key>title</key>
-			<string>Building project BlossomHubs with scheme BlossomHubs</string>
-			<key>uniqueIdentifier</key>
-			<string>CA1A6C2D-249C-48F1-A3E0-805B990CAAFB</string>
+			<string>DBBBA0B9-1891-4624-87C8-9979C7DF6A32</string>
 		</dict>
 	</dict>
 </dict>

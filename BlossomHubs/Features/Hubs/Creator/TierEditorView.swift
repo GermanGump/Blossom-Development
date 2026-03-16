@@ -80,6 +80,10 @@ struct TierEditorView: View {
 
     private func tierCard(_ tier: Tier) -> some View {
         HStack {
+            Circle()
+                .fill(tier.color)
+                .frame(width: 12, height: 12)
+
             VStack(alignment: .leading, spacing: 4) {
                 Text(tier.name)
                     .font(BlossomFont.subhead)

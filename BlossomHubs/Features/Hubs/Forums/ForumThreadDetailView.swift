@@ -131,7 +131,7 @@ struct ForumThreadDetailView: View {
                             TagView("Creator", style: .role)
                         }
 
-                        TagView(viewModel.tierName(for: thread.requiredTierIndex), style: .tier)
+                        TagView(viewModel.tierName(for: thread.requiredTierIndex), style: .tier, customColor: viewModel.tierColor(for: thread.requiredTierIndex))
                     }
 
                     Text(thread.publishedAt, format: .relative(presentation: .named))
