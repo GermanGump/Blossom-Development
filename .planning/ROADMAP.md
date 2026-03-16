@@ -163,7 +163,11 @@ Plans:
   3. The complete subscriber demo flow runs without visible errors: discovery splash -> browse communities -> community preview -> tier expansion -> mock payment -> confetti -> community landing -> content feed -> locked content prompt -> forum thread -> FAQ submission
   4. Every screen in the subscriber demo flow passes a dark mode check — no invisible text, no white-on-white cards, no unthemed system colors
   5. Inter font renders at the correct weight on all text styles across the full demo flow — no silent fallback to SF Pro
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 09-01-PLAN.md — Creator earnings feature: EarningsData model, ViewModel extension, SwiftUI Charts bar chart with interactive tap, 1M/3M/6M picker, revenue breakdown, per-tier colored bars
+- [ ] 09-02-PLAN.md — Demo polish: .foregroundColor() to .foregroundStyle() migration across 16 files, dark mode audit, end-to-end demo flow verification checkpoint
 
 ## Progress
 
@@ -180,4 +184,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
 | 7. Engagement: Forums and FAQ | 2/2 | Complete | 2026-03-15 |
 | 8. Creator Dashboard | 3/3 | Complete | 2026-03-15 |
-| 9. Creator Earnings and Demo Polish | 0/TBD | Not started | - |
+| 9. Creator Earnings and Demo Polish | 0/2 | Not started | - |
