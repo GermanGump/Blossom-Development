@@ -7,7 +7,7 @@
         "key": "Edit Tier",
         "location": {
           "startingColumn": 30,
-          "startingLine": 72
+          "startingLine": 87
         }
       },
       {
@@ -76,10 +76,18 @@
       },
       {
         "comment": "",
+        "key": "Delete Tier",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
         "key": "Cancel",
         "location": {
           "startingColumn": 28,
-          "startingLine": 76
+          "startingLine": 91
         }
       },
       {
@@ -87,7 +95,7 @@
         "key": "Save",
         "location": {
           "startingColumn": 28,
-          "startingLine": 81
+          "startingLine": 96
         }
       }
     ]

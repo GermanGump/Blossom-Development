@@ -7,7 +7,7 @@
         "key": "Communities",
         "location": {
           "startingColumn": 30,
-          "startingLine": 153
+          "startingLine": 162
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Your Subscription",
         "location": {
           "startingColumn": 26,
-          "startingLine": 164
+          "startingLine": 173
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "View Tiers",
         "location": {
           "startingColumn": 48,
-          "startingLine": 164
+          "startingLine": 173
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "%@ members",
         "location": {
           "startingColumn": 22,
-          "startingLine": 259
+          "startingLine": 268
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "+%lld more",
         "location": {
           "startingColumn": 22,
-          "startingLine": 278
+          "startingLine": 287
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "\"%@\"",
         "location": {
           "startingColumn": 26,
-          "startingLine": 292
+          "startingLine": 301
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "— %@",
         "location": {
           "startingColumn": 26,
-          "startingLine": 298
+          "startingLine": 307
         }
       }
     ]

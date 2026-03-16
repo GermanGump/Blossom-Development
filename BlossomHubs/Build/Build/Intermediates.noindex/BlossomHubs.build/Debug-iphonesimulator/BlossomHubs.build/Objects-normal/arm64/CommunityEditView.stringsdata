@@ -7,7 +7,7 @@
         "key": "Edit Community",
         "location": {
           "startingColumn": 26,
-          "startingLine": 93
+          "startingLine": 189
         }
       },
       {
@@ -15,23 +15,23 @@
         "key": "No community found",
         "location": {
           "startingColumn": 22,
-          "startingLine": 89
+          "startingLine": 185
         }
       },
       {
         "comment": "",
-        "key": "Details",
+        "key": "Community Hub Name",
         "location": {
           "startingColumn": 29,
-          "startingLine": 29
+          "startingLine": 44
         }
       },
       {
         "comment": "",
-        "key": "Appearance",
+        "key": "Hub Description",
         "location": {
           "startingColumn": 29,
-          "startingLine": 52
+          "startingLine": 50
         }
       },
       {
@@ -39,31 +39,79 @@
         "key": "Category",
         "location": {
           "startingColumn": 29,
-          "startingLine": 76
+          "startingLine": 123
         }
       },
       {
         "comment": "",
-        "key": "Community Name",
+        "key": "Enter hub name",
         "location": {
           "startingColumn": 35,
-          "startingLine": 30
+          "startingLine": 45
         }
       },
       {
         "comment": "",
-        "key": "Description",
+        "key": "Describe your hub",
         "location": {
           "startingColumn": 35,
-          "startingLine": 40
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Current Logo",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "Upload New Logo",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 77
         }
       },
       {
         "comment": "",
         "key": "Logo",
         "location": {
-          "startingColumn": 32,
-          "startingLine": 53
+          "startingColumn": 30,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recommended: 400 x 400 px (square, 1:1 ratio)",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "Upload New Banner",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "Banner",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recommended: 1200 x 400 px (landscape, 3:1 ratio)",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 119
         }
       },
       {
@@ -71,7 +119,23 @@
         "key": "Category",
         "location": {
           "startingColumn": 35,
-          "startingLine": 77
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save Changes",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 143
+        }
+      },
+      {
+        "comment": "",
+        "key": "Saved!",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 137
         }
       }
     ]

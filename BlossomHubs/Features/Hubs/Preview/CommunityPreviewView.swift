@@ -40,7 +40,16 @@ struct CommunityPreviewView: View {
                 Color.clear
                     .frame(height: 240)
                     .overlay(alignment: .center) {
-                        if let bannerName = community.bannerImageName {
+                        if let data = community.bannerImageData, let uiImage = UIImage(data: data) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(maxWidth: .infinity)
+                                .visualEffect { content, proxy in
+                                    let offsetY = proxy.frame(in: .scrollView).minY
+                                    return content.offset(y: offsetY > 0 ? -offsetY * 0.4 : 0)
+                                }
+                        } else if let bannerName = community.bannerImageName {
                             Image(bannerName)
                                 .resizable()
                                 .scaledToFill()

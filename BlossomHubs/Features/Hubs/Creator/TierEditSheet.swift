@@ -68,6 +68,21 @@ struct TierEditSheet: View {
                     }
                     .buttonStyle(.plain)
                 }
+
+                Section {
+                    Button(role: .destructive) {
+                        deleteTier()
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Spacer()
+                            Text("Delete Tier")
+                                .font(BlossomFont.body)
+                                .fontWeight(.semibold)
+                            Spacer()
+                        }
+                    }
+                }
             }
             .navigationTitle("Edit Tier")
             .navigationBarTitleDisplayMode(.inline)
@@ -85,6 +100,12 @@ struct TierEditSheet: View {
                     .disabled(name.isEmpty)
                 }
             }
+        }
+    }
+
+    private func deleteTier() {
+        store.updateCommunity(id: communityID) { community in
+            community.tiers.removeAll(where: { $0.id == tier.id })
         }
     }
 

@@ -1,4 +1,23 @@
 import Foundation
+import SwiftUI
+
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let r, g, b: Double
+        switch hex.count {
+        case 6:
+            r = Double((int >> 16) & 0xFF) / 255
+            g = Double((int >> 8) & 0xFF) / 255
+            b = Double(int & 0xFF) / 255
+        default:
+            r = 0; g = 0; b = 0
+        }
+        self.init(red: r, green: g, blue: b)
+    }
+}
 
 // MARK: - PostType
 
@@ -45,17 +64,24 @@ struct Tier: Identifiable, Hashable {
     var name: String
     var monthlyPrice: Decimal
     var benefits: [String]
+    var colorHex: String
 
     init(
         id: UUID = UUID(),
         name: String,
         monthlyPrice: Decimal,
-        benefits: [String]
+        benefits: [String],
+        colorHex: String = "7C3AED"
     ) {
         self.id = id
         self.name = name
         self.monthlyPrice = monthlyPrice
         self.benefits = benefits
+        self.colorHex = colorHex
+    }
+
+    var color: Color {
+        Color(hex: colorHex)
     }
 }
 
@@ -201,7 +227,9 @@ struct Community: Identifiable {
     var name: String
     var description: String
     var logoImageName: String
+    var logoImageData: Data?
     var bannerImageName: String?
+    var bannerImageData: Data?
     var creator: Creator
     var tiers: [Tier]
     var posts: [Post]
@@ -216,7 +244,9 @@ struct Community: Identifiable {
         name: String,
         description: String,
         logoImageName: String,
+        logoImageData: Data? = nil,
         bannerImageName: String? = nil,
+        bannerImageData: Data? = nil,
         creator: Creator,
         tiers: [Tier],
         posts: [Post],
@@ -230,7 +260,9 @@ struct Community: Identifiable {
         self.name = name
         self.description = description
         self.logoImageName = logoImageName
+        self.logoImageData = logoImageData
         self.bannerImageName = bannerImageName
+        self.bannerImageData = bannerImageData
         self.creator = creator
         self.tiers = tiers
         self.posts = posts

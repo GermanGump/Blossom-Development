@@ -32,20 +32,24 @@ enum TagStyle {
 struct TagView: View {
     let text: String
     let style: TagStyle
+    var customColor: Color?
 
-    init(_ text: String, style: TagStyle) {
+    init(_ text: String, style: TagStyle, customColor: Color? = nil) {
         self.text = text
         self.style = style
+        self.customColor = customColor
     }
 
     var body: some View {
+        let fg = customColor ?? style.foregroundColor
+        let bg = customColor?.opacity(0.12) ?? style.backgroundColor
         Text(text)
             .font(BlossomFont.caption)
             .lineLimit(1)
-            .foregroundColor(style.foregroundColor)
+            .foregroundColor(fg)
             .padding(.horizontal, 10)
             .padding(.vertical, 4)
-            .background(style.backgroundColor)
+            .background(bg)
             .clipShape(Capsule())
     }
 }

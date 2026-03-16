@@ -16,9 +16,9 @@ struct CommunityLandingSection: View {
             // MARK: - Community Logo overlapping banner
             HStack {
                 AvatarView(
-                    imageName: community.logoImageName,
-                    preset: .xlarge,
-                    ringColor: .white
+                    image: communityLogoImage,
+                    ringColor: .white,
+                    size: AvatarSize.xlarge.rawValue
                 )
                 .overlay(
                     Circle()
@@ -84,6 +84,13 @@ struct CommunityLandingSection: View {
             .padding(.top, 24)
             .padding(.horizontal, 16)
         }
+    }
+
+    private var communityLogoImage: Image {
+        if let data = community.logoImageData, let uiImage = UIImage(data: data) {
+            return Image(uiImage: uiImage)
+        }
+        return Image(community.logoImageName)
     }
 
     private func sectionCount(for section: CommunitySection) -> Int? {

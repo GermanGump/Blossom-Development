@@ -41,7 +41,7 @@ struct CreatorDashboardView: View {
                             statCard(
                                 icon: "dollarsign.circle.fill",
                                 label: "Est. Monthly",
-                                value: "$\(viewModel.estimatedRevenue)"
+                                value: viewModel.estimatedRevenue
                             )
                         }
                         .padding(.horizontal, 16)

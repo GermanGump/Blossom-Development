@@ -21,6 +21,11 @@ final class SubscriptionStore {
                 creatorCommunityID: CommunityStore.wealthmaticaID
             )
         }
+        // Ensure Nick always has creator community ID (handles sessions persisted before this field existed)
+        if session.creatorCommunityID == nil {
+            session.creatorCommunityID = CommunityStore.wealthmaticaID
+            persist()
+        }
     }
 
     func subscribe(to community: Community, tier: Tier) {

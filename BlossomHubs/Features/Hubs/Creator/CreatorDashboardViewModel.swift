@@ -15,10 +15,15 @@ final class CreatorDashboardViewModel {
         community?.memberCount ?? 0
     }
 
-    var estimatedRevenue: Decimal {
-        guard let community else { return 0 }
+    var estimatedRevenue: String {
+        guard let community else { return "$0.00" }
         let avgPrice: Decimal = community.tiers.reduce(0) { $0 + $1.monthlyPrice } / max(Decimal(community.tiers.count), 1)
-        return Decimal(subscriberCount) * avgPrice
+        let total = Decimal(subscriberCount) * avgPrice
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "USD"
+        formatter.maximumFractionDigits = 2
+        return formatter.string(from: total as NSDecimalNumber) ?? "$0.00"
     }
 
     init(communityID: UUID, communityStore: CommunityStore, subscriptionStore: SubscriptionStore) {
