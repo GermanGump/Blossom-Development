@@ -1,23 +1,30 @@
 {
-  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Creator/CommunityEditView.swift" : {
-    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityEditView.swiftconstvalues",
-    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityEditView.d",
-    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityEditView.dia",
-    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityEditView.o",
-    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CommunityEditView.swiftdeps"
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
   },
-  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Creator/ComposePostView.swift" : {
-    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ComposePostView.swiftconstvalues",
-    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ComposePostView.d",
-    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ComposePostView.dia",
-    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ComposePostView.o",
-    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/ComposePostView.swiftdeps"
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/CategoryExploreView.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryExploreView.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryExploreView.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryExploreView.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryExploreView.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryExploreView.swiftdeps"
   },
-  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Creator/PermissionsMatrixView.swift" : {
-    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PermissionsMatrixView.swiftconstvalues",
-    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PermissionsMatrixView.d",
-    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PermissionsMatrixView.dia",
-    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PermissionsMatrixView.o",
-    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/PermissionsMatrixView.swiftdeps"
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/CategoryMapping.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMapping.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMapping.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMapping.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMapping.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMapping.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Features/Hubs/Discovery/CategoryMockData.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMockData.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMockData.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMockData.dia",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMockData.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/BlossomHubs.build/Debug-iphonesimulator/BlossomHubs.build/Objects-normal/arm64/CategoryMockData.swiftdeps"
   }
 }

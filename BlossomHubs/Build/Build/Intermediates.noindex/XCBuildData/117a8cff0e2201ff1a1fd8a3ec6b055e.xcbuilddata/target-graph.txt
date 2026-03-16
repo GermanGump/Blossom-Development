@@ -1,0 +1,14 @@
+Target dependency graph (6 targets)
+Target 'BlossomHubs' in project 'BlossomHubs'
+➜ Explicit dependency on target 'ComponentsKit' in project 'ComponentsKit'
+Target 'ComponentsKit' in project 'ComponentsKit'
+➜ Explicit dependency on target 'ComponentsKit' in project 'ComponentsKit'
+➜ Explicit dependency on target 'ComponentsKit_ComponentsKit' in project 'ComponentsKit'
+➜ Explicit dependency on target 'AutoLayout' in project 'AutoLayout'
+Target 'ComponentsKit' in project 'ComponentsKit'
+➜ Explicit dependency on target 'ComponentsKit_ComponentsKit' in project 'ComponentsKit'
+➜ Explicit dependency on target 'AutoLayout' in project 'AutoLayout'
+Target 'AutoLayout' in project 'AutoLayout'
+➜ Explicit dependency on target 'AutoLayout' in project 'AutoLayout'
+Target 'AutoLayout' in project 'AutoLayout' (no dependencies)
+Target 'ComponentsKit_ComponentsKit' in project 'ComponentsKit' (no dependencies)

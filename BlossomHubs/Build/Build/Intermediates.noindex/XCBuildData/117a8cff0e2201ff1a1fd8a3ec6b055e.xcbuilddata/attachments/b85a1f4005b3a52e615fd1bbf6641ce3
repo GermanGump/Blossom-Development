@@ -1,0 +1,49 @@
+{
+  "" : {
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/AutoLayout-primary.dia",
+    "emit-module-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/AutoLayout-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/AutoLayout-primary-emit-module.dia",
+    "pch" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/AutoLayout-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/AutoLayout-primary.swiftdeps"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/AutoLayout/Sources/AutoLayout/LayoutConstraints+Helpers.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.dia",
+    "index-unit-output-path" : "/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.o",
+    "llvm-bc" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.bc",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers.swiftdeps",
+    "swiftmodule" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints+Helpers~partial.swiftmodule"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/AutoLayout/Sources/AutoLayout/LayoutConstraints.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.dia",
+    "index-unit-output-path" : "/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.o",
+    "llvm-bc" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.bc",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints.swiftdeps",
+    "swiftmodule" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraints~partial.swiftmodule"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/AutoLayout/Sources/AutoLayout/LayoutConstraintsBuilder.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.dia",
+    "index-unit-output-path" : "/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.o",
+    "llvm-bc" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.bc",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder.swiftdeps",
+    "swiftmodule" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/LayoutConstraintsBuilder~partial.swiftmodule"
+  },
+  "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/SourcePackages/checkouts/AutoLayout/Sources/AutoLayout/UIView+Layout.swift" : {
+    "const-values" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.swiftconstvalues",
+    "dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.d",
+    "diagnostics" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.dia",
+    "index-unit-output-path" : "/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.o",
+    "llvm-bc" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.bc",
+    "object" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.o",
+    "swift-dependencies" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout.swiftdeps",
+    "swiftmodule" : "/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Build/Build/Intermediates.noindex/AutoLayout.build/Debug-iphonesimulator/AutoLayout.build/Objects-normal/arm64/UIView+Layout~partial.swiftmodule"
+  }
+}

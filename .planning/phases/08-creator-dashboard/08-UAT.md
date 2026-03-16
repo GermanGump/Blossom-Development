@@ -2,7 +2,7 @@
 phase: 08-creator-dashboard
 type: uat
 session_start: 2026-03-15
-status: in-progress
+status: complete
 ---
 
 # Phase 8: Creator Dashboard — UAT
@@ -11,16 +11,26 @@ status: in-progress
 
 | # | Test | Status | Notes |
 |---|------|--------|-------|
-| 1 | Manage my Hub Entry Point | - | |
-| 2 | Dashboard Home & Stats | - | |
-| 3 | Community Edit Form | - | |
-| 4 | Tier Editor List & Add | - | |
-| 5 | Tier Edit Sheet | - | |
-| 6 | Permissions Matrix | - | |
-| 7 | Compose Post (Text) | - | |
-| 8 | Compose Post (Trade Highlight) | - | |
-| 9 | Compose Post (YouTube Link) | - | |
-| 10 | Verified Badge Audit | - | |
+| 1 | Manage my Hub Entry Point | PASS | Added "My Community" quick-access card above "My Hubs" |
+| 2 | Dashboard Home & Stats | PASS | Revenue formatted as currency |
+| 3 | Community Edit Form | PASS | Draft/save pattern with PhotosPicker for logo & banner |
+| 4 | Tier Editor List & Add | PASS | Color dots on tier cards |
+| 5 | Tier Edit Sheet | PASS | Color swatches, HEX input, delete tier |
+| 6 | Permissions Matrix | PASS | |
+| 7 | Compose Post (Text) | PASS | |
+| 8 | Compose Post (Trade Highlight) | PASS | |
+| 9 | Compose Post (YouTube Link) | PASS | YouTube embed with thumbnail |
+| 10 | Verified Badge Audit | PASS | |
+
+## Fixes Applied During UAT
+
+- **UserDefaults backward compat**: Patched SubscriptionStore to set `creatorCommunityID` for persisted sessions missing the field
+- **Revenue formatting**: Changed `estimatedRevenue` from raw Decimal to NumberFormatter currency string
+- **CommunityEditView rewrite**: Draft @State pattern with Save Changes button, PhotosPicker for logo/banner with size hints
+- **Tier color customization**: Added `colorHex` to Tier model, preset swatches + HEX input in TierEditSheet, propagated to TagView across forums
+- **Color.fromHex()**: Renamed from `Color(hex:)` to avoid ComponentsKit SPM collision
+- **My Community quick access**: Added creator's own community card at top of Hubs tab for fast navigation
+- **Scroll padding**: `.contentMargins(.bottom, 100)` on edit form to prevent tab bar clipping
 
 ## Tests
 

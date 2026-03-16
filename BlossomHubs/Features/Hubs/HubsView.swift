@@ -60,6 +60,8 @@ struct HubsView: View {
                 PermissionsMatrixView()
             case .creatorPublishContent:
                 ComposePostView()
+            case .categoryExplore(let category):
+                CategoryExploreView(categoryName: category)
             }
         }
     }

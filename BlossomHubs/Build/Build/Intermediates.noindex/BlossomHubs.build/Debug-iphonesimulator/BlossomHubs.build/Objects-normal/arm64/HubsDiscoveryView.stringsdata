@@ -7,7 +7,7 @@
         "key": "Verified Blossom Communities",
         "location": {
           "startingColumn": 30,
-          "startingLine": 41
+          "startingLine": 65
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Join, learn, invest.",
         "location": {
           "startingColumn": 30,
-          "startingLine": 45
+          "startingLine": 69
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Manage my Hub",
         "location": {
           "startingColumn": 38,
-          "startingLine": 63
+          "startingLine": 87
         }
       },
       {
@@ -31,7 +31,15 @@
         "key": "Edit community, tiers & content",
         "location": {
           "startingColumn": 38,
-          "startingLine": 67
+          "startingLine": 91
+        }
+      },
+      {
+        "comment": "",
+        "key": "My Community",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 111
         }
       },
       {
@@ -39,7 +47,23 @@
         "key": "My Hubs",
         "location": {
           "startingColumn": 30,
-          "startingLine": 87
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "Featured Hub",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explore more",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 187
         }
       }
     ]

@@ -9,4 +9,5 @@ enum HubsRoute: Hashable {
     case creatorManageTiers
     case creatorPermissions
     case creatorPublishContent
+    case categoryExplore(category: String)
 }

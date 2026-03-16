@@ -8,21 +8,45 @@ struct HubsDiscoveryView: View {
     @State private var cardsVisible = false
 
     private var subscribedCommunities: [Community] {
-        store.communities.filter { community in
+        let creatorID = subscriptionStore.session.creatorCommunityID
+        return store.communities.filter { community in
             subscriptionStore.currentTier(for: community.id) != nil
+                && community.id != creatorID
         }
+    }
+
+    private var creatorCommunity: Community? {
+        guard let id = subscriptionStore.session.creatorCommunityID else { return nil }
+        return store.communities.first { $0.id == id }
     }
 
     private var heroCommunity: Community? {
         store.communities.first { $0.creator.username == "@bdinvesting" }
     }
 
-    private var listCommunities: [Community] {
+    /// Group non-hero, non-subscribed, non-creator communities by display category,
+    /// merging raw categories that share the same display name (e.g. Trading Hubs).
+    private var categorizedCommunities: [(category: String, communities: [Community])] {
+        let creatorID = subscriptionStore.session.creatorCommunityID
         let heroID = heroCommunity?.id
         let subscribedIDs = Set(subscribedCommunities.map(\.id))
-        return store.communities
-            .filter { $0.id != heroID && !subscribedIDs.contains($0.id) }
-            .sorted { $0.memberCount > $1.memberCount }
+
+        let eligible = store.communities.filter { community in
+            community.id != heroID
+                && community.id != creatorID
+                && !subscribedIDs.contains(community.id)
+        }
+
+        // Group by display name (merges raw categories like Swing/Options/Momentum → Trading Hubs)
+        let grouped = Dictionary(grouping: eligible) { community in
+            CategoryMapping.displayName(for: community.category)
+        }
+
+        return CategoryMapping.displayOrder.compactMap { displayName in
+            guard let communities = grouped[displayName], !communities.isEmpty else { return nil }
+            let sorted = communities.sorted { $0.memberCount > $1.memberCount }
+            return (category: displayName, communities: sorted)
+        }
     }
 
     @Environment(\.colorScheme) private var colorScheme
@@ -81,6 +105,21 @@ struct HubsDiscoveryView: View {
                     }
                 }
 
+                // My Community — creator's own hub quick access
+                if let myCommunity = creatorCommunity {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("My Community")
+                            .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(BlossomTheme.primaryText)
+
+                        CommunityCardView(
+                            community: myCommunity,
+                            route: .communityDetail(id: myCommunity.id.uuidString)
+                        )
+                    }
+                }
+
                 // My Hubs — subscribed communities
                 if !subscribedCommunities.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
@@ -99,25 +138,68 @@ struct HubsDiscoveryView: View {
                     .padding(.bottom, 8)
                 }
 
+                // Featured Hub
                 if let hero = heroCommunity {
-                    CommunityHeroCardView(community: hero)
-                        .opacity(cardsVisible ? 1 : 0)
-                        .offset(y: cardsVisible ? 0 : 20)
-                        .animation(.easeOut(duration: 0.35).delay(0), value: cardsVisible)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Featured Hub")
+                            .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(BlossomTheme.primaryText)
+
+                        CommunityHeroCardView(community: hero)
+                            .opacity(cardsVisible ? 1 : 0)
+                            .offset(y: cardsVisible ? 0 : 20)
+                            .animation(.easeOut(duration: 0.35).delay(0), value: cardsVisible)
+                    }
+                    .padding(.bottom, 4)
                 }
 
-                ForEach(Array(listCommunities.enumerated()), id: \.element.id) { index, community in
-                    CommunityCardView(community: community)
-                        .opacity(cardsVisible ? 1 : 0)
-                        .offset(y: cardsVisible ? 0 : 20)
-                        .animation(
-                            .easeOut(duration: 0.35).delay(Double(index + 1) * 0.08),
-                            value: cardsVisible
-                        )
+                // Category sections
+                ForEach(Array(categorizedCommunities.enumerated()), id: \.element.category) { sectionIndex, group in
+                    VStack(alignment: .leading, spacing: 8) {
+                        // Section header
+                        HStack(spacing: 6) {
+                            Image(systemName: CategoryMapping.icon(for: group.category))
+                                .font(.system(size: 14))
+                                .foregroundStyle(BlossomTheme.violet)
+                            Text(group.category)
+                                .font(BlossomFont.subhead)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(BlossomTheme.primaryText)
+                        }
+                        .padding(.top, 4)
+
+                        // Community cards
+                        ForEach(Array(group.communities.enumerated()), id: \.element.id) { cardIndex, community in
+                            CommunityCardView(community: community)
+                                .opacity(cardsVisible ? 1 : 0)
+                                .offset(y: cardsVisible ? 0 : 20)
+                                .animation(
+                                    .easeOut(duration: 0.35)
+                                        .delay(Double(sectionIndex * 2 + cardIndex + 1) * 0.08),
+                                    value: cardsVisible
+                                )
+                        }
+
+                        // Explore more link
+                        NavigationLink(value: HubsRoute.categoryExplore(category: group.category)) {
+                            HStack(spacing: 6) {
+                                Text("Explore more")
+                                    .font(BlossomFont.caption)
+                                    .fontWeight(.medium)
+                                Image(systemName: "arrow.right")
+                                    .font(.system(size: 11, weight: .semibold))
+                            }
+                            .foregroundStyle(BlossomTheme.violet)
+                            .padding(.top, 2)
+                            .padding(.bottom, 4)
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
+            .padding(.bottom, 100)
         }
         .task {
             guard !cardsVisible else { return }
