@@ -1,9 +1,12 @@
 import SwiftUI
+import Charts
 
 struct CreatorDashboardView: View {
     @Environment(CommunityStore.self) private var communityStore
     @Environment(SubscriptionStore.self) private var subscriptionStore
     @State private var viewModel: CreatorDashboardViewModel?
+    @State private var selectedPeriod: EarningsPeriod = .sixMonths
+    @State private var selectedMonth: Int?
 
     var body: some View {
         Group {
@@ -46,6 +49,10 @@ struct CreatorDashboardView: View {
                         }
                         .padding(.horizontal, 16)
 
+                        // Earnings section (replaces placeholder, positioned between stats and section links)
+                        earningsSection(viewModel: viewModel)
+                            .padding(.horizontal, 16)
+
                         // Section links
                         VStack(spacing: 10) {
                             sectionLink(
@@ -75,29 +82,6 @@ struct CreatorDashboardView: View {
                                 subtitle: "Create posts & trade highlights",
                                 route: .creatorPublishContent
                             )
-
-                            // Earnings placeholder
-                            HStack(spacing: 12) {
-                                Image(systemName: "chart.bar")
-                                    .font(.system(size: 20))
-                                    .foregroundStyle(BlossomTheme.violet)
-                                    .frame(width: 32)
-
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text("Earnings")
-                                        .font(BlossomFont.subhead)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(BlossomTheme.primaryText)
-                                    Text("Coming soon")
-                                        .font(BlossomFont.caption)
-                                        .foregroundStyle(BlossomTheme.secondaryText)
-                                }
-
-                                Spacer()
-                            }
-                            .padding(16)
-                            .blossomCard()
-                            .opacity(0.5)
                         }
                         .padding(.horizontal, 16)
                     }
@@ -122,6 +106,196 @@ struct CreatorDashboardView: View {
         }
     }
 
+    // MARK: - Earnings Section
+
+    @ViewBuilder
+    private func earningsSection(viewModel: CreatorDashboardViewModel) -> some View {
+        let chartPoints = viewModel.chartData(for: selectedPeriod)
+        let breakdown = viewModel.tierBreakdown(for: selectedPeriod)
+        let subsCount = viewModel.totalSubscribers(for: selectedPeriod)
+        let gross = viewModel.totalGross(for: selectedPeriod)
+        let fee = viewModel.totalFee(for: selectedPeriod)
+        let net = viewModel.totalNet(for: selectedPeriod)
+
+        VStack(spacing: 12) {
+            // Header row: title + period label
+            HStack {
+                Text("Earnings")
+                    .font(BlossomFont.subhead)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(BlossomTheme.primaryText)
+                Spacer()
+                Text(viewModel.periodLabel(for: selectedPeriod))
+                    .font(BlossomFont.caption)
+                    .foregroundStyle(BlossomTheme.secondaryText)
+            }
+
+            // Subscriber count row
+            HStack {
+                Text("Members")
+                    .font(BlossomFont.caption)
+                    .foregroundStyle(BlossomTheme.secondaryText)
+                Spacer()
+                Text(formatCount(subsCount))
+                    .font(BlossomFont.caption)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(BlossomTheme.primaryText)
+            }
+
+            // Segmented period picker
+            Picker("Period", selection: $selectedPeriod) {
+                ForEach(EarningsPeriod.allCases, id: \.self) { period in
+                    Text(period.rawValue).tag(period)
+                }
+            }
+            .pickerStyle(.segmented)
+            .onChange(of: selectedPeriod) { selectedMonth = nil }
+            .sensoryFeedback(.impact(flexibility: .soft), trigger: selectedPeriod)
+
+            // Bar chart — net revenue per month
+            Chart(chartPoints) { point in
+                BarMark(
+                    x: .value("Month", point.monthIndex),
+                    y: .value("Net Revenue", NSDecimalNumber(decimal: point.netRevenue).doubleValue)
+                )
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [BlossomTheme.violet.opacity(0.6), BlossomTheme.violet],
+                        startPoint: .bottom,
+                        endPoint: .top
+                    )
+                )
+                .opacity(selectedMonth == nil || selectedMonth == point.monthIndex ? 1.0 : 0.4)
+                .cornerRadius(4)
+            }
+            .chartOverlay { proxy in
+                GeometryReader { geo in
+                    Rectangle()
+                        .fill(.clear)
+                        .contentShape(Rectangle())
+                        .onTapGesture { location in
+                            let relativeX = location.x - geo[proxy.plotAreaFrame].origin.x
+                            if let monthIdx: Int = proxy.value(atX: relativeX) {
+                                selectedMonth = (selectedMonth == monthIdx) ? nil : monthIdx
+                            }
+                        }
+                }
+            }
+            .chartXAxis {
+                AxisMarks(values: chartPoints.map { $0.monthIndex }) { value in
+                    AxisValueLabel {
+                        if let idx = value.as(Int.self),
+                           let point = chartPoints.first(where: { $0.monthIndex == idx }) {
+                            Text(point.monthLabel)
+                                .font(BlossomFont.caption)
+                                .foregroundStyle(BlossomTheme.secondaryText)
+                        }
+                    }
+                }
+            }
+            .chartYAxis {
+                AxisMarks(format: .currency(code: "USD").precision(.fractionLength(0)))
+            }
+            .frame(height: 160)
+            .animation(.easeInOut(duration: 0.3), value: selectedPeriod)
+            .sensoryFeedback(.selection, trigger: selectedMonth)
+
+            // Selected month callout
+            if let selIdx = selectedMonth,
+               let point = chartPoints.first(where: { $0.monthIndex == selIdx }) {
+                HStack {
+                    Spacer()
+                    Text("\(point.monthLabel): \(viewModel.formatted(point.netRevenue))")
+                        .font(BlossomFont.caption)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(BlossomTheme.violet)
+                    Spacer()
+                }
+                .transition(.opacity)
+            }
+
+            Divider()
+
+            // Revenue breakdown rows
+            revenueRow(label: "Gross Revenue", amount: gross, isDeduction: false)
+                .contentTransition(.numericText())
+            revenueRow(label: "Blossom Fee (10%)", amount: fee, isDeduction: true)
+                .contentTransition(.numericText())
+            Divider()
+            revenueRow(label: "Net Payout", amount: net, isDeduction: false, bold: true)
+                .contentTransition(.numericText())
+
+            // Per-tier breakdown
+            if !breakdown.isEmpty {
+                VStack(spacing: 8) {
+                    ForEach(Array(breakdown.enumerated()), id: \.offset) { _, item in
+                        VStack(spacing: 4) {
+                            HStack {
+                                Circle()
+                                    .fill(item.tierColor)
+                                    .frame(width: 8, height: 8)
+                                Text(item.tierName)
+                                    .font(BlossomFont.caption)
+                                    .foregroundStyle(BlossomTheme.primaryText)
+                                Spacer()
+                                Text(String(format: "%.0f%%", item.percentage * 100))
+                                    .font(BlossomFont.caption)
+                                    .foregroundStyle(BlossomTheme.secondaryText)
+                            }
+                            // NOTE: GeometryReader intentional — containerRelativeFrame() cannot
+                            // express arbitrary percentage-based width fill for progress bar
+                            GeometryReader { geo in
+                                RoundedRectangle(cornerRadius: 2)
+                                    .fill(item.tierColor.opacity(0.2))
+                                    .overlay(alignment: .leading) {
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .fill(item.tierColor)
+                                            .frame(width: geo.size.width * item.percentage)
+                                    }
+                            }
+                            .frame(height: 6)
+                        }
+                    }
+                }
+            }
+        }
+        .padding(16)
+        .blossomCard()
+    }
+
+    // MARK: - Revenue Row
+
+    private func revenueRow(label: String, amount: Decimal, isDeduction: Bool, bold: Bool = false) -> some View {
+        HStack {
+            Text(label)
+                .font(BlossomFont.caption)
+                .foregroundStyle(BlossomTheme.secondaryText)
+            Spacer()
+            Text(formatAmount(amount))
+                .font(BlossomFont.subhead)
+                .fontWeight(bold ? .semibold : .regular)
+                .foregroundStyle(isDeduction ? BlossomTheme.orange : BlossomTheme.primaryText)
+        }
+    }
+
+    // MARK: - Formatting Helpers
+
+    private func formatAmount(_ amount: Decimal) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = "USD"
+        formatter.maximumFractionDigits = 2
+        return formatter.string(from: amount as NSDecimalNumber) ?? "$0.00"
+    }
+
+    private func formatCount(_ count: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter.string(from: NSNumber(value: count)) ?? "\(count)"
+    }
+
+    // MARK: - Stat Card
+
     private func statCard(icon: String, label: String, value: String) -> some View {
         VStack(spacing: 8) {
             Image(systemName: icon)
@@ -140,6 +314,8 @@ struct CreatorDashboardView: View {
         .padding(16)
         .blossomCard()
     }
+
+    // MARK: - Section Link
 
     private func sectionLink(icon: String, title: String, subtitle: String, route: HubsRoute) -> some View {
         NavigationLink(value: route) {
