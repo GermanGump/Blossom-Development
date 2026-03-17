@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 9 context gathered
-last_updated: "2026-03-16T23:19:38.392Z"
-last_activity: 2026-03-15 — Completed 08-03 — ComposePostView with post type switching, ticker parsing, verified badge audit
+stopped_at: Completed 09-01 — Creator earnings card with SwiftUI Charts bar chart inline on Creator Dashboard
+last_updated: "2026-03-16T23:57:58.000Z"
+last_activity: 2026-03-16 — Completed 09-01 — SwiftUI Charts earnings card, 1M/3M/6M picker, gross/fee/net breakdown, per-tier bars
 progress:
   total_phases: 9
   completed_phases: 8
-  total_plans: 20
-  completed_plans: 20
-  percent: 83
+  total_plans: 21
+  completed_plans: 21
+  percent: 86
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-10)
 
 ## Current Position
 
-Phase: 8 of 9 COMPLETE
-Plan: 3 of 3 in Phase 8 complete
-Status: Phase 8 complete — content publishing and badge audit done
-Last activity: 2026-03-15 — Completed 08-03 — ComposePostView with post type switching, ticker parsing, verified badge audit
+Phase: 9 of 9 IN PROGRESS
+Plan: 1 of 2 in Phase 9 complete
+Status: Phase 9 Plan 01 complete — creator earnings card with SwiftUI Charts, CRTR-06 satisfied
+Last activity: 2026-03-16 — Completed 09-01 — SwiftUI Charts earnings card, 1M/3M/6M picker, gross/fee/net breakdown, per-tier bars
 
-Progress: [████████░░] 83%
+Progress: [████████░░] 86%
 
 ## Performance Metrics
 
@@ -76,6 +76,7 @@ Progress: [████████░░] 83%
 | Phase 08 P01 | 6 | 2 tasks | 15 files |
 | Phase 08 P02 | 3 | 2 tasks | 4 files |
 | Phase 08 P03 | 3 | 2 tasks | 2 files |
+| Phase 09 P01 | 4 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -149,6 +150,9 @@ Recent decisions affecting current work:
 - [Phase 08-03]: Swift Regex /\$[A-Za-z.]+/ used for ticker parsing -- handles $AMD, $TSLA, $RY.TO, $BRK.B
 - [Phase 08-03]: Form-based compose layout with segmented picker, conditional sections, and success overlay feedback
 - [Phase 08-03]: FAQ answered-by attribution augmented with VerifiedBadge() for cross-surface consistency
+- [Phase 09-01]: Mock earnings subscriber counts derived from gross math (19*Inv + 49*Pro = gross) not community.memberCount — earnings tracks paid+free tier base month by month
+- [Phase 09-01]: Int monthIndex used as chart x-axis key (not String monthLabel) for reliable chartOverlay proxy.value(atX:) coordinate mapping
+- [Phase 09-01]: GeometryReader retained in chartOverlay and tier percentage bars — containerRelativeFrame() cannot express arbitrary percentage fills
 
 ### Pending Todos
 
@@ -161,6 +165,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T23:19:38.383Z
-Stopped at: Phase 9 context gathered
-Resume file: .planning/phases/09-creator-earnings-and-demo-polish/09-CONTEXT.md
+Last session: 2026-03-16T23:57:58.000Z
+Stopped at: Completed 09-01 — Creator earnings card with SwiftUI Charts inline on Creator Dashboard
+Resume file: .planning/phases/09-creator-earnings-and-demo-polish/09-02-PLAN.md
