@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 10-02 — Ad host view integration, awaiting human-verify checkpoint
-last_updated: "2026-03-17T11:29:49.238Z"
+stopped_at: Completed 10-02 — Ad host view integration complete, visual verification approved
+last_updated: "2026-03-17T12:38:41.750Z"
 last_activity: 2026-03-16 — Completed 09-02 — Demo polish, foregroundStyle migration, dark mode audit, demo flow approved
 progress:
   total_phases: 10
@@ -79,6 +79,7 @@ Progress: [██████████] 100%
 | Phase 09 P01 | 4 | 2 tasks | 2 files |
 | Phase 10-ad-placement-system P01 | 8 | 2 tasks | 5 files |
 | Phase 10-ad-placement-system P02 | 2 | 1 tasks | 3 files |
+| Phase 10-ad-placement-system P02 | 15 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -162,6 +163,7 @@ Recent decisions affecting current work:
 - [Phase 10-ad-placement-system]: AdCreative is a plain struct with hardcoded static arrays — no AdStore, no service layer, per user decision
 - [Phase 10-ad-placement-system]: PillAdView uses lighter styling (8pt corner radius, no shadow) rather than blossomCard() — pill format is lighter weight than full cards
 - [Phase 10-ad-placement-system]: BannerAdView inserted as flat LazyVStack item — always above Featured Hub, no conditional
+- [Phase 10-ad-placement-system]: CommunitySectionPager minHeight increased to 2x screen height — inline ad adds height to feed, paged TabView clips content to frame bounds at 1x
 
 ### Pending Todos
 
@@ -174,6 +176,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T11:29:49.235Z
-Stopped at: Completed 10-02 — Ad host view integration, awaiting human-verify checkpoint
+Last session: 2026-03-17T12:38:41.746Z
+Stopped at: Completed 10-02 — Ad host view integration complete, visual verification approved
 Resume file: None
