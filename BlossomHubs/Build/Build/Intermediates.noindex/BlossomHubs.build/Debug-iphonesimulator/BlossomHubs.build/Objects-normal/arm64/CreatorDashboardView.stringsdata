@@ -7,23 +7,55 @@
         "key": "Creator Dashboard",
         "location": {
           "startingColumn": 26,
-          "startingLine": 111
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "Period",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 146
         }
       },
       {
         "comment": "",
         "key": "Earnings",
         "location": {
-          "startingColumn": 42,
-          "startingLine": 87
+          "startingColumn": 22,
+          "startingLine": 123
         }
       },
       {
         "comment": "",
-        "key": "Coming soon",
+        "key": "Members",
         "location": {
-          "startingColumn": 42,
-          "startingLine": 91
+          "startingColumn": 22,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Month",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 158
+        }
+      },
+      {
+        "comment": "",
+        "key": "Net Revenue",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 208
         }
       }
     ]
