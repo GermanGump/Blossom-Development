@@ -6,10 +6,10 @@ struct VerifiedBadge: View {
         HStack(spacing: 4) {
             Image(systemName: "checkmark.shield.fill")
                 .font(BlossomFont.caption)
-                .foregroundColor(BlossomTheme.teal)
+                .foregroundStyle(BlossomTheme.teal)
             Text("Verified")
                 .font(BlossomFont.caption)
-                .foregroundColor(BlossomTheme.teal)
+                .foregroundStyle(BlossomTheme.teal)
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
@@ -29,7 +29,7 @@ struct VerifiedBadge: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Nick Simpson")
                     .font(BlossomFont.headline)
-                    .foregroundColor(BlossomTheme.primaryText)
+                    .foregroundStyle(BlossomTheme.primaryText)
                 VerifiedBadge()
             }
         }

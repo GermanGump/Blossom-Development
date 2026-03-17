@@ -22,7 +22,7 @@ struct ForumReplyRow: View {
                     Text(reply.authorName)
                         .font(BlossomFont.subhead)
                         .fontWeight(.semibold)
-                        .foregroundColor(BlossomTheme.primaryText)
+                        .foregroundStyle(BlossomTheme.primaryText)
 
                     if reply.isCreator || reply.isAmbassador {
                         TagView(reply.isCreator ? "Creator" : "Ambassador", style: .role)
@@ -31,11 +31,11 @@ struct ForumReplyRow: View {
                     }
 
                     Text("·")
-                        .foregroundColor(BlossomTheme.secondaryText)
+                        .foregroundStyle(BlossomTheme.secondaryText)
 
                     Text(reply.publishedAt, format: .relative(presentation: .named))
                         .font(BlossomFont.caption)
-                        .foregroundColor(BlossomTheme.secondaryText)
+                        .foregroundStyle(BlossomTheme.secondaryText)
 
                     Spacer()
                 }
@@ -43,13 +43,13 @@ struct ForumReplyRow: View {
                 // Reply content
                 Text(reply.content)
                     .font(BlossomFont.body)
-                    .foregroundColor(BlossomTheme.primaryText)
+                    .foregroundStyle(BlossomTheme.primaryText)
 
                 // Action row
                 HStack(spacing: 16) {
                     Text("Reply")
                         .font(BlossomFont.caption)
-                        .foregroundColor(BlossomTheme.secondaryText)
+                        .foregroundStyle(BlossomTheme.secondaryText)
 
                     Spacer()
 
@@ -57,10 +57,10 @@ struct ForumReplyRow: View {
                         HStack(spacing: 4) {
                             Image(systemName: isLiked ? "heart.fill" : "heart")
                                 .font(.system(size: 13))
-                                .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
+                                .foregroundStyle(isLiked ? .red : BlossomTheme.secondaryText)
                             Text("\(reply.likeCount + (isLiked ? 1 : 0))")
                                 .font(BlossomFont.caption)
-                                .foregroundColor(BlossomTheme.secondaryText)
+                                .foregroundStyle(BlossomTheme.secondaryText)
                         }
                     }
                     .buttonStyle(.plain)

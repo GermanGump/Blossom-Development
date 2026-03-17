@@ -24,17 +24,17 @@ extension View {
     VStack(spacing: 16) {
         Text("Hub Card Example")
             .font(BlossomFont.headline)
-            .foregroundColor(BlossomTheme.primaryText)
+            .foregroundStyle(BlossomTheme.primaryText)
             .padding(20)
             .blossomCard()
 
         VStack(alignment: .leading, spacing: 8) {
             Text("Investor Community")
                 .font(BlossomFont.headline)
-                .foregroundColor(BlossomTheme.primaryText)
+                .foregroundStyle(BlossomTheme.primaryText)
             Text("Premium stock picks and analysis")
                 .font(BlossomFont.body)
-                .foregroundColor(BlossomTheme.secondaryText)
+                .foregroundStyle(BlossomTheme.secondaryText)
         }
         .padding(16)
         .blossomCard()

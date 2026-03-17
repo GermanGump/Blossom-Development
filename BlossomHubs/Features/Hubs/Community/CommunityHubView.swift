@@ -118,7 +118,7 @@ struct CommunityHubView: View {
                 Button(action: { showForumCompose = true }) {
                     Image(systemName: "plus")
                         .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .frame(width: 52, height: 52)
                         .background(BlossomTheme.violet)
                         .clipShape(Circle())

@@ -46,7 +46,7 @@ struct TagView: View {
         Text(text)
             .font(BlossomFont.caption)
             .lineLimit(1)
-            .foregroundColor(fg)
+            .foregroundStyle(fg)
             .padding(.horizontal, 10)
             .padding(.vertical, 4)
             .background(bg)

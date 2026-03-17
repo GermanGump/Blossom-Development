@@ -24,13 +24,13 @@ struct ForumThreadRow: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(thread.title)
                         .font(BlossomFont.subhead)
-                        .foregroundColor(BlossomTheme.primaryText)
+                        .foregroundStyle(BlossomTheme.primaryText)
                         .lineLimit(2)
 
                     HStack(spacing: 6) {
                         Text(authorName)
                             .font(BlossomFont.caption)
-                            .foregroundColor(BlossomTheme.secondaryText)
+                            .foregroundStyle(BlossomTheme.secondaryText)
 
                         TagView(tierName, style: .tier, customColor: tierColor)
 
@@ -44,7 +44,7 @@ struct ForumThreadRow: View {
 
                         Text(thread.publishedAt, format: .relative(presentation: .named))
                             .font(BlossomFont.caption)
-                            .foregroundColor(BlossomTheme.secondaryText)
+                            .foregroundStyle(BlossomTheme.secondaryText)
                     }
                 }
 
@@ -52,20 +52,20 @@ struct ForumThreadRow: View {
                     HStack(spacing: 3) {
                         Image(systemName: "bubble.right")
                             .font(.system(size: 12))
-                            .foregroundColor(BlossomTheme.secondaryText)
+                            .foregroundStyle(BlossomTheme.secondaryText)
                         Text("\(thread.replyCount)")
                             .font(BlossomFont.caption)
-                            .foregroundColor(BlossomTheme.secondaryText)
+                            .foregroundStyle(BlossomTheme.secondaryText)
                     }
 
                     Button(action: onLike) {
                         HStack(spacing: 3) {
                             Image(systemName: isLiked ? "heart.fill" : "heart")
                                 .font(.system(size: 12))
-                                .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
+                                .foregroundStyle(isLiked ? .red : BlossomTheme.secondaryText)
                             Text("\(thread.likeCount + (isLiked ? 1 : 0))")
                                 .font(BlossomFont.caption)
-                                .foregroundColor(BlossomTheme.secondaryText)
+                                .foregroundStyle(BlossomTheme.secondaryText)
                         }
                     }
                     .buttonStyle(.plain)

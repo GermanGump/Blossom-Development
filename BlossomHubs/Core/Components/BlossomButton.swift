@@ -7,7 +7,7 @@ struct BlossomPrimaryButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(BlossomFont.buttonLabel)
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(BlossomTheme.violet)
@@ -22,7 +22,7 @@ struct BlossomSecondaryButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(BlossomFont.buttonLabel)
-            .foregroundColor(BlossomTheme.violet)
+            .foregroundStyle(BlossomTheme.violet)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(.clear)
@@ -41,7 +41,7 @@ struct BlossomGhostButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(BlossomFont.buttonLabel)
-            .foregroundColor(BlossomTheme.teal)
+            .foregroundStyle(BlossomTheme.teal)
             .opacity(configuration.isPressed ? 0.7 : 1.0)
     }
 }

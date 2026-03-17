@@ -16,7 +16,7 @@ struct HubsTopNavBar: View {
             // Center: search bar
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(BlossomTheme.secondaryText)
+                    .foregroundStyle(BlossomTheme.secondaryText)
                 TextField("Search", text: $searchText)
                     .font(BlossomFont.subhead)
             }
@@ -28,11 +28,11 @@ struct HubsTopNavBar: View {
             // Right: teal bell with red "9+" badge
             ZStack(alignment: .topTrailing) {
                 Image(systemName: "bell.fill")
-                    .foregroundColor(BlossomTheme.teal)
+                    .foregroundStyle(BlossomTheme.teal)
                     .font(.system(size: 22))
                 Text("9+")
                     .font(BlossomFont.caption)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .padding(.horizontal, 4)
                     .padding(.vertical, 1)
                     .background(Color.red)
@@ -43,7 +43,7 @@ struct HubsTopNavBar: View {
             // Right: violet speech bubble with dollar sign -> My Subscriptions
             NavigationLink(value: HubsRoute.mySubscriptions) {
                 Image(systemName: "dollarsign.bubble.fill")
-                    .foregroundColor(BlossomTheme.violet)
+                    .foregroundStyle(BlossomTheme.violet)
                     .font(.system(size: 28))
             }
         }

@@ -28,15 +28,15 @@ struct LockedContentOverlay<Content: View>: View {
             VStack(spacing: 16) {
                 Image(systemName: "lock.fill")
                     .font(.system(size: 32))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
 
                 Text("Upgrade to \(tierName)")
                     .font(BlossomFont.headline)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
 
                 Text("\(tierName) members get access")
                     .font(BlossomFont.body)
-                    .foregroundColor(.white.opacity(0.85))
+                    .foregroundStyle(.white.opacity(0.85))
 
                 Button("Upgrade", action: onUpgrade)
                     .buttonStyle(BlossomPrimaryButton())

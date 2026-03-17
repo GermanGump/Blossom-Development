@@ -37,7 +37,7 @@ struct BlossomTabItem: View {
                 Text(tab.rawValue)
                     .font(BlossomFont.caption)
             }
-            .foregroundColor(isSelected ? BlossomTheme.tabActive : BlossomTheme.tabInactive)
+            .foregroundStyle(isSelected ? BlossomTheme.tabActive : BlossomTheme.tabInactive)
             .frame(maxWidth: .infinity)
         }
         .buttonStyle(.plain)

@@ -44,7 +44,7 @@ struct AvatarView: View {
             if showBadge {
                 Image(systemName: "bolt.fill")
                     .font(.system(size: size * 0.2, weight: .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(width: size * 0.3, height: size * 0.3)
                     .background(BlossomTheme.teal)
                     .clipShape(Circle())
@@ -55,7 +55,7 @@ struct AvatarView: View {
             if showVerifiedBadge {
                 Image(systemName: "checkmark.shield.fill")
                     .font(.system(size: size * 0.22, weight: .bold))
-                    .foregroundColor(BlossomTheme.teal)
+                    .foregroundStyle(BlossomTheme.teal)
                     .frame(width: size * 0.35, height: size * 0.35)
                     .background(.white)
                     .clipShape(Circle())

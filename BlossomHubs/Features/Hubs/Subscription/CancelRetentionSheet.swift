@@ -62,7 +62,7 @@ struct CancelRetentionSheet: View {
                     onConfirmCancel()
                 }
                 .font(BlossomFont.buttonLabel)
-                .foregroundColor(.white)
+                .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
                 .background(selectedReason != nil ? Color.red : Color.red.opacity(0.4))

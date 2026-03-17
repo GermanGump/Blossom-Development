@@ -55,10 +55,10 @@ struct ForumThreadDetailView: View {
                         Text("Most Recent")
                             .font(BlossomFont.caption)
                             .fontWeight(.semibold)
-                            .foregroundColor(BlossomTheme.primaryText)
+                            .foregroundStyle(BlossomTheme.primaryText)
                         Image(systemName: "chevron.down")
                             .font(.system(size: 10, weight: .semibold))
-                            .foregroundColor(BlossomTheme.primaryText)
+                            .foregroundStyle(BlossomTheme.primaryText)
                         Spacer()
                     }
                     .padding(.horizontal, 16)
@@ -125,7 +125,7 @@ struct ForumThreadDetailView: View {
                         Text(isCreatorThread ? community.creator.name : "Member")
                             .font(BlossomFont.subhead)
                             .fontWeight(.semibold)
-                            .foregroundColor(BlossomTheme.primaryText)
+                            .foregroundStyle(BlossomTheme.primaryText)
 
                         if isCreatorThread {
                             TagView("Creator", style: .role)
@@ -136,7 +136,7 @@ struct ForumThreadDetailView: View {
 
                     Text(thread.publishedAt, format: .relative(presentation: .named))
                         .font(BlossomFont.caption)
-                        .foregroundColor(BlossomTheme.secondaryText)
+                        .foregroundStyle(BlossomTheme.secondaryText)
                 }
 
                 Spacer()
@@ -145,12 +145,12 @@ struct ForumThreadDetailView: View {
             // Thread title
             Text(thread.title)
                 .font(BlossomFont.headline)
-                .foregroundColor(BlossomTheme.primaryText)
+                .foregroundStyle(BlossomTheme.primaryText)
 
             // Thread content
             Text(thread.content)
                 .font(BlossomFont.body)
-                .foregroundColor(BlossomTheme.primaryText)
+                .foregroundStyle(BlossomTheme.primaryText)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 16)
@@ -166,10 +166,10 @@ struct ForumThreadDetailView: View {
                 HStack(spacing: 4) {
                     Image(systemName: isLiked ? "heart.fill" : "heart")
                         .font(.system(size: 16))
-                        .foregroundColor(isLiked ? .red : BlossomTheme.secondaryText)
+                        .foregroundStyle(isLiked ? .red : BlossomTheme.secondaryText)
                     Text("\(thread.likeCount + (isLiked ? 1 : 0))")
                         .font(BlossomFont.caption)
-                        .foregroundColor(BlossomTheme.secondaryText)
+                        .foregroundStyle(BlossomTheme.secondaryText)
                 }
             }
             .buttonStyle(.plain)
@@ -178,20 +178,20 @@ struct ForumThreadDetailView: View {
             HStack(spacing: 4) {
                 Image(systemName: "bubble.right")
                     .font(.system(size: 15))
-                    .foregroundColor(BlossomTheme.secondaryText)
+                    .foregroundStyle(BlossomTheme.secondaryText)
                 Text("\(threadReplies.count)")
                     .font(BlossomFont.caption)
-                    .foregroundColor(BlossomTheme.secondaryText)
+                    .foregroundStyle(BlossomTheme.secondaryText)
             }
 
             // Share
             HStack(spacing: 4) {
                 Image(systemName: "arrowshape.turn.up.right")
                     .font(.system(size: 15))
-                    .foregroundColor(BlossomTheme.secondaryText)
+                    .foregroundStyle(BlossomTheme.secondaryText)
                 Text("0")
                     .font(BlossomFont.caption)
-                    .foregroundColor(BlossomTheme.secondaryText)
+                    .foregroundStyle(BlossomTheme.secondaryText)
             }
 
             Spacer()
@@ -199,7 +199,7 @@ struct ForumThreadDetailView: View {
             // Bookmark
             Image(systemName: "bookmark")
                 .font(.system(size: 15))
-                .foregroundColor(BlossomTheme.secondaryText)
+                .foregroundStyle(BlossomTheme.secondaryText)
         }
     }
 
@@ -225,7 +225,7 @@ struct ForumThreadDetailView: View {
             Button(action: sendReply) {
                 Image(systemName: "arrow.up.circle.fill")
                     .font(.system(size: 30))
-                    .foregroundColor(replyText.isEmpty ? BlossomTheme.secondaryText : BlossomTheme.teal)
+                    .foregroundStyle(replyText.isEmpty ? BlossomTheme.secondaryText : BlossomTheme.teal)
             }
             .disabled(replyText.isEmpty)
         }
