@@ -24,7 +24,10 @@ struct CommunitySectionPager: View {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .frame(minHeight: UIScreen.main.bounds.height)
+        // 2.5x screen height ensures paged TabView pages are tall enough
+        // to display all content (posts + ad + spacing) without clipping.
+        // VStack + Spacer pushes content to top; excess height is blank.
+        .frame(minHeight: UIScreen.main.bounds.height * 2)
     }
 
     @ViewBuilder
