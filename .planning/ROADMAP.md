@@ -21,6 +21,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers (completed 2026-03-15)
 - [x] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge (completed 2026-03-15)
 - [x] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish (completed 2026-03-16)
+- [ ] **Phase 10: Ad Placement System** - Banner, inline card, and pill ad formats across discovery, content feed, and category explore surfaces (added 2026-03-17)
 
 ## Phase Details
 
@@ -169,10 +170,27 @@ Plans:
 - [x] 09-01-PLAN.md — Creator earnings feature: EarningsData model, ViewModel extension, SwiftUI Charts bar chart with interactive tap, 1M/3M/6M picker, revenue breakdown, per-tier colored bars (completed 2026-03-16)
 - [x] 09-02-PLAN.md — Demo polish: .foregroundColor() to .foregroundStyle() migration across 16 files, dark mode audit, end-to-end demo flow verification checkpoint (completed 2026-03-16, human-verify approved)
 
+### Phase 10: Ad Placement System
+**Goal**: Banner, inline card, and pill ad formats render on Blossom-owned browsing surfaces (discovery feed, content feed, category explore) with 5 Canadian finance mock advertisers and Blossom PRO house ads — demonstrating where ads live in the product without building ad infrastructure
+**Depends on**: Phase 9
+**Requirements**: AD-COMP, AD-DATA, AD-VISUAL, AD-PLACE, AD-INTERACT
+**Success Criteria** (what must be TRUE):
+  1. A banner ad appears above the Featured Hub section on the discovery screen, showing advertiser branding and a "Sponsored" or "Upgrade" label
+  2. An inline card ad appears between posts 3-6 in the content feed, visually distinguished from organic post cards by a left accent stripe
+  3. Pill ads appear at a consistent cadence (every 6-8 cards) in the category explore list
+  4. Tapping any ad opens Safari with the advertiser's real website URL
+  5. Blossom PRO ads show violet accent styling and "Upgrade" label instead of "Sponsored"
+  6. No ads appear on community hub landing, forums, FAQ, community preview, search, My Subscriptions, or Creator Dashboard
+**Plans:** 2 plans
+
+Plans:
+- [ ] 10-01-PLAN.md — AdCreative model with 5 advertisers, BannerAdView, InlineCardAdView, PillAdView components
+- [ ] 10-02-PLAN.md — Integration into HubsDiscoveryView, ContentFeedView, CategoryExploreView, visual verification checkpoint
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -185,13 +203,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 7. Engagement: Forums and FAQ | 2/2 | Complete | 2026-03-15 |
 | 8. Creator Dashboard | 3/3 | Complete | 2026-03-15 |
 | 9. Creator Earnings and Demo Polish | 2/2 | Complete | 2026-03-16 |
-
-### Phase 10: Ad Placement System
-
-**Goal:** [To be planned]
-**Requirements**: TBD
-**Depends on:** Phase 9
-**Plans:** 0 plans
-
-Plans:
-- [ ] TBD (run /gsd:plan-phase 10 to break down)
+| 10. Ad Placement System | 0/2 | In Progress | — |
