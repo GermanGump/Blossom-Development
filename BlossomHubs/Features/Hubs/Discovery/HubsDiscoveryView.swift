@@ -138,6 +138,9 @@ struct HubsDiscoveryView: View {
                     .padding(.bottom, 8)
                 }
 
+                // Banner ad — appears above Featured Hub regardless of subscription state
+                BannerAdView()
+
                 // Featured Hub
                 if let hero = heroCommunity {
                     VStack(alignment: .leading, spacing: 8) {

@@ -8,6 +8,7 @@ struct ContentFeedView: View {
     @State private var viewModel: ContentFeedViewModel?
     @Environment(SubscriptionStore.self) private var subscriptionStore
     @State private var showTierSheet = false
+    @State private var adInsertionIndex: Int = Int.random(in: 3...5)
 
     /// Resolve the user's tier index within this community's tiers array.
     /// Returns nil if not subscribed (all posts locked).
@@ -40,7 +41,11 @@ struct ContentFeedView: View {
                 }
 
                 LazyVStack(spacing: 16) {
-                    ForEach(viewModel.filteredPosts) { post in
+                    ForEach(Array(viewModel.filteredPosts.enumerated()), id: \.element.id) { index, post in
+                        if index == adInsertionIndex {
+                            InlineCardAdView()
+                        }
+
                         let isLocked = !viewModel.canAccess(
                             post: post,
                             userTierIndex: userTierIndex
