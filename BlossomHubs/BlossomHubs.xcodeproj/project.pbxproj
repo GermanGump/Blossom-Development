@@ -91,6 +91,10 @@
 		F609A2B3C4D5E6F7A8B9C0D1 /* CollectionFilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619A2B3C4D5E6F7A8B9C0D1 /* CollectionFilterPicker.swift */; };
 		F6A7B8C9D0E1F2A3B4C5D6E7 /* CancelRetentionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B8C9D0E1F2A3B4C5D6E7F8 /* CancelRetentionSheet.swift */; };
 		FF7B80191D4F65B697C2C7DF /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADB61C542FF0E9E8C46FDB /* HomeNavigation.swift */; };
+		1001A2B3C4D5E6F7A8B9C0D1 /* AdCreative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1011A2B3C4D5E6F7A8B9C0D1 /* AdCreative.swift */; };
+		1002A2B3C4D5E6F7A8B9C0D1 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012A2B3C4D5E6F7A8B9C0D1 /* BannerAdView.swift */; };
+		1003A2B3C4D5E6F7A8B9C0D1 /* InlineCardAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1013A2B3C4D5E6F7A8B9C0D1 /* InlineCardAdView.swift */; };
+		1004A2B3C4D5E6F7A8B9C0D1 /* PillAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1014A2B3C4D5E6F7A8B9C0D1 /* PillAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +183,10 @@
 		F617A2B3C4D5E6F7A8B9C0D1 /* ContentFeedViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentFeedViewModel.swift; sourceTree = "<group>"; };
 		F618A2B3C4D5E6F7A8B9C0D1 /* ContentFeedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentFeedView.swift; sourceTree = "<group>"; };
 		F619A2B3C4D5E6F7A8B9C0D1 /* CollectionFilterPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionFilterPicker.swift; sourceTree = "<group>"; };
+		1011A2B3C4D5E6F7A8B9C0D1 /* AdCreative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdCreative.swift; sourceTree = "<group>"; };
+		1012A2B3C4D5E6F7A8B9C0D1 /* BannerAdView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		1013A2B3C4D5E6F7A8B9C0D1 /* InlineCardAdView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InlineCardAdView.swift; sourceTree = "<group>"; };
+		1014A2B3C4D5E6F7A8B9C0D1 /* PillAdView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PillAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,8 +460,21 @@
 				0720A2B3C4D5E6F7A8B9C0D1 /* Forums */,
 				0740A2B3C4D5E6F7A8B9C0D1 /* FAQ */,
 				0820A2B3C4D5E6F7A8B9C0D1 /* Creator */,
+				1000A2B3C4D5E6F7A8B9C0D1 /* Ads */,
 			);
 			path = Hubs;
+			sourceTree = "<group>";
+		};
+		1000A2B3C4D5E6F7A8B9C0D1 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				1011A2B3C4D5E6F7A8B9C0D1 /* AdCreative.swift */,
+				1012A2B3C4D5E6F7A8B9C0D1 /* BannerAdView.swift */,
+				1013A2B3C4D5E6F7A8B9C0D1 /* InlineCardAdView.swift */,
+				1014A2B3C4D5E6F7A8B9C0D1 /* PillAdView.swift */,
+			);
+			name = Ads;
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		C8D9E0F1A2B3C4D5E6F7A8B9 /* Subscription */ = {
@@ -662,6 +683,10 @@
 				E7A9CB4FE0F1B8BCA7C53703 /* CategoryExploreView.swift in Sources */,
 				018A6DFD16AF114B45DCE22C /* CategoryMapping.swift in Sources */,
 				71DD186F300C48551AEE5C59 /* CategoryMockData.swift in Sources */,
+				1001A2B3C4D5E6F7A8B9C0D1 /* AdCreative.swift in Sources */,
+				1002A2B3C4D5E6F7A8B9C0D1 /* BannerAdView.swift in Sources */,
+				1003A2B3C4D5E6F7A8B9C0D1 /* InlineCardAdView.swift in Sources */,
+				1004A2B3C4D5E6F7A8B9C0D1 /* PillAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
