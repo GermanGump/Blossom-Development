@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: All 9 phases complete — milestone v1.0 done
-last_updated: "2026-03-17T00:30:00.000Z"
+stopped_at: "Completed 10-01 — Ad components: BannerAdView, InlineCardAdView, PillAdView with AdCreative model"
+last_updated: "2026-03-17T11:25:44.918Z"
 last_activity: 2026-03-16 — Completed 09-02 — Demo polish, foregroundStyle migration, dark mode audit, demo flow approved
 progress:
-  total_phases: 9
+  total_phases: 10
   completed_phases: 9
-  total_plans: 22
-  completed_plans: 22
+  total_plans: 24
+  completed_plans: 23
   percent: 100
 ---
 
@@ -77,8 +77,13 @@ Progress: [██████████] 100%
 | Phase 08 P02 | 3 | 2 tasks | 4 files |
 | Phase 08 P03 | 3 | 2 tasks | 2 files |
 | Phase 09 P01 | 4 | 2 tasks | 2 files |
+| Phase 10-ad-placement-system P01 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
+
+### Roadmap Evolution
+
+- Phase 10 added: Ad Placement System
 
 ### Decisions
 
@@ -153,6 +158,8 @@ Recent decisions affecting current work:
 - [Phase 09-01]: Mock earnings subscriber counts derived from gross math (19*Inv + 49*Pro = gross) not community.memberCount — earnings tracks paid+free tier base month by month
 - [Phase 09-01]: Int monthIndex used as chart x-axis key (not String monthLabel) for reliable chartOverlay proxy.value(atX:) coordinate mapping
 - [Phase 09-01]: GeometryReader retained in chartOverlay and tier percentage bars — containerRelativeFrame() cannot express arbitrary percentage fills
+- [Phase 10-ad-placement-system]: AdCreative is a plain struct with hardcoded static arrays — no AdStore, no service layer, per user decision
+- [Phase 10-ad-placement-system]: PillAdView uses lighter styling (8pt corner radius, no shadow) rather than blossomCard() — pill format is lighter weight than full cards
 
 ### Pending Todos
 
@@ -165,6 +172,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T23:57:58.000Z
-Stopped at: Completed 09-01 — Creator earnings card with SwiftUI Charts inline on Creator Dashboard
-Resume file: .planning/phases/09-creator-earnings-and-demo-polish/09-02-PLAN.md
+Last session: 2026-03-17T11:25:44.915Z
+Stopped at: Completed 10-01 — Ad components: BannerAdView, InlineCardAdView, PillAdView with AdCreative model
+Resume file: None
