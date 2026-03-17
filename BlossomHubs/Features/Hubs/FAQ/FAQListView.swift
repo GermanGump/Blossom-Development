@@ -12,7 +12,7 @@ struct FAQListView: View {
 
     /// Resolve the user's tier index within this community's tiers array.
     private var userTierIndex: Int? {
-        guard let tierID = subscriptionStore.currentTier(for: community.id) else {
+        guard let tierID = subscriptionStore.currentTier(for: community.id, in: community) else {
             return nil
         }
         return community.tiers.firstIndex { $0.id == tierID }

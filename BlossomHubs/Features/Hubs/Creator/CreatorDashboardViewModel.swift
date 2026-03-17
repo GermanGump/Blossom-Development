@@ -62,7 +62,7 @@ final class CreatorDashboardViewModel {
         let total = Decimal(subscriberCount) * avgPrice
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
+        formatter.currencyCode = "CAD"
         formatter.maximumFractionDigits = 2
         return formatter.string(from: total as NSDecimalNumber) ?? "$0.00"
     }
@@ -214,7 +214,7 @@ extension CreatorDashboardViewModel {
     func formatted(_ amount: Decimal) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
+        formatter.currencyCode = "CAD"
         formatter.maximumFractionDigits = 2
         return formatter.string(from: amount as NSDecimalNumber) ?? "$0.00"
     }

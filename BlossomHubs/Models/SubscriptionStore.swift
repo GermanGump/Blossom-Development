@@ -57,11 +57,18 @@ final class SubscriptionStore {
     }
 
     func isSubscribed(to communityID: UUID) -> Bool {
-        session.subscriptions[communityID] != nil
+        // Creator always has access to their own community
+        if session.creatorCommunityID == communityID { return true }
+        return session.subscriptions[communityID] != nil
     }
 
-    func currentTier(for communityID: UUID) -> UUID? {
-        session.subscriptions[communityID]?.tierID
+    func currentTier(for communityID: UUID, in community: Community? = nil) -> UUID? {
+        // Creator gets the highest tier on their own community
+        if session.creatorCommunityID == communityID,
+           let topTier = community?.tiers.last {
+            return topTier.id
+        }
+        return session.subscriptions[communityID]?.tierID
     }
 
     func markWelcomeSeen(for communityID: UUID) {

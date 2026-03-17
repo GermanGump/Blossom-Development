@@ -5,7 +5,7 @@ struct CommunityBannerView: View {
 
     var body: some View {
         Color.clear
-            .frame(height: 240)
+            .frame(height: 192)
             .overlay(alignment: .center) {
                 if let data = community.bannerImageData, let uiImage = UIImage(data: data) {
                     Image(uiImage: uiImage)

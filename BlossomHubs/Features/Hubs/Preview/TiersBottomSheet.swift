@@ -19,7 +19,7 @@ struct TiersBottomSheet: View {
     }
 
     private var currentTierIndex: Int? {
-        guard let currentTierID = subscriptionStore.currentTier(for: community.id) else { return nil }
+        guard let currentTierID = subscriptionStore.currentTier(for: community.id, in: community) else { return nil }
         return tiers.firstIndex(where: { $0.id == currentTierID })
     }
 
@@ -56,7 +56,7 @@ struct TiersBottomSheet: View {
                 VStack(spacing: 8) {
                     ForEach(Array(tiers.enumerated()), id: \.element.id) { index, tier in
                         if isManageMode {
-                            let isCurrent = subscriptionStore.currentTier(for: community.id) == tier.id
+                            let isCurrent = subscriptionStore.currentTier(for: community.id, in: community) == tier.id
                             let action: SubscriptionAction? = {
                                 guard !isCurrent, let currentIdx = currentTierIndex else { return nil }
                                 return index > currentIdx ? .upgrade : .downgrade

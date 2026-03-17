@@ -114,7 +114,7 @@ struct CommunityHubView: View {
         }
         .overlay(alignment: .bottomTrailing) {
             if viewModel.selectedSection == .discussions,
-               subscriptionStore.currentTier(for: viewModel.community.id) != nil {
+               subscriptionStore.currentTier(for: viewModel.community.id, in: viewModel.community) != nil {
                 Button(action: { showForumCompose = true }) {
                     Image(systemName: "plus")
                         .font(.system(size: 22, weight: .semibold))

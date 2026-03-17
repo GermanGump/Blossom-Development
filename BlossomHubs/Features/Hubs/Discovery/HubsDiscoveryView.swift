@@ -10,7 +10,7 @@ struct HubsDiscoveryView: View {
     private var subscribedCommunities: [Community] {
         let creatorID = subscriptionStore.session.creatorCommunityID
         return store.communities.filter { community in
-            subscriptionStore.currentTier(for: community.id) != nil
+            subscriptionStore.currentTier(for: community.id, in: community) != nil
                 && community.id != creatorID
         }
     }
@@ -53,7 +53,7 @@ struct HubsDiscoveryView: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 12) {
+            LazyVStack(spacing: 22) {
                 // Header
                 HStack(spacing: 10) {
                     Image(colorScheme == .dark ? "blossom-logo-dark" : "blossom-logo-icon")

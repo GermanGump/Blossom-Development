@@ -38,7 +38,7 @@ struct CommunityPreviewView: View {
 
                 // MARK: - Parallax Banner
                 Color.clear
-                    .frame(height: 240)
+                    .frame(height: 192)
                     .overlay(alignment: .center) {
                         if let data = community.bannerImageData, let uiImage = UIImage(data: data) {
                             Image(uiImage: uiImage)

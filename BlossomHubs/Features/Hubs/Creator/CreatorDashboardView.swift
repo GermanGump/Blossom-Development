@@ -6,7 +6,7 @@ struct CreatorDashboardView: View {
     @Environment(SubscriptionStore.self) private var subscriptionStore
     @State private var viewModel: CreatorDashboardViewModel?
     @State private var selectedPeriod: EarningsPeriod = .sixMonths
-    @State private var selectedMonth: Int?
+    @State private var selectedMonth: String?
 
     var body: some View {
         Group {
@@ -86,6 +86,7 @@ struct CreatorDashboardView: View {
                         .padding(.horizontal, 16)
                     }
                     .padding(.vertical, 12)
+                    .padding(.bottom, 100)
                 }
             } else {
                 ProgressView()
@@ -155,18 +156,19 @@ struct CreatorDashboardView: View {
             // Bar chart — net revenue per month
             Chart(chartPoints) { point in
                 BarMark(
-                    x: .value("Month", point.monthIndex),
-                    y: .value("Net Revenue", NSDecimalNumber(decimal: point.netRevenue).doubleValue)
+                    x: .value("Month", point.monthLabel),
+                    y: .value("Net Revenue", NSDecimalNumber(decimal: point.netRevenue).doubleValue),
+                    width: .ratio(0.55)
                 )
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [BlossomTheme.violet.opacity(0.6), BlossomTheme.violet],
+                        colors: [BlossomTheme.violet.opacity(0.5), BlossomTheme.violet],
                         startPoint: .bottom,
                         endPoint: .top
                     )
                 )
-                .opacity(selectedMonth == nil || selectedMonth == point.monthIndex ? 1.0 : 0.4)
-                .cornerRadius(4)
+                .opacity(selectedMonth == nil || selectedMonth == point.monthLabel ? 1.0 : 0.4)
+                .clipShape(RoundedRectangle(cornerRadius: 6))
             }
             .chartOverlay { proxy in
                 GeometryReader { geo in
@@ -175,18 +177,17 @@ struct CreatorDashboardView: View {
                         .contentShape(Rectangle())
                         .onTapGesture { location in
                             let relativeX = location.x - geo[proxy.plotAreaFrame].origin.x
-                            if let monthIdx: Int = proxy.value(atX: relativeX) {
-                                selectedMonth = (selectedMonth == monthIdx) ? nil : monthIdx
+                            if let month: String = proxy.value(atX: relativeX) {
+                                selectedMonth = (selectedMonth == month) ? nil : month
                             }
                         }
                 }
             }
             .chartXAxis {
-                AxisMarks(values: chartPoints.map { $0.monthIndex }) { value in
+                AxisMarks { value in
                     AxisValueLabel {
-                        if let idx = value.as(Int.self),
-                           let point = chartPoints.first(where: { $0.monthIndex == idx }) {
-                            Text(point.monthLabel)
+                        if let label = value.as(String.self) {
+                            Text(label)
                                 .font(BlossomFont.caption)
                                 .foregroundStyle(BlossomTheme.secondaryText)
                         }
@@ -194,24 +195,59 @@ struct CreatorDashboardView: View {
                 }
             }
             .chartYAxis {
-                AxisMarks(format: .currency(code: "USD").precision(.fractionLength(0)))
+                AxisMarks { value in
+                    AxisGridLine()
+                    AxisValueLabel {
+                        if let val = value.as(Double.self) {
+                            Text(formatAxisValue(val))
+                                .font(.system(size: 10))
+                                .foregroundStyle(BlossomTheme.secondaryText)
+                        }
+                    }
+                }
             }
-            .frame(height: 160)
+            .frame(height: 180)
             .animation(.easeInOut(duration: 0.3), value: selectedPeriod)
             .sensoryFeedback(.selection, trigger: selectedMonth)
 
             // Selected month callout
-            if let selIdx = selectedMonth,
-               let point = chartPoints.first(where: { $0.monthIndex == selIdx }) {
-                HStack {
-                    Spacer()
-                    Text("\(point.monthLabel): \(viewModel.formatted(point.netRevenue))")
-                        .font(BlossomFont.caption)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(BlossomTheme.violet)
-                    Spacer()
+            if let selLabel = selectedMonth,
+               let point = chartPoints.first(where: { $0.monthLabel == selLabel }) {
+                HStack(spacing: 10) {
+                    Image("blossom-logo-icon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Certified Blossom Payout:")
+                            .font(BlossomFont.caption)
+                            .foregroundStyle(.white.opacity(0.8))
+                        HStack(spacing: 4) {
+                            Text(point.monthLabel)
+                                .font(BlossomFont.caption)
+                                .foregroundStyle(.white.opacity(0.7))
+                            Text(viewModel.formatted(point.netRevenue))
+                                .font(BlossomFont.subhead)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.white)
+                        }
+                    }
                 }
-                .transition(.opacity)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 14)
+                .background(
+                    LinearGradient(
+                        colors: [BlossomTheme.violet, BlossomTheme.violet.opacity(0.8)],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .transition(.scale(scale: 0.8, anchor: .top).combined(with: .opacity))
+                .animation(.spring(response: 0.35, dampingFraction: 0.7), value: selectedMonth)
             }
 
             Divider()
@@ -283,9 +319,20 @@ struct CreatorDashboardView: View {
     private func formatAmount(_ amount: Decimal) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
+        formatter.currencyCode = "CAD"
         formatter.maximumFractionDigits = 2
         return formatter.string(from: amount as NSDecimalNumber) ?? "$0.00"
+    }
+
+    private func formatAxisValue(_ value: Double) -> String {
+        if value == 0 { return "$0" }
+        if value >= 1000 {
+            let k = value / 1000
+            return k.truncatingRemainder(dividingBy: 1) == 0
+                ? "$\(Int(k))K"
+                : String(format: "$%.1fK", k)
+        }
+        return "$\(Int(value))"
     }
 
     private func formatCount(_ count: Int) -> String {
