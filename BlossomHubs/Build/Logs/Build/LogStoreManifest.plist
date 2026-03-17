@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>7B3F15F7-2D0E-41AA-9D23-A83FA47F552F</key>
+		<key>44078C69-4EE5-4065-8BA8-DAA7B09302C8</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>7B3F15F7-2D0E-41AA-9D23-A83FA47F552F.xcactivitylog</string>
+			<string>44078C69-4EE5-4065-8BA8-DAA7B09302C8.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -29,7 +29,7 @@
 				<key>totalNumberOfTestFailures</key>
 				<integer>0</integer>
 				<key>totalNumberOfWarnings</key>
-				<integer>3</integer>
+				<integer>1</integer>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>BlossomHubs project</string>
@@ -40,13 +40,13 @@
 			<key>signature</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>timeStartedRecording</key>
-			<real>795400592.80406702</real>
+			<real>795443204.26629806</real>
 			<key>timeStoppedRecording</key>
-			<real>795400599.32546794</real>
+			<real>795443207.77754402</real>
 			<key>title</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>uniqueIdentifier</key>
-			<string>7B3F15F7-2D0E-41AA-9D23-A83FA47F552F</string>
+			<string>44078C69-4EE5-4065-8BA8-DAA7B09302C8</string>
 		</dict>
 	</dict>
 </dict>

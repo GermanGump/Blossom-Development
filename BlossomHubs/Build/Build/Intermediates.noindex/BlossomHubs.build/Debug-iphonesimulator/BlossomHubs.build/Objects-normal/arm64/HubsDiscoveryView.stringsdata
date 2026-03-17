@@ -55,7 +55,7 @@
         "key": "Featured Hub",
         "location": {
           "startingColumn": 30,
-          "startingLine": 144
+          "startingLine": 147
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "Explore more",
         "location": {
           "startingColumn": 38,
-          "startingLine": 187
+          "startingLine": 190
         }
       }
     ]
