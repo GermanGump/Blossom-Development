@@ -7,7 +7,7 @@
         "key": "Creator Dashboard",
         "location": {
           "startingColumn": 26,
-          "startingLine": 95
+          "startingLine": 96
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Period",
         "location": {
           "startingColumn": 20,
-          "startingLine": 146
+          "startingLine": 147
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Earnings",
         "location": {
           "startingColumn": 22,
-          "startingLine": 123
+          "startingLine": 124
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Members",
         "location": {
           "startingColumn": 22,
-          "startingLine": 135
+          "startingLine": 136
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Month",
         "location": {
           "startingColumn": 31,
-          "startingLine": 158
+          "startingLine": 159
         }
       },
       {
@@ -47,15 +47,15 @@
         "key": "Net Revenue",
         "location": {
           "startingColumn": 31,
-          "startingLine": 159
+          "startingLine": 160
         }
       },
       {
         "comment": "",
-        "key": "%@: %@",
+        "key": "Certified Blossom Payout:",
         "location": {
-          "startingColumn": 26,
-          "startingLine": 208
+          "startingColumn": 30,
+          "startingLine": 224
         }
       }
     ]
