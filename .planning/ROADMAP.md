@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Content Feed and Tier-Gated Access** - Creator content feed, investing-native post types, YouTube deep links, locked-content overlays, content collections (completed 2026-03-14)
 - [x] **Phase 7: Engagement: Forums and FAQ** - Discussion forums, thread creation and replies, likes, tier badges, FAQ zone, creator answers (completed 2026-03-15)
 - [x] **Phase 8: Creator Dashboard** - Creator entry point, community setup, tier editor, permissions matrix, content publishing, verified badge (completed 2026-03-15)
-- [ ] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish
+- [x] **Phase 9: Creator Earnings and Demo Polish** - Earnings view with SwiftUI Charts, end-to-end demo verification, dark mode audit, animation polish (completed 2026-03-16)
 
 ## Phase Details
 
@@ -163,11 +163,11 @@ Plans:
   3. The complete subscriber demo flow runs without visible errors: discovery splash -> browse communities -> community preview -> tier expansion -> mock payment -> confetti -> community landing -> content feed -> locked content prompt -> forum thread -> FAQ submission
   4. Every screen in the subscriber demo flow passes a dark mode check — no invisible text, no white-on-white cards, no unthemed system colors
   5. Inter font renders at the correct weight on all text styles across the full demo flow — no silent fallback to SF Pro
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
-- [ ] 09-01-PLAN.md — Creator earnings feature: EarningsData model, ViewModel extension, SwiftUI Charts bar chart with interactive tap, 1M/3M/6M picker, revenue breakdown, per-tier colored bars
-- [ ] 09-02-PLAN.md — Demo polish: .foregroundColor() to .foregroundStyle() migration across 16 files, dark mode audit, end-to-end demo flow verification checkpoint
+- [x] 09-01-PLAN.md — Creator earnings feature: EarningsData model, ViewModel extension, SwiftUI Charts bar chart with interactive tap, 1M/3M/6M picker, revenue breakdown, per-tier colored bars (completed 2026-03-16)
+- [x] 09-02-PLAN.md — Demo polish: .foregroundColor() to .foregroundStyle() migration across 16 files, dark mode audit, end-to-end demo flow verification checkpoint (completed 2026-03-16, human-verify approved)
 
 ## Progress
 
@@ -184,4 +184,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Content Feed and Tier-Gated Access | 2/2 | Complete | 2026-03-14 |
 | 7. Engagement: Forums and FAQ | 2/2 | Complete | 2026-03-15 |
 | 8. Creator Dashboard | 3/3 | Complete | 2026-03-15 |
-| 9. Creator Earnings and Demo Polish | 0/2 | Not started | - |
+| 9. Creator Earnings and Demo Polish | 2/2 | Complete | 2026-03-16 |
