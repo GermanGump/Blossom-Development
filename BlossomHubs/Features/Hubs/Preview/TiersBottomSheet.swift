@@ -11,6 +11,7 @@ struct TiersBottomSheet: View {
     @State private var showChangeTierAlert = false
     @State private var pendingTierChange: PendingTierChange? = nil
     @State private var showCancelRetention = false
+    @State private var selectedDetent: PresentationDetent = .medium
     @Environment(\.dismiss) private var dismiss
     @Environment(SubscriptionStore.self) private var subscriptionStore
 
@@ -110,6 +111,12 @@ struct TiersBottomSheet: View {
             }
         }
         .background(BlossomTheme.background)
+        .presentationDetents([.medium, .large], selection: $selectedDetent)
+        .onChange(of: expandedTierID) {
+            if expandedTierID != nil {
+                withAnimation { selectedDetent = .large }
+            }
+        }
         .alert(
             alertTitle,
             isPresented: $showChangeTierAlert,
