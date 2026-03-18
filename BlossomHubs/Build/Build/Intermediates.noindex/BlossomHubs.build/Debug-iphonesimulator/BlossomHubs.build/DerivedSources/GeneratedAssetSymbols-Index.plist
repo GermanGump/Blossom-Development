@@ -131,6 +131,16 @@
 			<key>catalogPath</key>
 			<string>/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Assets.xcassets</string>
 			<key>objcSymbol</key>
+			<string>ACImageNameBlossomHubsLogo</string>
+			<key>relativePath</key>
+			<string>./blossom-hubs-logo.imageset</string>
+			<key>swiftSymbol</key>
+			<string>blossomHubsLogo</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Assets.xcassets</string>
+			<key>objcSymbol</key>
 			<string>ACImageNameBlossomLogoDark</string>
 			<key>relativePath</key>
 			<string>./blossom-logo-dark.imageset</string>
@@ -146,6 +156,16 @@
 			<string>./blossom-logo-icon.imageset</string>
 			<key>swiftSymbol</key>
 			<string>blossomLogoIcon</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBlossomLogoIconSvg</string>
+			<key>relativePath</key>
+			<string>./blossom-logo-icon-svg.imageset</string>
+			<key>swiftSymbol</key>
+			<string>blossomLogoIconSvg</string>
 		</dict>
 		<dict>
 			<key>catalogPath</key>

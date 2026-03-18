@@ -1,0 +1,29 @@
+#!/bin/bash
+# Blossom Hubs Demo Launcher
+# Triggered via blossom-demo:// URL scheme from pitch deck
+
+PROJECT="/Users/nsimpson/Documents/GitHub/Blossom-Development/BlossomHubs/BlossomHubs.xcodeproj"
+SCHEME="BlossomHubs"
+SIMULATOR="iPhone 17 Pro"
+
+# Boot simulator
+xcrun simctl boot "$SIMULATOR" 2>/dev/null || true
+open -a Simulator
+
+# Build
+xcodebuild \
+    -project "$PROJECT" \
+    -scheme "$SCHEME" \
+    -destination "platform=iOS Simulator,name=$SIMULATOR" \
+    -configuration Debug \
+    build 2>&1 | tail -5
+
+# Find and install the built app
+BUILD_DIR=$(xcodebuild -project "$PROJECT" -scheme "$SCHEME" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | awk '{print $3}')
+APP_PATH="$BUILD_DIR/BlossomHubs.app"
+
+if [ -d "$APP_PATH" ]; then
+    xcrun simctl install booted "$APP_PATH"
+    BUNDLE_ID=$(defaults read "$APP_PATH/Info.plist" CFBundleIdentifier 2>/dev/null || echo "com.blossom.BlossomHubs")
+    xcrun simctl launch booted "$BUNDLE_ID"
+fi

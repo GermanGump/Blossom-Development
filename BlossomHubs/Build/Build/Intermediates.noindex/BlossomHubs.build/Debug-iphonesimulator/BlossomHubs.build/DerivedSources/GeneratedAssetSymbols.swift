@@ -58,11 +58,17 @@ extension DeveloperToolsSupport.ImageResource {
     /// The "bd-profile-pic" asset catalog image resource.
     static let bdProfilePic = DeveloperToolsSupport.ImageResource(name: "bd-profile-pic", bundle: resourceBundle)
 
+    /// The "blossom-hubs-logo" asset catalog image resource.
+    static let blossomHubsLogo = DeveloperToolsSupport.ImageResource(name: "blossom-hubs-logo", bundle: resourceBundle)
+
     /// The "blossom-logo-dark" asset catalog image resource.
     static let blossomLogoDark = DeveloperToolsSupport.ImageResource(name: "blossom-logo-dark", bundle: resourceBundle)
 
     /// The "blossom-logo-icon" asset catalog image resource.
     static let blossomLogoIcon = DeveloperToolsSupport.ImageResource(name: "blossom-logo-icon", bundle: resourceBundle)
+
+    /// The "blossom-logo-icon-svg" asset catalog image resource.
+    static let blossomLogoIconSvg = DeveloperToolsSupport.ImageResource(name: "blossom-logo-icon-svg", bundle: resourceBundle)
 
     /// The "blossom-logo-light" asset catalog image resource.
     static let blossomLogoLight = DeveloperToolsSupport.ImageResource(name: "blossom-logo-light", bundle: resourceBundle)

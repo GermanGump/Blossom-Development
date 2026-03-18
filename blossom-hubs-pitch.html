@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Hubs — Feature Pitch</title>
+
+    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (THEME)
+           Blossom brand palette on Neon Cyber base
+           =========================================== */
+        :root {
+            /* Blossom Brand Colors */
+            --violet: #7361F7;
+            --orange: #FF7833;
+            --teal: #35C7B2;
+            --dark-navy: #080b14;
+            --dark-surface: #0f1320;
+
+            /* Theme Mapping */
+            --bg-primary: #080b14;
+            --bg-surface: #0f1320;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.45);
+            --text-muted: rgba(255, 255, 255, 0.25);
+            --accent-primary: var(--violet);
+            --accent-secondary: var(--teal);
+            --accent-tertiary: var(--orange);
+
+            /* Typography — ALL clamp() */
+            --font-display: 'Clash Display', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+            --title-size: clamp(2.5rem, 7vw, 6rem);
+            --h2-size: clamp(1.5rem, 4vw, 3rem);
+            --h3-size: clamp(1rem, 2vw, 1.5rem);
+            --body-size: clamp(0.75rem, 1.3vw, 1.05rem);
+            --small-size: clamp(0.6rem, 0.9vw, 0.8rem);
+            --eyebrow-size: clamp(0.6rem, 1vw, 0.8rem);
+
+            /* Spacing */
+            --slide-padding: clamp(1.5rem, 4vw, 4rem);
+            --content-gap: clamp(1rem, 2.5vw, 2rem);
+            --element-gap: clamp(0.5rem, 1vw, 1rem);
+
+            /* Animation */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.6s;
+            --duration-slow: 1s;
+        }
+
+        /* ===========================================
+           BASE STYLES
+           =========================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* === VIEWPORT-BASE.CSS (MANDATORY) === */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+        }
+        .card, .container, .content-box {
+            max-width: min(90vw, 1000px);
+            max-height: min(80vh, 700px);
+        }
+        .feature-list, .bullet-list {
+            gap: clamp(0.4rem, 1vh, 1rem);
+        }
+        .feature-list li, .bullet-list li {
+            font-size: var(--body-size);
+            line-height: 1.4;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(0.5rem, 1.5vw, 1rem);
+        }
+        img, .image-container {
+            max-width: 100%;
+            max-height: min(50vh, 400px);
+            object-fit: contain;
+        }
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(0.75rem, 3vw, 2rem);
+                --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+                --title-size: clamp(1.8rem, 5vw, 3.5rem);
+                --h2-size: clamp(1.25rem, 3vw, 2rem);
+            }
+        }
+        @media (max-height: 600px) {
+            :root {
+                --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+                --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+                --title-size: clamp(1.5rem, 4.5vw, 2.5rem);
+                --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+            }
+            .nav-dots, .keyboard-hint, .decorative { display: none; }
+        }
+        @media (max-height: 500px) {
+            :root {
+                --slide-padding: clamp(0.4rem, 2vw, 1rem);
+                --title-size: clamp(1.2rem, 4vw, 2rem);
+                --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+                --body-size: clamp(0.65rem, 1vw, 0.85rem);
+            }
+        }
+        @media (max-width: 600px) {
+            :root { --title-size: clamp(1.5rem, 8vw, 3rem); }
+            .grid { grid-template-columns: 1fr; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+        /* === END VIEWPORT-BASE.CSS === */
+
+        /* ===========================================
+           GLOBAL PRESENTATION STYLES
+           =========================================== */
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .slide {
+            background: var(--bg-primary);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ===========================================
+           SHARED BACKGROUND EFFECTS
+           Grid, orbs, and glow rings reused per-slide
+           =========================================== */
+        .grid-bg {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(115,97,247,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(115,97,247,0.05) 1px, transparent 1px);
+            background-size: clamp(30px, 5vw, 60px) clamp(30px, 5vw, 60px);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute; border-radius: 50%; filter: blur(80px);
+            pointer-events: none;
+            animation: drift 8s ease-in-out infinite alternate;
+        }
+        .orb-violet { background: rgba(115,97,247,0.2); }
+        .orb-teal { background: rgba(53,199,178,0.15); }
+        .orb-orange { background: rgba(255,120,51,0.12); }
+
+        /* ===========================================
+           ANIMATION CLASSES
+           Triggered by Intersection Observer (.visible)
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                        transform var(--duration-normal) var(--ease-out-expo);
+        }
+        .reveal-blur {
+            opacity: 0;
+            filter: blur(12px);
+            transform: translateY(20px);
+            transition: opacity 0.8s var(--ease-out-expo),
+                        filter 0.8s var(--ease-out-expo),
+                        transform 0.8s var(--ease-out-expo);
+        }
+        .slide.visible .reveal,
+        .slide.visible .reveal-blur {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+        .slide.visible .reveal:nth-child(1) { transition-delay: 0.1s; }
+        .slide.visible .reveal:nth-child(2) { transition-delay: 0.2s; }
+        .slide.visible .reveal:nth-child(3) { transition-delay: 0.3s; }
+        .slide.visible .reveal:nth-child(4) { transition-delay: 0.4s; }
+        .slide.visible .reveal:nth-child(5) { transition-delay: 0.5s; }
+        .slide.visible .reveal:nth-child(6) { transition-delay: 0.6s; }
+
+        /* ===========================================
+           REUSABLE COMPONENTS
+           =========================================== */
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: var(--eyebrow-size);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--teal);
+        }
+
+        .slide-title {
+            font-family: var(--font-display);
+            font-size: var(--h2-size);
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .slide-subtitle {
+            font-size: var(--body-size);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 55ch;
+        }
+
+        .highlight-violet { color: var(--violet); }
+        .highlight-teal { color: var(--teal); }
+        .highlight-orange { color: var(--orange); }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--violet), var(--teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .corner-label {
+            position: absolute;
+            font-family: var(--font-body);
+            font-size: var(--small-size);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        .corner-tl { top: var(--slide-padding); left: var(--slide-padding); }
+        .corner-tr { top: var(--slide-padding); right: var(--slide-padding); }
+        .corner-br { bottom: var(--slide-padding); right: var(--slide-padding); }
+        .corner-bl { bottom: var(--slide-padding); left: var(--slide-padding); }
+
+        .glow-ring {
+            position: absolute; border-radius: 50%;
+            border: 1px solid rgba(115,97,247,0.1);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: ringPulse 5s ease-in-out infinite;
+        }
+
+        /* ===========================================
+           NAVIGATION DOTS
+           =========================================== */
+        .nav-dots {
+            position: fixed; right: clamp(0.8rem, 2vw, 1.5rem);
+            top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column;
+            gap: clamp(6px, 1vh, 10px);
+            z-index: 1000;
+        }
+        .nav-dot {
+            width: clamp(6px, 0.6vw, 8px);
+            height: clamp(6px, 0.6vw, 8px);
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none; padding: 0;
+        }
+        .nav-dot.active {
+            background: var(--violet);
+            box-shadow: 0 0 12px rgba(115,97,247,0.5);
+            transform: scale(1.3);
+        }
+        .nav-dot:hover { background: rgba(255,255,255,0.4); }
+
+        /* ===========================================
+           PROGRESS BAR
+           =========================================== */
+        .progress-bar {
+            position: fixed; top: 0; left: 0;
+            height: 2px; width: 0;
+            background: linear-gradient(90deg, var(--violet), var(--teal), var(--orange));
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        /* ===========================================
+           SLIDE 1: TITLE
+           =========================================== */
+        .title-slide .content {
+            position: relative; z-index: 2;
+            text-align: center;
+            max-width: min(85vw, 900px);
+        }
+        .title-slide .main-title {
+            font-family: var(--font-display);
+            font-size: var(--title-size);
+            font-weight: 700;
+            line-height: 0.92;
+            margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+        }
+        .title-slide .tagline {
+            font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        .title-slide .tagline strong {
+            color: var(--orange);
+            font-weight: 700;
+        }
+        .bg-logo {
+            position: absolute;
+            right: calc(-1 * clamp(5vw, 10vw, 15vw));
+            top: 50%;
+            transform: translateY(-50%);
+            width: clamp(300px, 55vw, 700px);
+            height: auto;
+            max-height: none;
+            opacity: 0.14;
+            pointer-events: none;
+            z-index: 1;
+            animation: drift 12s ease-in-out infinite alternate;
+        }
+        .title-slide .ring-1 {
+            width: clamp(300px, 45vw, 550px);
+            height: clamp(300px, 45vw, 550px);
+        }
+        .title-slide .ring-2 {
+            width: clamp(420px, 60vw, 720px);
+            height: clamp(420px, 60vw, 720px);
+            border-color: rgba(53,199,178,0.07);
+            animation-delay: -2.5s;
+        }
+
+        /* ===========================================
+           SLIDE 2: THE PROBLEM
+           =========================================== */
+        .problem-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(85vw, 800px);
+            display: flex; flex-direction: column;
+            gap: var(--content-gap);
+        }
+        .leak-stats {
+            display: flex; gap: clamp(1.5rem, 4vw, 3rem);
+            margin-top: clamp(0.5rem, 1.5vw, 1rem);
+            flex-wrap: wrap;
+        }
+        .leak-stat {
+            display: flex; flex-direction: column;
+        }
+        .leak-stat .value {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--orange);
+            line-height: 1;
+        }
+        .leak-stat .label {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            margin-top: clamp(0.2rem, 0.5vw, 0.4rem);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .problem-quote {
+            font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border-left: 2px solid var(--orange);
+            padding-left: clamp(0.8rem, 1.5vw, 1.2rem);
+            max-width: 50ch;
+        }
+
+        /* ===========================================
+           SLIDE 3: THE SOLUTION
+           =========================================== */
+        .solution-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(85vw, 850px);
+            display: flex; flex-direction: column;
+            gap: var(--content-gap);
+        }
+        .feature-pills {
+            display: flex; flex-wrap: wrap;
+            gap: clamp(0.4rem, 0.8vw, 0.6rem);
+        }
+        .pill {
+            font-size: var(--small-size);
+            font-weight: 500;
+            padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.8rem, 1.2vw, 1rem);
+            border-radius: 100px;
+            background: rgba(115,97,247,0.12);
+            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(115,97,247,0.2);
+        }
+        .pill.active {
+            background: var(--violet);
+            color: #fff;
+            border-color: var(--violet);
+        }
+
+        /* ===========================================
+           SLIDE 4: HOW IT WORKS (FEATURES)
+           Split layout: subscriber vs creator columns
+           =========================================== */
+        .features-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(92vw, 1000px);
+            width: 100%;
+            display: flex; flex-direction: column;
+            gap: clamp(0.8rem, 2vw, 1.5rem);
+        }
+        .features-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(1.5rem, 4vw, 3rem);
+        }
+        @media (max-width: 700px) {
+            .features-split { grid-template-columns: 1fr; gap: clamp(1rem, 2vw, 1.5rem); }
+        }
+        .features-column {
+            display: flex; flex-direction: column;
+            gap: clamp(0.5rem, 1vh, 0.8rem);
+        }
+        .column-header {
+            display: flex; align-items: center;
+            gap: clamp(0.4rem, 0.8vw, 0.6rem);
+            margin-bottom: clamp(0.2rem, 0.5vw, 0.4rem);
+        }
+        .column-badge {
+            font-family: var(--font-display);
+            font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: clamp(0.2rem, 0.4vw, 0.3rem) clamp(0.6rem, 1vw, 0.8rem);
+            border-radius: 100px;
+        }
+        .column-badge.subscriber {
+            background: rgba(53,199,178,0.15);
+            color: var(--teal);
+            border: 1px solid rgba(53,199,178,0.25);
+        }
+        .column-badge.creator {
+            background: rgba(255,120,51,0.15);
+            color: var(--orange);
+            border: 1px solid rgba(255,120,51,0.25);
+        }
+        .column-line {
+            flex: 1; height: 1px;
+        }
+        .column-line.sub-line { background: linear-gradient(90deg, rgba(53,199,178,0.3), transparent); }
+        .column-line.cre-line { background: linear-gradient(90deg, rgba(255,120,51,0.3), transparent); }
+        .feat-row {
+            display: flex; align-items: flex-start;
+            gap: clamp(0.6rem, 1vw, 0.8rem);
+        }
+        .feat-accent {
+            width: 3px; min-height: 100%;
+            border-radius: 2px; flex-shrink: 0;
+            margin-top: clamp(0.15rem, 0.3vw, 0.25rem);
+        }
+        .feat-accent.teal { background: var(--teal); }
+        .feat-accent.orange { background: var(--orange); }
+        .feat-accent.violet { background: var(--violet); }
+        .feat-text h3 {
+            font-family: var(--font-display);
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        .feat-text p {
+            font-size: clamp(0.6rem, 0.9vw, 0.78rem);
+            color: var(--text-secondary);
+            line-height: 1.45;
+            margin-top: clamp(0.1rem, 0.2vw, 0.15rem);
+        }
+        .feat-text .feat-unique {
+            color: var(--teal);
+            font-weight: 600;
+            font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: clamp(0.15rem, 0.3vw, 0.2rem);
+        }
+
+        /* ===========================================
+           SLIDE 5: THE FLYWHEEL
+           =========================================== */
+        .flywheel-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(85vw, 800px);
+            display: flex; flex-direction: column;
+            align-items: center; text-align: center;
+            gap: var(--content-gap);
+        }
+        .flywheel-chain {
+            display: flex; align-items: center;
+            gap: clamp(0.3rem, 0.8vw, 0.6rem);
+            flex-wrap: wrap; justify-content: center;
+        }
+        .chain-node {
+            font-family: var(--font-display);
+            font-size: clamp(0.7rem, 1.1vw, 0.95rem);
+            font-weight: 600;
+            padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            border-radius: clamp(8px, 1vw, 12px);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            white-space: nowrap;
+        }
+        .chain-node.highlight {
+            background: rgba(115,97,247,0.15);
+            border-color: var(--violet);
+            color: #fff;
+        }
+        .chain-arrow {
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            color: var(--text-muted);
+        }
+        .flywheel-detail {
+            font-size: var(--body-size);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 50ch;
+        }
+        .flywheel-detail strong { color: var(--teal); font-weight: 600; }
+
+        /* ===========================================
+           SLIDE 6: REVENUE MODEL
+           =========================================== */
+        .revenue-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(85vw, 850px);
+            display: flex; flex-direction: column;
+            gap: var(--content-gap);
+        }
+        .revenue-streams {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(0.6rem, 1.2vw, 1rem);
+        }
+        @media (max-width: 700px) {
+            .revenue-streams { grid-template-columns: 1fr; }
+        }
+        .revenue-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: clamp(8px, 1vw, 12px);
+            padding: clamp(1rem, 2vw, 1.5rem);
+            display: flex; flex-direction: column;
+            gap: clamp(0.3rem, 0.6vw, 0.5rem);
+        }
+        .revenue-card .rev-value {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            font-weight: 700;
+            line-height: 1;
+        }
+        .revenue-card .rev-label {
+            font-size: clamp(0.65rem, 1vw, 0.85rem);
+            font-weight: 600;
+        }
+        .revenue-card .rev-desc {
+            font-size: clamp(0.6rem, 0.85vw, 0.75rem);
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* ===========================================
+           SLIDE 7: WHAT'S BUILT
+           =========================================== */
+        .built-slide .content {
+            position: relative; z-index: 2;
+            max-width: min(85vw, 800px);
+            display: flex; flex-direction: column;
+            gap: var(--content-gap);
+        }
+        .phase-bar {
+            display: flex;
+            gap: clamp(2px, 0.3vw, 3px);
+            height: clamp(28px, 4vh, 40px);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .phase-segment {
+            flex: 1;
+            background: var(--violet);
+            position: relative;
+            transition: opacity 0.3s ease;
+        }
+        .phase-segment:nth-child(even) { background: var(--teal); }
+        .phase-segment:nth-child(3n) { background: var(--orange); }
+        .completion-row {
+            display: flex; justify-content: space-between;
+            align-items: baseline;
+        }
+        .completion-label {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .completion-value {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--teal);
+        }
+        .built-list {
+            list-style: none;
+            display: flex; flex-direction: column;
+            gap: clamp(0.3rem, 0.6vh, 0.5rem);
+        }
+        .built-list li {
+            font-size: var(--body-size);
+            color: var(--text-secondary);
+            padding-left: clamp(1rem, 1.5vw, 1.2rem);
+            position: relative;
+        }
+        .built-list li::before {
+            content: '→';
+            position: absolute; left: 0;
+            color: var(--violet);
+            font-weight: 700;
+        }
+
+        /* ===========================================
+           SLIDE 8: THE ASK / CTA
+           =========================================== */
+        .cta-slide .content {
+            position: relative; z-index: 2;
+            text-align: center;
+            max-width: min(85vw, 700px);
+            display: flex; flex-direction: column;
+            align-items: center;
+            gap: var(--content-gap);
+        }
+        .cta-slide .main-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+        }
+        .cta-pill {
+            display: inline-flex; align-items: center; gap: clamp(0.4rem, 0.8vw, 0.6rem);
+            font-family: var(--font-display);
+            font-size: clamp(0.75rem, 1.2vw, 1rem);
+            font-weight: 600;
+            padding: clamp(0.6rem, 1vw, 0.9rem) clamp(1.2rem, 2.5vw, 2rem);
+            border-radius: 100px;
+            background: var(--violet);
+            color: #fff;
+            border: none;
+            box-shadow: 0 0 30px rgba(115,97,247,0.3);
+            animation: ctaPulse 3s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-pill::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: inherit;
+            background: conic-gradient(
+                from 0deg,
+                var(--violet),
+                var(--teal),
+                var(--orange),
+                var(--violet));
+            opacity: 0;
+            z-index: -1;
+            filter: blur(12px);
+            transition: opacity 0.4s ease;
+        }
+        .cta-pill:hover::before {
+            opacity: 1;
+            animation: hueSpin 2s linear infinite;
+        }
+        .cta-pill:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 0 40px rgba(115,97,247,0.5),
+                0 0 80px rgba(53,199,178,0.25),
+                0 0 120px rgba(255,120,51,0.15);
+            filter: brightness(1.1);
+        }
+        .cta-pill:active {
+            transform: scale(0.98);
+        }
+
+        /* ===========================================
+           LAUNCH OVERLAY
+           Full-screen takeover when demo is launching
+           =========================================== */
+        .launch-overlay {
+            position: fixed; inset: 0;
+            background: var(--bg-primary);
+            z-index: 20000;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        .launch-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .launch-logo {
+            width: clamp(80px, 15vw, 140px);
+            height: auto;
+            max-height: none;
+            animation: launchLogoPulse 2s ease-in-out infinite;
+        }
+        .launch-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+        }
+        .launch-status {
+            font-family: var(--font-body);
+            font-size: clamp(0.65rem, 1vw, 0.85rem);
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        .launch-spinner {
+            width: clamp(28px, 4vw, 40px);
+            height: clamp(28px, 4vw, 40px);
+            border: 2px solid rgba(255,255,255,0.08);
+            border-top-color: var(--violet);
+            border-right-color: var(--teal);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .launch-progress {
+            width: clamp(200px, 30vw, 350px);
+            height: 3px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .launch-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--violet), var(--teal));
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+        .launch-orbs {
+            position: absolute; inset: 0; pointer-events: none;
+        }
+        .launch-orbs .orb {
+            animation: launchOrbExpand 3s ease-out forwards;
+        }
+        .cta-footnote {
+            font-size: var(--small-size);
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           INLINE EDITING (User opted in)
+           =========================================== */
+        .edit-hotzone {
+            position: fixed; top: 0; left: 0;
+            width: 80px; height: 80px;
+            z-index: 10000;
+            cursor: pointer;
+        }
+        .edit-toggle {
+            position: fixed;
+            top: clamp(0.8rem, 1.5vw, 1.2rem);
+            left: clamp(0.8rem, 1.5vw, 1.2rem);
+            width: clamp(32px, 3vw, 40px);
+            height: clamp(32px, 3vw, 40px);
+            border-radius: 50%;
+            background: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, background 0.3s ease;
+            z-index: 10001;
+        }
+        .edit-toggle.show,
+        .edit-toggle.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .edit-toggle.active {
+            background: var(--violet);
+            border-color: var(--violet);
+        }
+        .edit-banner {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: 0; overflow: hidden;
+            background: var(--violet);
+            color: #fff;
+            font-size: var(--small-size);
+            font-weight: 500;
+            display: flex; align-items: center; justify-content: center;
+            gap: clamp(0.5rem, 1vw, 1rem);
+            z-index: 9999;
+            transition: height 0.3s ease;
+        }
+        .edit-banner.show {
+            height: clamp(28px, 3.5vh, 36px);
+        }
+        .edit-banner button {
+            background: rgba(255,255,255,0.2);
+            border: none; color: #fff;
+            padding: 0.15rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: var(--small-size);
+        }
+        [contenteditable="true"] {
+            outline: 1px dashed rgba(115,97,247,0.4);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        /* ===========================================
+           KEYFRAMES
+           =========================================== */
+        @keyframes drift {
+            from { transform: translate(0, 0); }
+            to { transform: translate(20px, -15px); }
+        }
+        @keyframes ringPulse {
+            0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 0.4; }
+            50% { transform: translate(-50%,-50%) scale(1.04); opacity: 0.8; }
+        }
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(115,97,247,0.3); }
+            50% { box-shadow: 0 0 50px rgba(115,97,247,0.5); }
+        }
+        @keyframes counterUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes hueSpin {
+            0% { filter: blur(12px) hue-rotate(0deg); }
+            100% { filter: blur(12px) hue-rotate(360deg); }
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes launchLogoPulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+        @keyframes launchOrbExpand {
+            0% { transform: scale(0.5); opacity: 0; }
+            30% { opacity: 0.3; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        @keyframes screenZoom {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+        .cta-slide.launching {
+            animation: screenZoom 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation dots -->
+    <nav class="nav-dots" id="navDots" aria-label="Slide navigation"></nav>
+
+    <!-- Inline editing controls -->
+    <div class="edit-hotzone" id="editHotzone"></div>
+    <button class="edit-toggle" id="editToggle" title="Edit mode (E)">✏️</button>
+    <div class="edit-banner" id="editBanner">
+        <span>Edit Mode — click any text to edit</span>
+        <button onclick="editor.save()">💾 Save (Ctrl+S)</button>
+        <button onclick="editor.exportFile()">📥 Export</button>
+    </div>
+
+    <!-- ===========================================
+         SLIDE 1: TITLE
+         =========================================== -->
+    <section class="slide title-slide" aria-label="Title slide">
+        <div class="grid-bg"></div>
+        <img src="brand-guidlines/logos/Blossom-logo-icon-SVG.svg" alt="" class="bg-logo" aria-hidden="true">
+        <div class="orb orb-violet" style="width:35vw;height:35vw;top:-8%;left:-8%;"></div>
+        <div class="orb orb-teal" style="width:25vw;height:25vw;bottom:-5%;right:-5%;animation-delay:-4s;"></div>
+        <div class="orb orb-orange" style="width:18vw;height:18vw;top:25%;right:12%;animation-delay:-2s;"></div>
+        <div class="glow-ring ring-1"></div>
+        <div class="glow-ring ring-2"></div>
+        <div class="corner-label corner-tl">Blossom 2026</div>
+        <div class="corner-label corner-br">Internal Feature Pitch</div>
+        <div class="content">
+            <div class="eyebrow reveal">Feature Proposal</div>
+            <h1 class="main-title reveal">Blossom<br><span class="gradient-text">Hubs</span></h1>
+            <p class="tagline reveal">The community engine that keeps users in — and drives <strong>revenue up.</strong></p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 2: THE PROBLEM
+         =========================================== -->
+    <section class="slide problem-slide" aria-label="The Problem">
+        <div class="grid-bg"></div>
+        <div class="orb orb-orange" style="width:30vw;height:30vw;top:-10%;right:-5%;"></div>
+        <div class="corner-label corner-tl">02</div>
+        <div class="content">
+            <div class="eyebrow reveal">The Problem</div>
+            <h2 class="slide-title reveal">We're building the audience.<br><span class="highlight-orange">Then losing them.</span></h2>
+            <div class="leak-stats reveal">
+                <div class="leak-stat">
+                    <span class="value">Discord</span>
+                    <span class="label">Where communities migrate</span>
+                </div>
+                <div class="leak-stat">
+                    <span class="value">Patreon</span>
+                    <span class="label">Where creators monetize</span>
+                </div>
+                <div class="leak-stat">
+                    <span class="value">$0</span>
+                    <span class="label">Revenue Blossom captures</span>
+                </div>
+            </div>
+            <p class="problem-quote reveal">Ambassadors build followings on Blossom, then move their communities to platforms that let them monetize. We lose the users, the data, and the revenue.</p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3: THE SOLUTION
+         =========================================== -->
+    <section class="slide solution-slide" aria-label="The Solution">
+        <div class="grid-bg"></div>
+        <div class="orb orb-violet" style="width:28vw;height:28vw;bottom:-8%;left:-5%;"></div>
+        <div class="orb orb-teal" style="width:20vw;height:20vw;top:10%;right:8%;animation-delay:-3s;"></div>
+        <div class="corner-label corner-tl">03</div>
+        <div class="content">
+            <div class="eyebrow reveal">The Solution</div>
+            <h2 class="slide-title reveal">Paid subscription communities<br><span class="highlight-violet">inside Blossom.</span></h2>
+            <p class="slide-subtitle reveal">A new 6th tab where ambassadors create tiered communities, publish premium content, and earn — while their audience stays in our ecosystem.</p>
+            <div class="feature-pills reveal">
+                <span class="pill active">Tiered Subscriptions</span>
+                <span class="pill">Content Feed</span>
+                <span class="pill">Discussion Forums</span>
+                <span class="pill">FAQ Zone</span>
+                <span class="pill">Creator Dashboard</span>
+                <span class="pill">Earnings Tracking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 4: KEY FEATURES
+         =========================================== -->
+    <section class="slide features-slide" aria-label="Key Features">
+        <div class="grid-bg"></div>
+        <div class="orb orb-violet" style="width:22vw;height:22vw;top:-5%;left:20%;"></div>
+        <div class="orb orb-teal" style="width:18vw;height:18vw;bottom:5%;right:-3%;animation-delay:-3s;"></div>
+        <div class="corner-label corner-tl">04</div>
+        <div class="content">
+            <div class="eyebrow reveal">How It Works</div>
+            <h2 class="slide-title reveal">Two sides. <span class="highlight-violet">One platform.</span></h2>
+            <div class="features-split">
+                <div class="features-column reveal">
+                    <div class="column-header">
+                        <span class="column-badge subscriber">Subscriber</span>
+                        <div class="column-line sub-line"></div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent teal"></div>
+                        <div class="feat-text">
+                            <h3>Discovery & Preview</h3>
+                            <p>Browse by category, preview communities, compare tier benefits before subscribing.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent teal"></div>
+                        <div class="feat-text">
+                            <h3>Tier-Gated Content</h3>
+                            <p>Trade highlights, analysis posts, YouTube deep-links — unlocked by subscription level.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent teal"></div>
+                        <div class="feat-text">
+                            <h3>Discussion Forums</h3>
+                            <p>Async threads, not chat noise. Creator replies highlighted. No Discord burnout.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent violet"></div>
+                        <div class="feat-text">
+                            <h3>FAQ Zone</h3>
+                            <p>Structured Q&A with verified creator answers.</p>
+                            <div class="feat-unique">Unique to Blossom — no competitor has this</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-column reveal">
+                    <div class="column-header">
+                        <span class="column-badge creator">Creator</span>
+                        <div class="column-line cre-line"></div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent orange"></div>
+                        <div class="feat-text">
+                            <h3>Community Setup</h3>
+                            <p>Brand your hub with logo, banner, description. Define 1–4 subscription tiers.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent orange"></div>
+                        <div class="feat-text">
+                            <h3>Content Publishing</h3>
+                            <p>Compose posts, assign collections, set tier gates. Text, trades, and YouTube formats.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent orange"></div>
+                        <div class="feat-text">
+                            <h3>Permissions Matrix</h3>
+                            <p>Control exactly which tiers access which sections — posts, forums, FAQ, videos.</p>
+                        </div>
+                    </div>
+                    <div class="feat-row">
+                        <div class="feat-accent orange"></div>
+                        <div class="feat-text">
+                            <h3>Earnings Dashboard</h3>
+                            <p>Revenue charts, subscriber counts, transparent 10% fee breakdown. Full visibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 5: THE FLYWHEEL
+         =========================================== -->
+    <section class="slide flywheel-slide" aria-label="The Flywheel">
+        <div class="grid-bg"></div>
+        <div class="orb orb-teal" style="width:30vw;height:30vw;top:-8%;left:-8%;"></div>
+        <div class="orb orb-orange" style="width:22vw;height:22vw;bottom:5%;right:5%;animation-delay:-3s;"></div>
+        <div class="glow-ring" style="width:clamp(250px,40vw,500px);height:clamp(250px,40vw,500px);border-color:rgba(53,199,178,0.1);"></div>
+        <div class="corner-label corner-tl">05</div>
+        <div class="content">
+            <div class="eyebrow reveal">The Flywheel</div>
+            <h2 class="slide-title reveal">Every user compounds <span class="highlight-teal">the whole business.</span></h2>
+            <div class="flywheel-chain reveal">
+                <span class="chain-node highlight">More Users</span>
+                <span class="chain-arrow">→</span>
+                <span class="chain-node">More 1P Data</span>
+                <span class="chain-arrow">→</span>
+                <span class="chain-node">Better Ad Resolution</span>
+                <span class="chain-arrow">→</span>
+                <span class="chain-node highlight">More Ad Spend</span>
+            </div>
+            <p class="flywheel-detail reveal">Hubs keeps users inside Blossom instead of losing them to Discord. Every subscriber generates <strong>proprietary behavioral signals</strong> — content preferences, engagement patterns, investment interests — that make our ad placements more targeted, more valuable, and more attractive to advertisers.</p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 6: REVENUE MODEL
+         =========================================== -->
+    <section class="slide revenue-slide" aria-label="Revenue Model">
+        <div class="grid-bg"></div>
+        <div class="orb orb-violet" style="width:25vw;height:25vw;bottom:-8%;right:-5%;"></div>
+        <div class="corner-label corner-tl">06</div>
+        <div class="content">
+            <div class="eyebrow reveal">Revenue Model</div>
+            <h2 class="slide-title reveal">Three revenue streams. <span class="highlight-orange">One feature.</span></h2>
+            <div class="revenue-streams">
+                <div class="revenue-card reveal">
+                    <span class="rev-value highlight-violet">10%</span>
+                    <span class="rev-label">Platform Fee</span>
+                    <span class="rev-desc">Transparent 10% cut on every subscriber payment. Creators see it clearly in their earnings dashboard.</span>
+                </div>
+                <div class="revenue-card reveal">
+                    <span class="rev-value highlight-teal">Ads</span>
+                    <span class="rev-label">New Placements</span>
+                    <span class="rev-desc">Banner, inline card, and pill ad formats across discovery, feeds, and category pages. 1P data makes every impression more valuable.</span>
+                </div>
+                <div class="revenue-card reveal">
+                    <span class="rev-value highlight-orange">PRO+</span>
+                    <span class="rev-label">Bundle Upsell</span>
+                    <span class="rev-desc">Cross-sell Blossom PRO to engaged community subscribers. Deeper analytics, more reasons to stay.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 7: WHAT'S BUILT
+         =========================================== -->
+    <section class="slide built-slide" aria-label="What's Built">
+        <div class="grid-bg"></div>
+        <div class="orb orb-teal" style="width:20vw;height:20vw;top:10%;right:-5%;animation-delay:-2s;"></div>
+        <div class="corner-label corner-tl">07</div>
+        <div class="content">
+            <div class="eyebrow reveal">Prototype Status</div>
+            <h2 class="slide-title reveal">10 phases. <span class="highlight-teal">All complete.</span></h2>
+            <div class="phase-bar reveal">
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+                <div class="phase-segment"></div>
+            </div>
+            <div class="completion-row reveal">
+                <span class="completion-label">Requirements delivered</span>
+                <span class="completion-value">44 / 44</span>
+            </div>
+            <ul class="built-list reveal">
+                <li>End-to-end subscriber flow: discover → subscribe → content → forums → FAQ</li>
+                <li>Creator dashboard with earnings visualization and tier management</li>
+                <li>Ad placement system with 5 mock Canadian finance advertisers</li>
+                <li>6 real ambassador profiles, dark mode, brand-compliant design</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 8: THE ASK
+         =========================================== -->
+    <section class="slide cta-slide" aria-label="The Ask">
+        <div class="grid-bg"></div>
+        <img src="brand-guidlines/logos/Blossom-logo-icon-SVG.svg" alt="" class="bg-logo" aria-hidden="true">
+        <div class="orb orb-violet" style="width:35vw;height:35vw;top:-10%;left:-10%;"></div>
+        <div class="orb orb-teal" style="width:28vw;height:28vw;bottom:-8%;right:-8%;animation-delay:-3s;"></div>
+        <div class="orb orb-orange" style="width:15vw;height:15vw;top:30%;right:20%;animation-delay:-5s;"></div>
+        <div class="glow-ring" style="width:clamp(300px,45vw,550px);height:clamp(300px,45vw,550px);"></div>
+        <div class="glow-ring" style="width:clamp(420px,62vw,720px);height:clamp(420px,62vw,720px);border-color:rgba(53,199,178,0.07);animation-delay:-2.5s;"></div>
+        <div class="corner-label corner-bl">Blossom Hubs — 2026</div>
+        <div class="content">
+            <div class="eyebrow reveal">The Ask</div>
+            <h2 class="main-title reveal">Let's ship<br><span class="gradient-text">Hubs.</span></h2>
+            <p class="slide-subtitle reveal" style="text-align:center;">The prototype is demo-ready. The flywheel is clear. Every day without Hubs is another user lost to Discord.</p>
+            <a href="blossom-demo://launch" class="cta-pill reveal" id="launchDemo" style="text-decoration:none;">🌸 Greenlight Blossom Hubs</a>
+            <p class="cta-footnote reveal">Click to launch the live demo in Simulator</p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+         LAUNCH OVERLAY
+         Full-screen loading sequence while simulator boots
+         =========================================== -->
+    <div class="launch-overlay" id="launchOverlay">
+        <div class="launch-orbs">
+            <div class="orb orb-violet" style="width:40vw;height:40vw;top:-15%;left:-15%;"></div>
+            <div class="orb orb-teal" style="width:30vw;height:30vw;bottom:-10%;right:-10%;animation-delay:-1s;"></div>
+            <div class="orb orb-orange" style="width:20vw;height:20vw;top:20%;right:15%;animation-delay:-2s;"></div>
+        </div>
+        <img src="brand-guidlines/logos/Blossom-logo-icon-SVG.svg" alt="Blossom" class="launch-logo">
+        <div class="launch-text" id="launchText">Launching Blossom Hubs</div>
+        <div class="launch-spinner"></div>
+        <div class="launch-progress">
+            <div class="launch-progress-bar" id="launchProgressBar"></div>
+        </div>
+        <div class="launch-status" id="launchStatus">Booting simulator...</div>
+    </div>
+
+    <script>
+        /* ===========================================
+           SLIDE PRESENTATION CONTROLLER
+           Handles navigation, animations, and progress
+           =========================================== */
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.isScrolling = false;
+                this.setupIntersectionObserver();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.setupProgressBar();
+                this.setupNavDots();
+            }
+
+            /* Intersection Observer — triggers .visible class for animations */
+            setupIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            const index = [...this.slides].indexOf(entry.target);
+                            if (index !== -1) {
+                                this.currentSlide = index;
+                                this.updateNavDots();
+                                this.updateProgressBar();
+                            }
+                        }
+                    });
+                }, { threshold: 0.5 });
+                this.slides.forEach(slide => observer.observe(slide));
+            }
+
+            /* Keyboard: Arrow keys, Space, Page Up/Down */
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (e) => {
+                    if (e.target.getAttribute('contenteditable') === 'true') return;
+                    switch(e.key) {
+                        case 'ArrowDown': case 'ArrowRight': case ' ': case 'PageDown':
+                            e.preventDefault(); this.goToSlide(this.currentSlide + 1); break;
+                        case 'ArrowUp': case 'ArrowLeft': case 'PageUp':
+                            e.preventDefault(); this.goToSlide(this.currentSlide - 1); break;
+                        case 'Home': e.preventDefault(); this.goToSlide(0); break;
+                        case 'End': e.preventDefault(); this.goToSlide(this.slides.length - 1); break;
+                    }
+                });
+            }
+
+            /* Touch swipe support */
+            setupTouchNav() {
+                let startY = 0;
+                document.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; }, { passive: true });
+                document.addEventListener('touchend', (e) => {
+                    const diff = startY - e.changedTouches[0].clientY;
+                    if (Math.abs(diff) > 50) {
+                        diff > 0 ? this.goToSlide(this.currentSlide + 1) : this.goToSlide(this.currentSlide - 1);
+                    }
+                }, { passive: true });
+            }
+
+            /* Mouse wheel with debounce */
+            setupWheelNav() {
+                document.addEventListener('wheel', (e) => {
+                    if (this.isScrolling) return;
+                    this.isScrolling = true;
+                    if (e.deltaY > 0) this.goToSlide(this.currentSlide + 1);
+                    else if (e.deltaY < 0) this.goToSlide(this.currentSlide - 1);
+                    setTimeout(() => { this.isScrolling = false; }, 800);
+                }, { passive: true });
+            }
+
+            /* Progress bar */
+            setupProgressBar() { this.updateProgressBar(); }
+            updateProgressBar() {
+                const progress = ((this.currentSlide + 1) / this.slides.length) * 100;
+                document.getElementById('progressBar').style.width = progress + '%';
+            }
+
+            /* Navigation dots */
+            setupNavDots() {
+                const nav = document.getElementById('navDots');
+                this.slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    nav.appendChild(dot);
+                });
+            }
+            updateNavDots() {
+                document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === this.currentSlide);
+                });
+            }
+
+            /* Navigate to specific slide */
+            goToSlide(index) {
+                if (index < 0 || index >= this.slides.length) return;
+                this.currentSlide = index;
+                this.slides[index].scrollIntoView({ behavior: 'smooth' });
+                this.updateNavDots();
+                this.updateProgressBar();
+            }
+        }
+
+        /* ===========================================
+           INLINE EDITOR
+           Hover top-left or press E to enter edit mode
+           =========================================== */
+        class InlineEditor {
+            constructor() {
+                this.isActive = false;
+                this.storageKey = 'blossom-hubs-pitch-edits';
+                this.editableSelectors = 'h1, h2, h3, p, span, li, .tagline, .eyebrow, .slide-subtitle, .problem-quote, .flywheel-detail, .cta-footnote, .rev-desc, .rev-label, .feature-card p, .feature-card h3, .leak-stat .value, .leak-stat .label';
+                this.loadEdits();
+            }
+
+            toggleEditMode() {
+                this.isActive = !this.isActive;
+                const toggle = document.getElementById('editToggle');
+                const banner = document.getElementById('editBanner');
+                toggle.classList.toggle('active', this.isActive);
+                banner.classList.toggle('show', this.isActive);
+
+                document.querySelectorAll(this.editableSelectors).forEach(el => {
+                    if (this.isActive) {
+                        el.setAttribute('contenteditable', 'true');
+                        el.addEventListener('input', () => this.autoSave());
+                    } else {
+                        el.removeAttribute('contenteditable');
+                    }
+                });
+            }
+
+            autoSave() {
+                const edits = {};
+                document.querySelectorAll(this.editableSelectors).forEach((el, i) => {
+                    edits[i] = el.innerHTML;
+                });
+                localStorage.setItem(this.storageKey, JSON.stringify(edits));
+            }
+
+            loadEdits() {
+                const saved = localStorage.getItem(this.storageKey);
+                if (!saved) return;
+                try {
+                    const edits = JSON.parse(saved);
+                    document.querySelectorAll(this.editableSelectors).forEach((el, i) => {
+                        if (edits[i] !== undefined) el.innerHTML = edits[i];
+                    });
+                } catch (e) { /* ignore parse errors */ }
+            }
+
+            save() {
+                this.autoSave();
+            }
+
+            exportFile() {
+                const html = document.documentElement.outerHTML;
+                const blob = new Blob([`<!DOCTYPE html>\n${html}`], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'blossom-hubs-pitch-edited.html';
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        }
+
+        /* Initialize */
+        const presentation = new SlidePresentation();
+        const editor = new InlineEditor();
+
+        /* Edit toggle: JS-based hover with 400ms delay */
+        const hotzone = document.getElementById('editHotzone');
+        const editToggle = document.getElementById('editToggle');
+        let hideTimeout = null;
+
+        hotzone.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            editToggle.classList.add('show');
+        });
+        hotzone.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                if (!editor.isActive) editToggle.classList.remove('show');
+            }, 400);
+        });
+        editToggle.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); });
+        editToggle.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                if (!editor.isActive) editToggle.classList.remove('show');
+            }, 400);
+        });
+        editToggle.addEventListener('click', () => { editor.toggleEditMode(); });
+        hotzone.addEventListener('click', () => { editor.toggleEditMode(); });
+
+        /* Keyboard shortcut: E key (skip when editing text) */
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) {
+                editor.toggleEditMode();
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                editor.save();
+            }
+        });
+
+        /* ===========================================
+           LAUNCH SEQUENCE
+           Screen zoom + overlay with animated progress
+           =========================================== */
+        document.getElementById('launchDemo').addEventListener('click', (e) => {
+            /* Let the blossom-demo:// URL fire normally, then animate */
+            const ctaSlide = document.querySelector('.cta-slide');
+            const overlay = document.getElementById('launchOverlay');
+            const progressBar = document.getElementById('launchProgressBar');
+            const statusEl = document.getElementById('launchStatus');
+            const textEl = document.getElementById('launchText');
+
+            /* Phase 1: Zoom current slide out */
+            ctaSlide.classList.add('launching');
+
+            /* Phase 2: Show overlay after zoom */
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 600);
+
+            /* Phase 3: Animated progress steps */
+            const steps = [
+                { pct: 15, text: 'Booting simulator...', delay: 1200 },
+                { pct: 30, text: 'Resolving packages...', delay: 3000 },
+                { pct: 55, text: 'Building BlossomHubs...', delay: 6000 },
+                { pct: 75, text: 'Compiling SwiftUI views...', delay: 10000 },
+                { pct: 90, text: 'Installing on iPhone 17 Pro...', delay: 16000 },
+                { pct: 100, text: 'Launching app...', delay: 20000 },
+            ];
+
+            steps.forEach(step => {
+                setTimeout(() => {
+                    progressBar.style.width = step.pct + '%';
+                    statusEl.textContent = step.text;
+                    if (step.pct === 100) {
+                        textEl.textContent = 'Blossom Hubs is Live';
+                        const spinner = document.querySelector('.launch-spinner');
+                        spinner.style.animation = 'none';
+                        spinner.style.border = '2px solid var(--teal)';
+                        spinner.style.borderRadius = '50%';
+                        spinner.style.display = 'flex';
+                        spinner.style.alignItems = 'center';
+                        spinner.style.justifyContent = 'center';
+                        spinner.style.width = 'clamp(36px, 5vw, 48px)';
+                        spinner.style.height = 'clamp(36px, 5vw, 48px)';
+                        spinner.style.boxShadow = '0 0 20px rgba(53,199,178,0.3)';
+                        spinner.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="#35C7B2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                        spinner.style.animation = 'counterUp 0.5s ease-out';
+                        setTimeout(() => {
+                            statusEl.textContent = 'Check the simulator — the demo is running.';
+                        }, 1500);
+                    }
+                }, step.delay);
+            });
+        });
+    </script>
+</body>
+</html>

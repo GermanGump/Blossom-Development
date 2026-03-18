@@ -49,31 +49,17 @@ struct HubsDiscoveryView: View {
         }
     }
 
-    @Environment(\.colorScheme) private var colorScheme
-
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 22) {
-                // Header
-                HStack(spacing: 10) {
-                    Image(colorScheme == .dark ? "blossom-logo-dark" : "blossom-logo-icon")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 32)
-
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Verified Blossom Communities")
-                            .font(BlossomFont.subhead)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(BlossomTheme.primaryText)
-                        Text("Join, learn, invest.")
-                            .font(BlossomFont.caption)
-                            .foregroundStyle(BlossomTheme.secondaryText)
-                    }
-
-                    Spacer()
-                }
-                .padding(.bottom, 4)
+                // Blossom Hubs logo — hero placement
+                Image("blossom-hubs-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: UIScreen.main.bounds.width * 0.75)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 8)
+                    .padding(.bottom, 4)
 
                 // Creator entry point
                 if subscriptionStore.session.creatorCommunityID != nil {
@@ -140,6 +126,27 @@ struct HubsDiscoveryView: View {
 
                 // Banner ad — appears above Featured Hub regardless of subscription state
                 BannerAdView()
+
+                // Verified Blossom Communities header
+                HStack(spacing: 10) {
+                    Image("blossom-logo-icon-svg")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 32)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Verified Blossom Communities")
+                            .font(BlossomFont.subhead)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(BlossomTheme.primaryText)
+                        Text("Join, learn, invest.")
+                            .font(BlossomFont.caption)
+                            .foregroundStyle(BlossomTheme.secondaryText)
+                    }
+
+                    Spacer()
+                }
+                .padding(.bottom, 4)
 
                 // Featured Hub
                 if let hero = heroCommunity {

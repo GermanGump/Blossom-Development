@@ -45,11 +45,17 @@ static NSString * const ACColorNameBlossomViolet AC_SWIFT_PRIVATE = @"BlossomVio
 /// The "bd-profile-pic" asset catalog image resource.
 static NSString * const ACImageNameBdProfilePic AC_SWIFT_PRIVATE = @"bd-profile-pic";
 
+/// The "blossom-hubs-logo" asset catalog image resource.
+static NSString * const ACImageNameBlossomHubsLogo AC_SWIFT_PRIVATE = @"blossom-hubs-logo";
+
 /// The "blossom-logo-dark" asset catalog image resource.
 static NSString * const ACImageNameBlossomLogoDark AC_SWIFT_PRIVATE = @"blossom-logo-dark";
 
 /// The "blossom-logo-icon" asset catalog image resource.
 static NSString * const ACImageNameBlossomLogoIcon AC_SWIFT_PRIVATE = @"blossom-logo-icon";
+
+/// The "blossom-logo-icon-svg" asset catalog image resource.
+static NSString * const ACImageNameBlossomLogoIconSvg AC_SWIFT_PRIVATE = @"blossom-logo-icon-svg";
 
 /// The "blossom-logo-light" asset catalog image resource.
 static NSString * const ACImageNameBlossomLogoLight AC_SWIFT_PRIVATE = @"blossom-logo-light";

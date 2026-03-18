@@ -6,7 +6,7 @@
 	<integer>12</integer>
 	<key>logs</key>
 	<dict>
-		<key>44078C69-4EE5-4065-8BA8-DAA7B09302C8</key>
+		<key>09A3DE51-A456-4D5D-914A-18CFBB085902</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>44078C69-4EE5-4065-8BA8-DAA7B09302C8.xcactivitylog</string>
+			<string>09A3DE51-A456-4D5D-914A-18CFBB085902.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -29,7 +29,7 @@
 				<key>totalNumberOfTestFailures</key>
 				<integer>0</integer>
 				<key>totalNumberOfWarnings</key>
-				<integer>1</integer>
+				<integer>5</integer>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>BlossomHubs project</string>
@@ -40,15 +40,15 @@
 			<key>signature</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>timeStartedRecording</key>
-			<real>795443204.26629806</real>
+			<real>795491326.59314597</real>
 			<key>timeStoppedRecording</key>
-			<real>795443207.77754402</real>
+			<real>795491336.50652802</real>
 			<key>title</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>uniqueIdentifier</key>
-			<string>44078C69-4EE5-4065-8BA8-DAA7B09302C8</string>
+			<string>09A3DE51-A456-4D5D-914A-18CFBB085902</string>
 		</dict>
-		<key>AAE30090-8E19-4521-A731-D32DA0153457</key>
+		<key>9E0334B1-CD54-47DE-BA48-80CF612CA001</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -57,7 +57,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>AAE30090-8E19-4521-A731-D32DA0153457.xcactivitylog</string>
+			<string>9E0334B1-CD54-47DE-BA48-80CF612CA001.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -82,13 +82,55 @@
 			<key>signature</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>timeStartedRecording</key>
-			<real>795484962.39035702</real>
+			<real>795490854.79803097</real>
 			<key>timeStoppedRecording</key>
-			<real>795484969.30538702</real>
+			<real>795490866.622383</real>
 			<key>title</key>
 			<string>Building project BlossomHubs with scheme BlossomHubs</string>
 			<key>uniqueIdentifier</key>
-			<string>AAE30090-8E19-4521-A731-D32DA0153457</string>
+			<string>9E0334B1-CD54-47DE-BA48-80CF612CA001</string>
+		</dict>
+		<key>C657FC68-94D7-44FC-92C0-E00DE569BCA2</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C657FC68-94D7-44FC-92C0-E00DE569BCA2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>5</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BlossomHubs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BlossomHubs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project BlossomHubs with scheme BlossomHubs</string>
+			<key>timeStartedRecording</key>
+			<real>795491068.98425901</real>
+			<key>timeStoppedRecording</key>
+			<real>795491074.15755296</real>
+			<key>title</key>
+			<string>Building project BlossomHubs with scheme BlossomHubs</string>
+			<key>uniqueIdentifier</key>
+			<string>C657FC68-94D7-44FC-92C0-E00DE569BCA2</string>
 		</dict>
 	</dict>
 </dict>
