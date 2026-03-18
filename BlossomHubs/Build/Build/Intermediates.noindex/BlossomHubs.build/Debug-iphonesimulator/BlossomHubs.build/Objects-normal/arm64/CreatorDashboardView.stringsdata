@@ -7,7 +7,7 @@
         "key": "Creator Dashboard",
         "location": {
           "startingColumn": 26,
-          "startingLine": 96
+          "startingLine": 97
         }
       },
       {
@@ -15,15 +15,7 @@
         "key": "Period",
         "location": {
           "startingColumn": 20,
-          "startingLine": 147
-        }
-      },
-      {
-        "comment": "",
-        "key": "Earnings",
-        "location": {
-          "startingColumn": 22,
-          "startingLine": 124
+          "startingLine": 172
         }
       },
       {
@@ -31,31 +23,87 @@
         "key": "Members",
         "location": {
           "startingColumn": 22,
-          "startingLine": 136
+          "startingLine": 161
         }
       },
       {
         "comment": "",
         "key": "Month",
         "location": {
-          "startingColumn": 31,
-          "startingLine": 159
+          "startingColumn": 35,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "Subscribers",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "Month",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "Subscribers",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Month",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "Subscribers",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 207
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Month",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 276
         }
       },
       {
         "comment": "",
         "key": "Net Revenue",
         "location": {
-          "startingColumn": 31,
-          "startingLine": 160
+          "startingColumn": 35,
+          "startingLine": 277
         }
       },
       {
         "comment": "",
         "key": "Certified Blossom Payout:",
         "location": {
-          "startingColumn": 30,
-          "startingLine": 224
+          "startingColumn": 34,
+          "startingLine": 341
         }
       }
     ]

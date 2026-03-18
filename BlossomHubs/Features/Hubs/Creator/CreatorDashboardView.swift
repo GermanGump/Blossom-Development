@@ -7,6 +7,7 @@ struct CreatorDashboardView: View {
     @State private var viewModel: CreatorDashboardViewModel?
     @State private var selectedPeriod: EarningsPeriod = .sixMonths
     @State private var selectedMonth: String?
+    @State private var showSubscribers = false
 
     var body: some View {
         Group {
@@ -119,15 +120,39 @@ struct CreatorDashboardView: View {
         let net = viewModel.totalNet(for: selectedPeriod)
 
         VStack(spacing: 12) {
-            // Header row: title + period label
+            // Header row: toggle pill + period label
             HStack {
-                Text("Earnings")
-                    .font(BlossomFont.subhead)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(BlossomTheme.primaryText)
+                HStack(spacing: 0) {
+                    chartToggleTab(
+                        label: "Earnings",
+                        icon: "dollarsign.circle",
+                        isActive: !showSubscribers,
+                        activeColor: BlossomTheme.violet
+                    ) {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showSubscribers = false
+                            selectedMonth = nil
+                        }
+                    }
+                    chartToggleTab(
+                        label: "Subscribers",
+                        icon: "person.2",
+                        isActive: showSubscribers,
+                        activeColor: BlossomTheme.teal
+                    ) {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showSubscribers = true
+                            selectedMonth = nil
+                        }
+                    }
+                }
+                .background(BlossomTheme.background)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .sensoryFeedback(.impact(flexibility: .soft), trigger: showSubscribers)
+
                 Spacer()
                 Text(viewModel.periodLabel(for: selectedPeriod))
-                    .font(BlossomFont.caption)
+                    .font(.system(size: 10))
                     .foregroundStyle(BlossomTheme.secondaryText)
             }
 
@@ -153,143 +178,236 @@ struct CreatorDashboardView: View {
             .onChange(of: selectedPeriod) { selectedMonth = nil }
             .sensoryFeedback(.impact(flexibility: .soft), trigger: selectedPeriod)
 
-            // Bar chart — net revenue per month
-            Chart(chartPoints) { point in
-                BarMark(
-                    x: .value("Month", point.monthLabel),
-                    y: .value("Net Revenue", NSDecimalNumber(decimal: point.netRevenue).doubleValue),
-                    width: .ratio(0.55)
-                )
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [BlossomTheme.violet.opacity(0.5), BlossomTheme.violet],
-                        startPoint: .bottom,
-                        endPoint: .top
+            if showSubscribers {
+                // Line-dot chart — subscriber count per month (teal)
+                Chart(chartPoints) { point in
+                    LineMark(
+                        x: .value("Month", point.monthLabel),
+                        y: .value("Subscribers", point.subscriberCount)
                     )
-                )
-                .opacity(selectedMonth == nil || selectedMonth == point.monthLabel ? 1.0 : 0.4)
-                .clipShape(RoundedRectangle(cornerRadius: 6))
-            }
-            .chartOverlay { proxy in
-                GeometryReader { geo in
-                    Rectangle()
-                        .fill(.clear)
-                        .contentShape(Rectangle())
-                        .onTapGesture { location in
-                            let relativeX = location.x - geo[proxy.plotAreaFrame].origin.x
-                            if let month: String = proxy.value(atX: relativeX) {
-                                selectedMonth = (selectedMonth == month) ? nil : month
+                    .foregroundStyle(BlossomTheme.teal)
+                    .lineStyle(StrokeStyle(lineWidth: 2.5))
+                    .interpolationMethod(.catmullRom)
+
+                    AreaMark(
+                        x: .value("Month", point.monthLabel),
+                        y: .value("Subscribers", point.subscriberCount)
+                    )
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [BlossomTheme.teal.opacity(0.25), BlossomTheme.teal.opacity(0.0)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .interpolationMethod(.catmullRom)
+
+                    PointMark(
+                        x: .value("Month", point.monthLabel),
+                        y: .value("Subscribers", point.subscriberCount)
+                    )
+                    .foregroundStyle(BlossomTheme.teal)
+                    .symbolSize(selectedMonth == point.monthLabel ? 80 : 40)
+                    .annotation(position: .top, spacing: 4) {
+                        if selectedMonth == point.monthLabel {
+                            Text("\(point.subscriberCount)")
+                                .font(.system(size: 11, weight: .semibold))
+                                .foregroundStyle(BlossomTheme.teal)
+                        }
+                    }
+                }
+                .chartOverlay { proxy in
+                    GeometryReader { geo in
+                        Rectangle()
+                            .fill(.clear)
+                            .contentShape(Rectangle())
+                            .onTapGesture { location in
+                                let relativeX = location.x - geo[proxy.plotAreaFrame].origin.x
+                                if let month: String = proxy.value(atX: relativeX) {
+                                    selectedMonth = (selectedMonth == month) ? nil : month
+                                }
                             }
-                        }
-                }
-            }
-            .chartXAxis {
-                AxisMarks { value in
-                    AxisValueLabel {
-                        if let label = value.as(String.self) {
-                            Text(label)
-                                .font(BlossomFont.caption)
-                                .foregroundStyle(BlossomTheme.secondaryText)
-                        }
                     }
                 }
-            }
-            .chartYAxis {
-                AxisMarks { value in
-                    AxisGridLine()
-                    AxisValueLabel {
-                        if let val = value.as(Double.self) {
-                            Text(formatAxisValue(val))
-                                .font(.system(size: 10))
-                                .foregroundStyle(BlossomTheme.secondaryText)
-                        }
-                    }
-                }
-            }
-            .frame(height: 180)
-            .animation(.easeInOut(duration: 0.3), value: selectedPeriod)
-            .sensoryFeedback(.selection, trigger: selectedMonth)
-
-            // Selected month callout
-            if let selLabel = selectedMonth,
-               let point = chartPoints.first(where: { $0.monthLabel == selLabel }) {
-                HStack(spacing: 10) {
-                    Image("blossom-logo-icon")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 28, height: 28)
-                        .clipShape(RoundedRectangle(cornerRadius: 6))
-
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text("Certified Blossom Payout:")
-                            .font(BlossomFont.caption)
-                            .foregroundStyle(.white.opacity(0.8))
-                        HStack(spacing: 4) {
-                            Text(point.monthLabel)
-                                .font(BlossomFont.caption)
-                                .foregroundStyle(.white.opacity(0.7))
-                            Text(viewModel.formatted(point.netRevenue))
-                                .font(BlossomFont.subhead)
-                                .fontWeight(.bold)
-                                .foregroundStyle(.white)
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .padding(.horizontal, 14)
-                .background(
-                    LinearGradient(
-                        colors: [BlossomTheme.violet, BlossomTheme.violet.opacity(0.8)],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .transition(.scale(scale: 0.8, anchor: .top).combined(with: .opacity))
-                .animation(.spring(response: 0.35, dampingFraction: 0.7), value: selectedMonth)
-            }
-
-            Divider()
-
-            // Revenue breakdown rows
-            revenueRow(label: "Gross Revenue", amount: gross, isDeduction: false)
-                .contentTransition(.numericText())
-            revenueRow(label: "Blossom Fee (10%)", amount: fee, isDeduction: true)
-                .contentTransition(.numericText())
-            Divider()
-            revenueRow(label: "Net Payout", amount: net, isDeduction: false, bold: true)
-                .contentTransition(.numericText())
-
-            // Per-tier breakdown
-            if !breakdown.isEmpty {
-                VStack(spacing: 8) {
-                    ForEach(Array(breakdown.enumerated()), id: \.offset) { _, item in
-                        VStack(spacing: 4) {
-                            HStack {
-                                Circle()
-                                    .fill(item.tierColor)
-                                    .frame(width: 8, height: 8)
-                                Text(item.tierName)
-                                    .font(BlossomFont.caption)
-                                    .foregroundStyle(BlossomTheme.primaryText)
-                                Spacer()
-                                Text(String(format: "%.0f%%", item.percentage * 100))
+                .chartXAxis {
+                    AxisMarks { value in
+                        AxisValueLabel {
+                            if let label = value.as(String.self) {
+                                Text(label)
                                     .font(BlossomFont.caption)
                                     .foregroundStyle(BlossomTheme.secondaryText)
                             }
-                            // NOTE: GeometryReader intentional — containerRelativeFrame() cannot
-                            // express arbitrary percentage-based width fill for progress bar
-                            GeometryReader { geo in
-                                RoundedRectangle(cornerRadius: 2)
-                                    .fill(item.tierColor.opacity(0.2))
-                                    .overlay(alignment: .leading) {
-                                        RoundedRectangle(cornerRadius: 2)
-                                            .fill(item.tierColor)
-                                            .frame(width: geo.size.width * item.percentage)
-                                    }
+                        }
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks { value in
+                        AxisGridLine()
+                        AxisValueLabel {
+                            if let val = value.as(Double.self) {
+                                Text(formatSubscriberAxis(val))
+                                    .font(.system(size: 10))
+                                    .foregroundStyle(BlossomTheme.secondaryText)
                             }
-                            .frame(height: 6)
+                        }
+                    }
+                }
+                .frame(height: 180)
+                .animation(.easeInOut(duration: 0.3), value: selectedPeriod)
+                .sensoryFeedback(.selection, trigger: selectedMonth)
+
+                Divider()
+
+                // Subscriber summary rows
+                subscriberRow(label: "Current Subscribers", value: formatCount(subsCount))
+                if let first = chartPoints.first, let last = chartPoints.last, chartPoints.count > 1 {
+                    let growth = last.subscriberCount - first.subscriberCount
+                    let pct = first.subscriberCount > 0
+                        ? Double(growth) / Double(first.subscriberCount) * 100 : 0
+                    subscriberRow(
+                        label: "Growth (\(first.monthLabel)–\(last.monthLabel))",
+                        value: "+\(formatCount(growth)) (\(String(format: "%.0f", pct))%)"
+                    )
+                }
+            } else {
+                // Bar chart — net revenue per month
+                Chart(chartPoints) { point in
+                    BarMark(
+                        x: .value("Month", point.monthLabel),
+                        y: .value("Net Revenue", NSDecimalNumber(decimal: point.netRevenue).doubleValue),
+                        width: .ratio(0.55)
+                    )
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [BlossomTheme.violet.opacity(0.5), BlossomTheme.violet],
+                            startPoint: .bottom,
+                            endPoint: .top
+                        )
+                    )
+                    .opacity(selectedMonth == nil || selectedMonth == point.monthLabel ? 1.0 : 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                }
+                .chartOverlay { proxy in
+                    GeometryReader { geo in
+                        Rectangle()
+                            .fill(.clear)
+                            .contentShape(Rectangle())
+                            .onTapGesture { location in
+                                let relativeX = location.x - geo[proxy.plotAreaFrame].origin.x
+                                if let month: String = proxy.value(atX: relativeX) {
+                                    selectedMonth = (selectedMonth == month) ? nil : month
+                                }
+                            }
+                    }
+                }
+                .chartXAxis {
+                    AxisMarks { value in
+                        AxisValueLabel {
+                            if let label = value.as(String.self) {
+                                Text(label)
+                                    .font(BlossomFont.caption)
+                                    .foregroundStyle(BlossomTheme.secondaryText)
+                            }
+                        }
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks { value in
+                        AxisGridLine()
+                        AxisValueLabel {
+                            if let val = value.as(Double.self) {
+                                Text(formatAxisValue(val))
+                                    .font(.system(size: 10))
+                                    .foregroundStyle(BlossomTheme.secondaryText)
+                            }
+                        }
+                    }
+                }
+                .frame(height: 180)
+                .animation(.easeInOut(duration: 0.3), value: selectedPeriod)
+                .sensoryFeedback(.selection, trigger: selectedMonth)
+
+                // Selected month callout
+                if let selLabel = selectedMonth,
+                   let point = chartPoints.first(where: { $0.monthLabel == selLabel }) {
+                    HStack(spacing: 10) {
+                        Image("blossom-logo-icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 28, height: 28)
+                            .clipShape(RoundedRectangle(cornerRadius: 6))
+
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text("Certified Blossom Payout:")
+                                .font(BlossomFont.caption)
+                                .foregroundStyle(.white.opacity(0.8))
+                            HStack(spacing: 4) {
+                                Text(point.monthLabel)
+                                    .font(BlossomFont.caption)
+                                    .foregroundStyle(.white.opacity(0.7))
+                                Text(viewModel.formatted(point.netRevenue))
+                                    .font(BlossomFont.subhead)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.white)
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 14)
+                    .background(
+                        LinearGradient(
+                            colors: [BlossomTheme.violet, BlossomTheme.violet.opacity(0.8)],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .transition(.scale(scale: 0.8, anchor: .top).combined(with: .opacity))
+                    .animation(.spring(response: 0.35, dampingFraction: 0.7), value: selectedMonth)
+                }
+
+                Divider()
+
+                // Revenue breakdown rows
+                revenueRow(label: "Gross Revenue", amount: gross, isDeduction: false)
+                    .contentTransition(.numericText())
+                revenueRow(label: "Blossom Fee (10%)", amount: fee, isDeduction: true)
+                    .contentTransition(.numericText())
+                Divider()
+                revenueRow(label: "Net Payout", amount: net, isDeduction: false, bold: true)
+                    .contentTransition(.numericText())
+
+                // Per-tier breakdown
+                if !breakdown.isEmpty {
+                    VStack(spacing: 8) {
+                        ForEach(Array(breakdown.enumerated()), id: \.offset) { _, item in
+                            VStack(spacing: 4) {
+                                HStack {
+                                    Circle()
+                                        .fill(item.tierColor)
+                                        .frame(width: 8, height: 8)
+                                    Text(item.tierName)
+                                        .font(BlossomFont.caption)
+                                        .foregroundStyle(BlossomTheme.primaryText)
+                                    Spacer()
+                                    Text(String(format: "%.0f%%", item.percentage * 100))
+                                        .font(BlossomFont.caption)
+                                        .foregroundStyle(BlossomTheme.secondaryText)
+                                }
+                                // NOTE: GeometryReader intentional — containerRelativeFrame() cannot
+                                // express arbitrary percentage-based width fill for progress bar
+                                GeometryReader { geo in
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(item.tierColor.opacity(0.2))
+                                        .overlay(alignment: .leading) {
+                                            RoundedRectangle(cornerRadius: 2)
+                                                .fill(item.tierColor)
+                                                .frame(width: geo.size.width * item.percentage)
+                                        }
+                                }
+                                .frame(height: 6)
+                            }
                         }
                     }
                 }
@@ -339,6 +457,57 @@ struct CreatorDashboardView: View {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         return formatter.string(from: NSNumber(value: count)) ?? "\(count)"
+    }
+
+    // MARK: - Chart Toggle Tab
+
+    private func chartToggleTab(
+        label: String,
+        icon: String,
+        isActive: Bool,
+        activeColor: Color,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            HStack(spacing: 5) {
+                Image(systemName: icon)
+                    .font(.system(size: 12, weight: .medium))
+                Text(label)
+                    .font(.system(size: 13, weight: .medium))
+            }
+            .foregroundStyle(isActive ? .white : BlossomTheme.secondaryText)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(isActive ? activeColor : .clear)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+        .buttonStyle(.plain)
+    }
+
+    // MARK: - Subscriber Row
+
+    private func subscriberRow(label: String, value: String) -> some View {
+        HStack {
+            Text(label)
+                .font(BlossomFont.caption)
+                .foregroundStyle(BlossomTheme.secondaryText)
+            Spacer()
+            Text(value)
+                .font(BlossomFont.subhead)
+                .fontWeight(.semibold)
+                .foregroundStyle(BlossomTheme.teal)
+        }
+    }
+
+    private func formatSubscriberAxis(_ value: Double) -> String {
+        if value == 0 { return "0" }
+        if value >= 1000 {
+            let k = value / 1000
+            return k.truncatingRemainder(dividingBy: 1) == 0
+                ? "\(Int(k))K"
+                : String(format: "%.1fK", k)
+        }
+        return "\(Int(value))"
     }
 
     // MARK: - Stat Card
